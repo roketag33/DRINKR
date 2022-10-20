@@ -1,3 +1,13 @@
+# Cocktail Paradise
+
+Projet 2 JS/React Septembre 2022 composé de :
+
+- Gregory Ledez
+- Alexandre Sarrazin
+- Olga Yasnopolskaya
+- Mehdy Guettache
+- Anthony Labadie
+
 ## Concept
 
 This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
@@ -31,5 +41,5 @@ It's pre-configured with a set of tools which'll help students produce industry-
 - _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
 - _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
 - _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
+- _Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
 - _Nodemon_ : Allows to restart the server everytime a .js file is udated
