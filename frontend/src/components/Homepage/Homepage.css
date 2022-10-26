@@ -23,9 +23,7 @@
   }
 
   .mintleaves {
-    transform: rotate(-25deg);
     width: 75%;
-    position: fixed;
     top: 35%;
     left: -15%;
   }
@@ -37,9 +35,7 @@
   }
 
   .mintleaves {
-    transform: rotate(-25deg);
     width: 65%;
-    position: fixed;
     top: 35%;
     left: -15%;
   }
@@ -51,9 +47,7 @@
   }
 
   .mintleaves {
-    transform: rotate(-25deg);
     width: 45%;
-    position: fixed;
     top: 35%;
     left: 5%;
   }
