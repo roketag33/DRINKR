@@ -1,9 +1,10 @@
 import "./App.css";
+import Titleblock from "./components/titleblock/Titleblock";
 
 function App() {
   return (
     <div className="App">
-      <h1>DRINK'R</h1>
+      <Titleblock />
     </div>
   );
 }

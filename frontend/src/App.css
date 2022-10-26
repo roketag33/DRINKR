@@ -149,6 +149,5 @@ table {
   --h4-font-size: 1rem;
 }
 h1 {
-  color: var(--home-bg-color);
   font-family: text;
 }

@@ -1,0 +1,25 @@
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: Poppins;
+  margin-top: 5vh;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 700px) {
+  .title {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 3rem;
+  }
+}
