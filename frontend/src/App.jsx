@@ -1,14 +1,14 @@
-import Home from "@pages/Home";
+import Home from "./pages/Home";
 
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Home />
       <p>coucou</p>
     </div>
   );
-}
+};
 
 export default App;

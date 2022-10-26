@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Counter() {
+const Counter = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -13,4 +13,6 @@ export default function Counter() {
       </button>
     </p>
   );
-}
+};
+
+export default Counter;

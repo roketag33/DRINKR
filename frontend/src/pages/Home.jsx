@@ -1,7 +1,7 @@
-import Counter from "@components/Counter";
-import logo from "@assets/logo.svg";
+import Counter from "../components/Counter";
+import logo from "../assets/logo.svg";
 
-export default function Home() {
+const Home = () => {
   return (
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
@@ -33,4 +33,6 @@ export default function Home() {
       </p>
     </header>
   );
-}
+};
+
+export default Home;
