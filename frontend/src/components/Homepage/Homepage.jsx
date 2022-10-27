@@ -3,7 +3,7 @@ import Titleblock from "../titleblock/Titleblock";
 
 function Homepage() {
   return (
-    <div>
+    <div className="homePage__container">
       <Titleblock />
       <img
         className="cocktail__mainpage"
@@ -12,7 +12,7 @@ function Homepage() {
       />
       <img
         className="mintleaves"
-        src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG.png"
+        src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG 16.48.26.png"
         alt="mintleaves"
       />
     </div>
