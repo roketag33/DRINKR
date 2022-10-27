@@ -1,4 +1,4 @@
-import MajorityBlock from "@components/MajorityBlock/MajorityBlock";
+import MajorityBlock from "./components/MajorityBlock/MajorityBlock";
 import "./App.css";
 import Homepage from "./components/Homepage/Homepage";
 

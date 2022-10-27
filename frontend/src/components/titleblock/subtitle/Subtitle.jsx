@@ -1,7 +1,7 @@
 import React from "react";
 import "./subtitle.css";
 
-function Subtitle() {
+const Subtitle = () => {
   return (
     <div className=" subtitle">
       <h2>
@@ -9,6 +9,6 @@ function Subtitle() {
       </h2>
     </div>
   );
-}
+};
 
 export default Subtitle;

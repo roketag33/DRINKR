@@ -1,7 +1,7 @@
 import "./MajorityBlock.css";
 import React from "react";
 
-function MajorityBlock() {
+const MajorityBlock = () => {
   return (
     <div className="MajorityBlock__container">
       <p className="MajorityBlock__para">Are you 18 years or older ?</p>
@@ -18,6 +18,6 @@ function MajorityBlock() {
       </div>
     </div>
   );
-}
+};
 
 export default MajorityBlock;
