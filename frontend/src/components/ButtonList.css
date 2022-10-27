@@ -162,15 +162,7 @@ table {
   left: 5%;
   width: 45%;
 }
-.App {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--home-bg-color);
-  overflow: hidden;
-}
+
 .button-list__container {
   position: relative;
   display: flex;
