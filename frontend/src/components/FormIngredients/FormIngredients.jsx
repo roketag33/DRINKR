@@ -1,9 +1,8 @@
 /* eslint-disable react/button-has-type */
 import React from "react";
-import "./From_ingredients.css";
+import "./FormIngredients.css";
 
-// eslint-disable-next-line camelcase
-function From_ingredients() {
+function FormIngredients() {
   return (
     <div className="form__container">
       <h4 className="form__title">1-ALCOOL</h4>
@@ -36,4 +35,4 @@ function From_ingredients() {
 }
 
 // eslint-disable-next-line camelcase
-export default From_ingredients;
+export default FormIngredients;
