@@ -1,0 +1,97 @@
+:root {
+  --home-bg-color: #eb9ca4;
+  --cocktail-list-bg-color: #80c487;
+  --recipe-bg-color: #46a9bf;
+  --btn-bg-color: #ffff9e;
+  --btn-font-color: #131313;
+  --btn-box-shadow: 10px 10px #131313;
+  --title-font-family: Saint-Regus-Gras;
+  --text-font-family: text;
+  --h1-font-size: 5rem;
+  --h1-font-size-mobile: 2rem;
+  --h2-font-size: 2.5rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1rem;
+  --h4-font-size: 1rem;
+  --from-bg-color: #ffff9e;
+}
+
+@font-face {
+  font-family: "title-saint-regus";
+  src: url("./assets/sonar-hubermann-saintregus/Sonar\ Hubermann\ -\ SaintRegus-SemiBold.otf");
+}
+
+@font-face {
+  font-family: "text";
+  src: url("./assets/Poppins-Medium.ttf");
+}
+.form__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--from-bg-color);
+  border-radius: 30px;
+  width: 60%;
+  height: auto;
+  padding: 1rem;
+  box-shadow: 10px 10px #131313;
+}
+.form__title {
+  position: relative;
+  margin: 1rem;
+}
+.form__btn {
+  position: relative;
+  border-radius: 30px;
+  background-color: var(--btn-bg-color);
+  box-shadow: 3px 3px #131313;
+  font-size: var(--text-font-family);
+}
+.form__container__ingredients {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media screen and (min-width: 700px) {
+  .form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--from-bg-color);
+    border-radius: 30px;
+    width: 30%;
+    height: auto;
+    padding: 1rem;
+    box-shadow: 10px 10px #131313;
+  }
+
+  .form__title {
+    display: flex;
+    justify-content: start;
+    margin: 1rem;
+    font-size: var(--title-font-family);
+  }
+
+  .form__btn {
+    position: relative;
+    border-radius: 30px;
+    background-color: var(--btn-bg-color);
+    box-shadow: 3px 3px #131313;
+    font-size: var(--text-font-family);
+  }
+
+  .form__container__ingredients {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+}
