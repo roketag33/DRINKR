@@ -163,6 +163,7 @@ table {
 }
 
 .MajorityBlock__container {
+  position: absolute;
   display: flex;
   border: 1px solid grey;
   background-color: #ffff9e;
@@ -170,7 +171,6 @@ table {
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  margin: 20px 10px;
 }
 
 .MajorityBlock__buttons {

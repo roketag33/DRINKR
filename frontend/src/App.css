@@ -149,3 +149,7 @@ table {
   --h4-font-size: 1rem;
   --from-bg-color: #ffff9e;
 }
+.App {
+  background-color: var(--home-bg-color);
+  height: 100vh;
+}
