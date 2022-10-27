@@ -1,0 +1,25 @@
+.subtitle {
+  display: flex;
+  justify-content: center;
+  font-size: 1, 5rem;
+  font-family: text;
+  margin-top: 5vh;
+  z-index: 99;
+}
+
+@media screen and (min-width: 700px) {
+  .subtitle {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .title {
+    font-size: 2, 5rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .subtitle {
+    font-size: 2rem;
+  }
+}
