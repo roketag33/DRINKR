@@ -1,10 +1,10 @@
 import "./Homepage.css";
-// import Titlesblock from "./components/Titlesblock.jsx"
+import Titleblock from "../titleblock/Titleblock";
 
 const Homepage = () => {
   return (
     <div>
-      {/* <Titlesblock /> */}
+      <Titleblock />
       <img
         className="cocktail__mainpage"
         src="/src/assets/images/pink_cocktailtrans.png"
