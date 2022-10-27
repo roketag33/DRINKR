@@ -2,7 +2,7 @@
 import React from "react";
 import "./FormIngredients.css";
 
-function FormIngredients() {
+const FormIngredients = () => {
   return (
     <div className="form__container">
       <h4 className="form__title">1-ALCOOL</h4>
@@ -32,7 +32,7 @@ function FormIngredients() {
       </div>
     </div>
   );
-}
+};
 
 // eslint-disable-next-line camelcase
 export default FormIngredients;

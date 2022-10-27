@@ -1,7 +1,7 @@
 import "./Homepage.css";
 import Titleblock from "../titleblock/Titleblock";
 
-function Homepage() {
+const Homepage = () => {
   return (
     <div className="homePage__container">
       <Titleblock />
@@ -17,6 +17,6 @@ function Homepage() {
       />
     </div>
   );
-}
+};
 
 export default Homepage;
