@@ -1,9 +1,9 @@
+import MajorityBlock from "@components/MajorityBlock/MajorityBlock";
 import "./App.css";
-
 function App() {
   return (
     <div className="App">
-      <h1>DRINK'R</h1>
+      <MajorityBlock/>
     </div>
   );
 }
