@@ -147,5 +147,37 @@ table {
   --h2-font-size: 1.5rem;
   --h3-font-size: 1rem;
   --h4-font-size: 1rem;
-  --from-bg-color: #ffff9e;
+}
+.MajorityBlock__button-yes {
+  margin: 1px 10px;
+  background-color: #80c487;
+  border-radius: 30px;
+  padding: 5px 40px 5px 40px;
+}
+
+.MajorityBlock__button-no {
+  margin: 1px 10px;
+  background-color: #eb9ca4;
+  border-radius: 30px;
+  padding: 5px 40px 5px 40px;
+}
+
+.MajorityBlock__container {
+  display: flex;
+  border: 1px solid grey;
+  background-color: #ffff9e;
+  padding: 40px 20px 10px 10px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  margin: 20px 10px;
+}
+
+.MajorityBlock__buttons {
+  display: flex;
+  padding: 15px 10px;
+}
+
+.MajorityBlock__para {
+  font-size: large;
 }
