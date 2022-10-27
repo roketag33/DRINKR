@@ -1,7 +1,7 @@
 import "./Homepage.css";
 // import Titlesblock from "./components/Titlesblock.jsx"
 
-function Homepage() {
+const Homepage = () => {
   return (
     <div>
       {/* <Titlesblock /> */}
@@ -17,6 +17,6 @@ function Homepage() {
       />
     </div>
   );
-}
+};
 
 export default Homepage;
