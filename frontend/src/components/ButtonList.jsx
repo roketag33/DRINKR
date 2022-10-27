@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar";
 import ResultList from "./ResultList";
 import "./ButtonList.css";
 
-function ButtonList() {
+const ButtonList = () => {
   const [search, setSearch] = useState();
   const [userInput, setUserInput] = useState("");
 
@@ -57,6 +57,6 @@ function ButtonList() {
       </div>
     </div>
   );
-}
+};
 
 export default ButtonList;
