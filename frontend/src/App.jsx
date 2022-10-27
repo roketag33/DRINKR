@@ -1,9 +1,10 @@
 import MajorityBlock from "@components/MajorityBlock/MajorityBlock";
 import "./App.css";
+
 function App() {
   return (
     <div className="App">
-      <MajorityBlock/>
+      <MajorityBlock />
     </div>
   );
 }
