@@ -1,5 +1,6 @@
 import "./Homepage.css";
 import Titleblock from "../titleblock/Titleblock";
+import Firstbutton from "../Firstbutton/Firstbutton";
 
 function Homepage() {
   return (
@@ -15,6 +16,7 @@ function Homepage() {
         src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG.png"
         alt="mintleaves"
       />
+      <Firstbutton />
     </div>
   );
 }
