@@ -5,6 +5,7 @@
   font-family: Poppins;
   margin-top: 5vh;
   font-weight: bold;
+  z-index: 99;
 }
 
 @media screen and (min-width: 700px) {

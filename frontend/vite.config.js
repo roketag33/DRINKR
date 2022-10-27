@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable prettier/prettier */
 import { defineConfig } from "vite";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import react from "@vitejs/plugin-react";

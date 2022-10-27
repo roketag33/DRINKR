@@ -1,10 +1,10 @@
 import "./App.css";
-import Titleblock from "./components/titleblock/Titleblock";
+import Homepage from "./components/Homepage/Homepage";
 
 function App() {
   return (
     <div className="App">
-      <Titleblock />
+      <Homepage />
     </div>
   );
 }
