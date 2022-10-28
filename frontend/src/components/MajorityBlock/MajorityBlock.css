@@ -175,6 +175,7 @@ table {
   box-shadow: none;
 }
 .MajorityBlock__container {
+  position: absolute;
   display: flex;
   border: 1px solid grey;
   background-color: #ffff9e;
@@ -188,6 +189,7 @@ table {
   transform: translate(-50%, -50%);
   z-index: 10;
   box-shadow: 3px 3px black;
+
 }
 
 .MajorityBlock__buttons {
