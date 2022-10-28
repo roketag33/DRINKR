@@ -157,8 +157,8 @@ table {
   box-shadow: 3px 3px black;
 }
 
-.MajorityBlock__button-yes:active
-{ box-shadow: none;
+.MajorityBlock__button-yes:active {
+  box-shadow: none;
 }
 
 .MajorityBlock__button-no {
@@ -171,8 +171,8 @@ table {
   color: black;
 }
 
-.MajorityBlock__button-no:active
-{ box-shadow: none;
+.MajorityBlock__button-no:active {
+  box-shadow: none;
 }
 .MajorityBlock__container {
   display: flex;
@@ -185,9 +185,10 @@ table {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
   z-index: 10;
-  box-shadow: 3px 3px black;}
+  box-shadow: 3px 3px black;
+}
 
 .MajorityBlock__buttons {
   display: flex;
@@ -200,6 +201,3 @@ table {
   font-family: var(--text-font-family);
   background-color: #ffff9e;
 }
-
-
-
