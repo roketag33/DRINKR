@@ -4,6 +4,7 @@ import Buttons from "./Buttons";
 import SearchBar from "./SearchBar";
 import ResultList from "./ResultList";
 import "./ButtonList.css";
+import Titleblock from "../titleblock/Titleblock";
 
 const ButtonList = () => {
   const [search, setSearch] = useState();
@@ -32,6 +33,7 @@ const ButtonList = () => {
 
   return (
     <div className="button-list__container">
+      <Titleblock />
       <img
         className="home__bg-pink"
         src="/src/assets/images/pink_cocktailtrans.png"
@@ -42,10 +44,22 @@ const ButtonList = () => {
         src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG 16.48.26.png"
         alt=""
       />
-      <Buttons type="" className="list__btn btn" value="Add your ingredients" />
-      <Buttons type="" className="list__btn btn" value="Search all cocktails" />
+      <Buttons
+        type=""
+        className="list__btn  btn-up btn"
+        value="Add your ingredients"
+      />
+      <Buttons
+        type=""
+        className="list__btn btn-midle btn"
+        value="Search all cocktails"
+      />
       <form action="submit" className="button-list__form">
-        <SearchBar value={userInput} onChange={handleChange} />
+        <SearchBar
+          className="btn-down"
+          value={userInput}
+          onChange={handleChange}
+        />
       </form>
       <div className="button-list__result-container">
         {search &&

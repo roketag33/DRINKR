@@ -2,26 +2,27 @@
   display: flex;
   justify-content: center;
   font-size: 2rem;
-  font-family: Poppins;
+  font-family: title-saint-regus;
   padding-top: 2rem;
   font-weight: bold;
   z-index: 100;
   background-color: transparent;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 500px) {
   .main__title-logo {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 }
+
 @media screen and (min-width: 600px) {
   .main__title-logo {
     font-size: 4rem;
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .main__title-logo {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 }
