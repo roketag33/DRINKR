@@ -1,7 +1,6 @@
-* {
+.homePage__container {
   background-color: var(--home-bg-color);
 }
-
 .cocktail__mainpage {
   position: fixed;
   right: 0;
@@ -16,6 +15,7 @@
   top: 40%;
   left: -35%;
   background-color: transparent;
+  z-index: 0;
 }
 
 @media screen and (min-width: 404px) {

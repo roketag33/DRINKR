@@ -1,7 +1,7 @@
 import React from "react";
 import "./firstbutton.css";
 
-function Firstbutton() {
+const Firstbutton = () => {
   return (
     <div className="firstbutton">
       <div className="wrapper">
@@ -11,6 +11,6 @@ function Firstbutton() {
       </div>
     </div>
   );
-}
+};
 
 export default Firstbutton;
