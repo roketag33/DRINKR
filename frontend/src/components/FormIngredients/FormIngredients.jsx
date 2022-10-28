@@ -44,7 +44,7 @@ function FormIngredients() {
         ))}
       </div>
       <button className="form__btn__go btn" type="button">
-        Let's GO
+        LET'S GO
       </button>
     </div>
   );
