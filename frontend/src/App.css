@@ -154,3 +154,6 @@ table {
   background-color: var(--home-bg-color);
   height: 100vh;
 }
+.btn {
+  cursor: pointer;
+}

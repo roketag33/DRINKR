@@ -1,5 +1,6 @@
 .subtitle {
   display: flex;
+  position: absolute;
   justify-content: center;
   font-size: 1, 5rem;
   font-family: text;

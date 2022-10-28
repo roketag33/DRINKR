@@ -148,33 +148,6 @@ table {
   --h3-font-size: 1rem;
   --h4-font-size: 1rem;
 }
-.MajorityBlock__button-yes {
-  margin: 0.063px 0.625px;
-  background-color: #80c487;
-  border-radius: 30px;
-  padding: 5px 40px 5px 40px;
-  border: none;
-  box-shadow: 3px 3px black;
-  padding: 1rem 2rem;
-}
-
-.MajorityBlock__button-yes:active {
-  box-shadow: none;
-}
-
-.MajorityBlock__button-no {
-  margin: 1px 10px;
-  background-color: #eb9ca4;
-  border-radius: 30px;
-  padding: 5px 40px 5px 40px;
-  border: none;
-  box-shadow: 3px 3px black;
-  color: black;
-}
-
-.MajorityBlock__button-no:active {
-  box-shadow: none;
-}
 .MajorityBlock__container {
   position: absolute;
   display: flex;
@@ -190,27 +163,61 @@ table {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-  box-shadow: 3px 3px black;
+  box-shadow: 10px 10px black;
   width: 40%;
   height: 40vh;
 }
-
-.MajorityBlock__buttons {
-  display: flex;
-  padding: 3rem;
-  background-color: #ffff9e;
-  cursor: pointer;
-}
-.MajorityBlock__buttons button {
-  cursor: pointer;
-}
-
 .MajorityBlock__para {
-  font-size: medium;
+  font-size: 2rem;
   font-family: var(--text-font-family);
   background-color: #ffff9e;
   padding-bottom: 6rem;
 }
+.MajorityBlock__buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  background-color: #ffff9e;
+  cursor: pointer;
+}
+.MajorityBlock__button-yes {
+  position: relative;
+  background-color: #80c487;
+  border-radius: 10px;
+
+  border: none;
+  box-shadow: 5px 5px black;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  font-family: title-saint-regus;
+}
+.MajorityBlock__button-yes:active {
+  box-shadow: none;
+}
+
+.MajorityBlock__button-no {
+  position: relative;
+  background-color: #c68080;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 5px black;
+  padding: 2.3rem;
+  font-size: 1.5rem;
+  color: white;
+  font-family: title-saint-regus;
+}
+
+.MajorityBlock__button-no:active {
+  box-shadow: none;
+}
+
+.MajorityBlock__buttons button {
+  cursor: pointer;
+}
+
 .hide {
   display: none;
 }

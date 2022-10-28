@@ -1,5 +1,8 @@
 .titleblock__container {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   z-index: 10;
   background-color: transparent;

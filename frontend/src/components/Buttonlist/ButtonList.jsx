@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 import Buttons from "./Buttons";
 import SearchBar from "./SearchBar";
@@ -44,22 +45,20 @@ const ButtonList = () => {
         src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG 16.48.26.png"
         alt=""
       />
-      <Buttons
-        type=""
-        className="list__btn  btn-up btn"
-        value="Add your ingredients"
-      />
+      <NavLink to="/FormIngredients">
+        <Buttons
+          type=""
+          className="list__btn  btn-up btn"
+          value="Add your ingredients"
+        />
+      </NavLink>
       <Buttons
         type=""
         className="list__btn btn-midle btn"
         value="Search all cocktails"
       />
-      <form action="submit" className="button-list__form">
-        <SearchBar
-          className="btn-down"
-          value={userInput}
-          onChange={handleChange}
-        />
+      <form action="submit" className="button-list__form btn-down">
+        <SearchBar value={userInput} onChange={handleChange} />
       </form>
       <div className="button-list__result-container">
         {search &&

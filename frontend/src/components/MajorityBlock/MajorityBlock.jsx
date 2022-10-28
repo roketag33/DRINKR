@@ -14,14 +14,14 @@ const MajorityBlock = () => {
           onClick={() => setShow(false)}
           className="MajorityBlock__button-yes"
         >
-          Yes
+          YES
         </button>
         <a
           href="https://www.disneyplus.com/fr-fr"
           type="button"
           className="MajorityBlock__button-no"
         >
-          No
+          N0
         </a>
       </div>
     </div>
