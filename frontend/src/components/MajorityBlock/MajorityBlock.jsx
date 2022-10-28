@@ -1,13 +1,19 @@
 import "./MajorityBlock.css";
-import React from "react";
+import React, { useState } from "react";
 
 const MajorityBlock = () => {
+  const [show, setShow] = useState(true);
+
   return (
-    <div className="MajorityBlock__container">
+    <div className={show ? "MajorityBlock__container" : "hide"}>
       <p className="MajorityBlock__para">Are you 18 years or older ?</p>
 
       <div className="MajorityBlock__buttons">
-        <button type="button" className="MajorityBlock__button-yes">
+        <button
+          type="button"
+          onClick={() => setShow(false)}
+          className="MajorityBlock__button-yes"
+        >
           Yes
         </button>
         <a

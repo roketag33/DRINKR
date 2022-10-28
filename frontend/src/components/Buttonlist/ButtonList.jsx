@@ -4,6 +4,7 @@ import Buttons from "./Buttons";
 import SearchBar from "./SearchBar";
 import ResultList from "./ResultList";
 import "./ButtonList.css";
+import Titleblock from "../titleblock/Titleblock";
 
 const ButtonList = () => {
   const [search, setSearch] = useState();
@@ -32,6 +33,7 @@ const ButtonList = () => {
 
   return (
     <div className="button-list__container">
+      <Titleblock />
       <img
         className="home__bg-pink"
         src="/src/assets/images/pink_cocktailtrans.png"
