@@ -1,9 +1,11 @@
 import "./Homepage.css";
+import Navigation from "../Navigation";
 import Titleblock from "../titleblock/Titleblock";
 
 const Homepage = () => {
   return (
     <div className="homePage__container">
+      <Navigation />
       <Titleblock />
       <img
         className="cocktail__mainpage"
