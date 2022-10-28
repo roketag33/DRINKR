@@ -1,4 +1,5 @@
 .main__title-logo {
+  position: relative;
   display: flex;
   justify-content: center;
   font-size: 2rem;

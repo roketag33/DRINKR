@@ -1,5 +1,5 @@
 import React from "react";
-import "./FormIngredients.css";
+import Title from "../titleblock/title/Title";
 
 const ingredients = {
   alcool: ["GIN", "VODKA", "RHUM", "WHISKY"],
@@ -11,14 +11,36 @@ const ingredients = {
     "COKE",
     "SWEPPS",
     "GINGER BEER",
-    "sprite",
+    "SPRITE",
+    "TONIC",
+    "JUICE",
+    "MILK",
+    "WATER",
+    "COKE",
+    "SWEPPS",
+    "GINGER BEER",
+    "SPRITE",
   ],
-  extra: ["LEMON", "LIME", "FRUITS", "ICE"],
+  extra: [
+    "LEMON",
+    "LIME",
+    "FRUITS",
+    "ICE",
+    "LEMON",
+    "LIME",
+    "FRUITS",
+    "ICE",
+    "LEMON",
+    "LIME",
+    "FRUITS",
+    "ICE",
+  ],
 };
 
 const FormIngredients = () => {
   return (
     <div className="form__container">
+      <Title />
       <h4 className="form__title">1-ALCOOL</h4>
       <div className="form__container__ingredients">
         {ingredients.alcool.map((elements) => (
