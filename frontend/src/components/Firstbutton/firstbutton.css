@@ -1,5 +1,5 @@
 .firstbutton {
-  padding-top: 15vh;
+  padding-top: 5vh;
   z-index: 99;
   width: 100vw;
 }
@@ -8,13 +8,12 @@
 * {
   box-sizing: border-box;
 }
-
-body {
-  height: 50vh;
-  display: flex;
+/* .App {
+  /* height: 100vh; */
+  /* display: flex;
   justify-content: center;
   align-items: center;
-}
+} */ */
 
 .wrapper {
   display: flex;
