@@ -1,12 +1,8 @@
 import React from "react";
 import "./title.css";
 
-function Title() {
-  return (
-    <div className="title">
-      <h1>DRINK'R</h1>
-    </div>
-  );
-}
+const Title = () => {
+  return <h1 className="main__title-logo">DRINK'R</h1>;
+};
 
 export default Title;

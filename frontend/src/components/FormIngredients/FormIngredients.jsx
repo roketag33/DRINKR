@@ -16,7 +16,7 @@ const ingredients = {
   extra: ["LEMON", "LIME", "FRUITS", "ICE"],
 };
 
-function FormIngredients() {
+const FormIngredients = () => {
   return (
     <div className="form__container">
       <h4 className="form__title">1-ALCOOL</h4>
@@ -48,6 +48,6 @@ function FormIngredients() {
       </button>
     </div>
   );
-}
+};
 
 export default FormIngredients;
