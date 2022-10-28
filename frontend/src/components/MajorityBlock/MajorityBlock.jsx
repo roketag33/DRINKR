@@ -8,16 +8,17 @@ const MajorityBlock = () => {
 
       <div className="MajorityBlock__buttons">
         <button type="button" className="MajorityBlock__button-yes">
-          {" "}
-          Yes{" "}
+          Yes
         </button>
-        <button type="button" className="MajorityBlock__button-no">
-          {" "}
-          No{" "}
-        </button>
+        <a
+          href="https://www.disneyplus.com/fr-fr"
+          type="button"
+          className="MajorityBlock__button-no"
+        >
+          No
+        </a>
       </div>
     </div>
   );
 };
-
 export default MajorityBlock;
