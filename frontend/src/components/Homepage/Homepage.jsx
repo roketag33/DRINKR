@@ -2,12 +2,14 @@ import "./Homepage.css";
 import Navigation from "../Navigation";
 import Titleblock from "../titleblock/Titleblock";
 import Firstbutton from "../Firstbutton/Firstbutton";
+import MajorityBlock from "../MajorityBlock/MajorityBlock";
 
 const Homepage = () => {
   return (
     <div className="homePage__container">
       <Navigation />
       <Titleblock />
+      <MajorityBlock />
       <img
         className="cocktail__mainpage"
         src="/src/assets/images/pink_cocktailtrans.png"

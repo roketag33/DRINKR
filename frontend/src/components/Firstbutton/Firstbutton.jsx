@@ -5,7 +5,7 @@ const Firstbutton = () => {
   return (
     <div className="firstbutton">
       <div className="wrapper">
-        <a className="cta" href="home">
+        <a className="cta" href="hgitome">
           <span>LETS'GO</span>
         </a>
       </div>
