@@ -1,10 +1,12 @@
 import "./Homepage.css";
+import Navigation from "../Navigation";
 import Titleblock from "../titleblock/Titleblock";
 import Firstbutton from "../Firstbutton/Firstbutton";
 
 const Homepage = () => {
   return (
     <div className="homePage__container">
+      <Navigation />
       <Titleblock />
       <img
         className="cocktail__mainpage"
