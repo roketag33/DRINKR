@@ -126,7 +126,7 @@ table {
 
 @font-face {
   font-family: "title-saint-regus";
-  src: url("/src/assets/FontsFree-Net-Sonar-Hubermann-SaintRegus-SemiBold.ttf");
+  src: url("./assets/sonar-hubermann-saintregus/Sonar\ Hubermann\ -\ SaintRegus-SemiBold.otf");
 }
 @font-face {
   font-family: "text";
@@ -147,10 +147,70 @@ table {
   --h2-font-size: 1.5rem;
   --h3-font-size: 1rem;
   --h4-font-size: 1rem;
-  --from-bg-color: #ffff9e;
 }
-.App {
-  position: relative;
-  background-color: var(--home-bg-color);
-  height: 100vh;
+.MajorityBlock__button-yes {
+  margin: 0.063px 0.625px;
+  background-color: #80c487;
+  border-radius: 30px;
+  padding: 5px 40px 5px 40px;
+  border: none;
+  box-shadow: 3px 3px black;
+  padding: 1rem 2rem;
+}
+
+.MajorityBlock__button-yes:active {
+  box-shadow: none;
+}
+
+.MajorityBlock__button-no {
+  margin: 1px 10px;
+  background-color: #eb9ca4;
+  border-radius: 30px;
+  padding: 5px 40px 5px 40px;
+  border: none;
+  box-shadow: 3px 3px black;
+  color: black;
+}
+
+.MajorityBlock__button-no:active {
+  box-shadow: none;
+}
+.MajorityBlock__container {
+  position: absolute;
+  display: flex;
+  border: 1px solid grey;
+  background-color: #ffff9e;
+  padding: 40px 20px 10px 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  box-shadow: 3px 3px black;
+  width: 40%;
+  height: 40vh;
+}
+
+.MajorityBlock__buttons {
+  display: flex;
+  padding: 3rem;
+  background-color: #ffff9e;
+  cursor: pointer;
+}
+.MajorityBlock__buttons button {
+  cursor: pointer;
+}
+
+.MajorityBlock__para {
+  font-size: medium;
+  font-family: var(--text-font-family);
+  background-color: #ffff9e;
+  padding-bottom: 6rem;
+}
+.hide {
+  display: none;
 }

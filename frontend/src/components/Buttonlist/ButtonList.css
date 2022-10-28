@@ -1,0 +1,383 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "title-saint-regus";
+  src: url("./assets/sonar-hubermann-saintregus/Sonar\ Hubermann\ -\ SaintRegus-SemiBold.otf");
+}
+@font-face {
+  font-family: "text";
+  src: url("./assets/Poppins-Medium.ttf");
+}
+:root {
+  --home-bg-color: #eb9ca4;
+  --cocktail-list-bg-color: #80c487;
+  --recipe-bg-color: #46a9bf;
+  --btn-bg-color: #ffff9e;
+  --btn-font-color: #9105e1;
+  --btn-box-shadow: 5px 5px #131313;
+  --btn-clicked-bg-color: #fbfbb2;
+  --title-font-family: Saint-Regus-Gras;
+  --text-font-family: text;
+  --h1-font-size: 5rem;
+  --h1-font-size-mobile: 2rem;
+  --h2-font-size: 2.5rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1rem;
+  --h4-font-size: 1rem;
+}
+.home__bg-pink {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+}
+.home__bg-mint {
+  position: fixed;
+  transform: rotate(-25deg);
+  top: 35%;
+  left: 5%;
+  width: 45%;
+}
+
+.button-list__container {
+  position: relative;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 2rem;
+}
+
+.button-list__container .list__btn,
+.button-list__container .list__searchbar {
+  position: relative;
+  padding: 1rem 0;
+  width: 80%;
+  margin: 1rem 0;
+  border: none;
+  box-shadow: var(--btn-box-shadow);
+  border-radius: 100px;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-font-color);
+  font-family: var(--text-font-family);
+  font-size: var(--h3-font-size);
+  transition: box-shadow 0.2s ease;
+}
+.button-list__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.list__searchbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  border: none;
+  box-shadow: var(--btn-box-shadow);
+  border-radius: 100px;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-font-color);
+  font-family: var(--text-font-family);
+  font-size: var(--h3-font-size);
+}
+input[type="text"] {
+  padding-left: 50px;
+  margin-left: 20px;
+}
+.button-list__container .btn:hover {
+  cursor: pointer;
+}
+.button-list__container .btn:active {
+  box-shadow: none;
+  background-color: var(--btn-clicked-bg-color);
+  transition: box-shadow 0.2s ease;
+}
+.button-list__container .list__searchbar::placeholder {
+  padding-left: 1rem;
+  color: var(--btn-font-color);
+  font-family: var(--text-font-family);
+  opacity: 0.3;
+}
+.list__btn--go {
+  position: absolute;
+  bottom: -3rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: none;
+  box-shadow: var(--btn-box-shadow);
+  border-radius: 100px;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-font-color);
+  font-family: var(--text-font-family);
+  font-size: var(--h3-font-size);
+  transition: box-shadow 0.2s ease;
+  width: 30%;
+  animation: btn-appear 0.6s;
+}
+.button-list__result-container {
+  position: absolute;
+  bottom: -90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  overflow: scroll;
+  margin: 0;
+}
+.button-list__result__li {
+  font-family: var(--text-font-family);
+  margin: 0.5rem;
+  padding: 0.2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* .list__btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 5rem;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 10px 10px black;
+  background-color: #ffff9e;
+  margin: 1rem;
+}
+.btn-up{
+  animation-name: buttons-up;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.8,1.28,.79,1.29);
+
+
+}
+.btn-down{
+  animation-name: buttons-down;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.8,1.28,.79,1.29);
+
+}
+.btn-midle{
+  z-index: 10;
+}
+@keyframes buttons-up {
+  from { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  to{
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+}
+@keyframes buttons-down {
+  from { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  to{
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+} */
+@media all and (min-width: 404px) {
+  .home__bg-pink {
+    width: 80%;
+  }
+  .home__bg-mint {
+    width: 75%;
+    top: 35%;
+    left: -15%;
+  }
+}
+@media all and (min-width: 519px) {
+  .home__bg-pink {
+    width: 60%;
+  }
+  .home__bg-mint {
+    width: 65%;
+    top: 35%;
+    left: -15%;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .button-list__container .list__btn,
+  .button-list__container .list__searchbar {
+    font-size: var(--h2-font-size);
+  }
+  .home__bg-pink {
+    width: 56%;
+  }
+  .home__bg-mint {
+    width: 45%;
+    top: 35%;
+    left: 5%;
+  }
+}
+@media all and (min-width: 800px) {
+  .button-list__container .list__btn,
+  .button-list__container .list__searchbar {
+    width: 50%;
+    padding: 1rem 0;
+  }
+}
+@media all and (min-width: 950px) {
+  .button-list__container .list__btn,
+  .button-list__container .list__searchbar {
+    width: 40%;
+    padding: 1rem 0;
+  }
+  .list__btn--go {
+    width: 20%;
+  }
+}

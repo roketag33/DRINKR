@@ -1,10 +1,14 @@
 import "./Homepage.css";
+import Navigation from "../Navigation";
 import Titleblock from "../titleblock/Titleblock";
+import MajorityBlock from "../MajorityBlock/MajorityBlock";
 
-function Homepage() {
+const Homepage = () => {
   return (
-    <div>
+    <div className="homePage__container">
       <Titleblock />
+      <Navigation />
+      <MajorityBlock />
       <img
         className="cocktail__mainpage"
         src="/src/assets/images/pink_cocktailtrans.png"
@@ -12,11 +16,11 @@ function Homepage() {
       />
       <img
         className="mintleaves"
-        src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG.png"
+        src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG 16.48.26.png"
         alt="mintleaves"
       />
     </div>
   );
-}
+};
 
 export default Homepage;
