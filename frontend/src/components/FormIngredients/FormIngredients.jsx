@@ -1,38 +1,53 @@
-/* eslint-disable react/button-has-type */
 import React from "react";
 import "./FormIngredients.css";
+
+const ingredients = {
+  alcool: ["GIN", "VODKA", "RHUM", "WHISKY"],
+  soft: [
+    "TONIC",
+    "JUICE",
+    "MILK",
+    "WATER",
+    "COKE",
+    "SWEPPS",
+    "GINGER BEER",
+    "sprite",
+  ],
+  extra: ["LEMON", "LIME", "FRUITS", "ICE"],
+};
 
 const FormIngredients = () => {
   return (
     <div className="form__container">
       <h4 className="form__title">1-ALCOOL</h4>
       <div className="form__container__ingredients">
-        <button className="form__btn">GIN</button>
-        <button className="form__btn">VODKA</button>
-        <button className="form__btn">RHUM</button>
-        <button className="form__btn">WHISKY</button>
+        {ingredients.alcool.map((elements) => (
+          <button className="form__btn btn" type="button">
+            {elements}
+          </button>
+        ))}
       </div>
       <h4 className="form__title">2-SOFT</h4>
       <div className="form__container__ingredients">
-        <button className="form__btn">TONIC</button>
-        <button className="form__btn">JUICE</button>
-        <button className="form__btn">MILK</button>
-        <button className="form__btn">WATER</button>
-        <button className="form__btn">COKE</button>
-        <button className="form__btn">SHWEPPS</button>
-        <button className="form__btn">GINGER BEER</button>
-        <button className="form__btn">SPRITE</button>
+        {ingredients.soft.map((elements) => (
+          <button className="form__btn btn" type="button">
+            {elements}
+          </button>
+        ))}
       </div>
       <h4 className="form__title">3-EXTRA</h4>
       <div className="form__container__ingredients">
-        <button className="form__btn">LEMON</button>
-        <button className="form__btn">LIME</button>
-        <button className="form__btn">FRUITS</button>
-        <button className="form__btn">ICE</button>
+        {ingredients.extra.map((elements) => (
+          <button className="form__btn btn" type="button">
+            {elements}
+          </button>
+        ))}
       </div>
+      <button className="form__btn__go btn" type="button">
+        LET'S GO
+      </button>
     </div>
   );
 };
 
-// eslint-disable-next-line camelcase
 export default FormIngredients;

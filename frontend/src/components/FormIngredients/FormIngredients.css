@@ -41,6 +41,7 @@
 .form__title {
   position: relative;
   margin: 1rem;
+  background-color: var(--btn-bg-color);
 }
 .form__btn {
   position: relative;
@@ -55,6 +56,17 @@
   flex-flow: row wrap;
   justify-content: center;
   gap: 8px;
+  background-color: var(--btn-bg-color);
+}
+.form__btn__go {
+  position: relative;
+  border-radius: 30px;
+  background-color: var(--btn-bg-color);
+  box-shadow: 3px 3px #131313;
+  font-size: var(--text-font-family);
+  margin-top: 20px;
+  font-size: 30px;
+  padding: 10px;
 }
 
 @media screen and (min-width: 700px) {
@@ -77,6 +89,7 @@
     justify-content: start;
     margin: 1rem;
     font-size: var(--title-font-family);
+    background-color: var(--btn-bg-color);
   }
 
   .form__btn {
@@ -93,5 +106,6 @@
     flex-flow: row wrap;
     justify-content: center;
     gap: 8px;
+    background-color: var(--btn-bg-color);
   }
 }
