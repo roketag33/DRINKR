@@ -266,14 +266,65 @@ input[type="text"] {
   cursor: pointer;
 }
 
-@keyframes btn-appear {
-  from {
-    opacity: 0;
+/* .list__btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 5rem;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 10px 10px black;
+  background-color: #ffff9e;
+  margin: 1rem;
+}
+.btn-up{
+  animation-name: buttons-up;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.8,1.28,.79,1.29);
+
+
+}
+.btn-down{
+  animation-name: buttons-down;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.8,1.28,.79,1.29);
+
+}
+.btn-midle{
+  z-index: 10;
+}
+@keyframes buttons-up {
+  from { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  to {
-    opacity: 1;
+  to{
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   }
 }
+@keyframes buttons-down {
+  from { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  to{
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+} */
 @media all and (min-width: 404px) {
   .home__bg-pink {
     width: 80%;

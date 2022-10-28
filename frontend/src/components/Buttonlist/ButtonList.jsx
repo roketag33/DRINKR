@@ -42,10 +42,22 @@ function ButtonList() {
         src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG 16.48.26.png"
         alt=""
       />
-      <Buttons type="" className="list__btn btn" value="Add your ingredients" />
-      <Buttons type="" className="list__btn btn" value="Search all cocktails" />
+      <Buttons
+        type=""
+        className="list__btn  btn-up btn"
+        value="Add your ingredients"
+      />
+      <Buttons
+        type=""
+        className="list__btn btn-midle btn"
+        value="Search all cocktails"
+      />
       <form action="submit" className="button-list__form">
-        <SearchBar value={userInput} onChange={handleChange} />
+        <SearchBar
+          className="btn-down"
+          value={userInput}
+          onChange={handleChange}
+        />
       </form>
       <div className="button-list__result-container">
         {search &&

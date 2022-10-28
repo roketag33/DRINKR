@@ -126,7 +126,7 @@ table {
 
 @font-face {
   font-family: "title-saint-regus";
-  src: url("./assets/sonar-hubermann-saintregus/Sonar\ Hubermann\ -\ SaintRegus-SemiBold.otf");
+  src: url("/src/assets/FontsFree-Net-Sonar-Hubermann-SaintRegus-SemiBold.ttf");
 }
 @font-face {
   font-family: "text";
