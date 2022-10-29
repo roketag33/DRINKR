@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "../titleblock/title/Title";
+import "./FormIngredients.css";
 
 const ingredients = {
   alcool: ["GIN", "VODKA", "RHUM", "WHISKY"],

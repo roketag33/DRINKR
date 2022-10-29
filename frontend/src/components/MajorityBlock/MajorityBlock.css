@@ -164,33 +164,31 @@ table {
   transform: translate(-50%, -50%);
   z-index: 100;
   box-shadow: 10px 10px black;
-  width: 40%;
-  height: 40vh;
+  width: 90%;
+  height: 30vh;
 }
 .MajorityBlock__para {
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: var(--text-font-family);
   background-color: #ffff9e;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
 }
 .MajorityBlock__buttons {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
+  width: 50%;
   background-color: #ffff9e;
-  cursor: pointer;
 }
 .MajorityBlock__button-yes {
   position: relative;
   background-color: #80c487;
   border-radius: 10px;
-
   border: none;
   box-shadow: 5px 5px black;
-  padding: 2rem;
-  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
   color: white;
   font-family: title-saint-regus;
 }
@@ -204,8 +202,8 @@ table {
   border-radius: 10px;
   border: none;
   box-shadow: 5px 5px black;
-  padding: 2.3rem;
-  font-size: 1.5rem;
+  padding: 0.7rem;
+  font-size: 1rem;
   color: white;
   font-family: title-saint-regus;
 }
@@ -220,4 +218,112 @@ table {
 
 .hide {
   display: none;
+}
+@media all and (min-width: 430px) {
+  .MajorityBlock__container {
+    width: 70%;
+  }
+}
+@media all and (min-width: 500px) {
+  .MajorityBlock__para {
+    font-size: 1.4rem;
+  }
+  .MajorityBlock__button-yes {
+    padding: 1rem;
+  }
+  .MajorityBlock__button-no {
+    padding: 1rem;
+  }
+}
+@media all and (min-width: 640px) {
+  .MajorityBlock__container {
+    width: 50%;
+    height: 40vh;
+    white-space: nowrap;
+  }
+  .MajorityBlock__buttons {
+    width: 60%;
+  }
+  .MajorityBlock__para {
+    padding-bottom: 4.5rem;
+  }
+}
+@media all and (min-width: 780px) {
+  .MajorityBlock__button-yes {
+    padding: 1.3rem;
+  }
+  .MajorityBlock__button-no {
+    padding: 1.5rem;
+  }
+}
+
+@media all and (min-width: 850px) {
+  .MajorityBlock__container {
+    position: absolute;
+    display: flex;
+    border: 1px solid grey;
+    background-color: #ffff9e;
+    padding: 40px 20px 10px 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    box-shadow: 10px 10px black;
+    width: 40%;
+    height: 40vh;
+  }
+  .MajorityBlock__para {
+    font-size: 1.5rem;
+    padding-bottom: 6rem;
+  }
+  .MajorityBlock__buttons {
+    width: 60%;
+  }
+}
+@media all and (min-width: 1000px) {
+  .MajorityBlock__buttons {
+    width: 50%;
+  }
+}
+@media all and (min-width: 1140px) {
+  .MajorityBlock__para {
+    font-size: 2rem;
+  }
+  .MajorityBlock__button-yes {
+    padding: 1.8rem;
+  }
+  .MajorityBlock__button-no {
+    padding: 2rem;
+  }
+}
+@media all and (min-width: 1700px) {
+  .MajorityBlock__para {
+    font-size: 2.5rem;
+  }
+  .MajorityBlock__button-yes {
+    padding: 2.3rem;
+  }
+  .MajorityBlock__button-no {
+    padding: 2.5rem;
+  }
+}
+@media all and (min-width: 2000px) {
+  .MajorityBlock__para {
+    font-size: 3.4rem;
+    padding-top: 2rem;
+    padding-bottom: 18rem;
+  }
+  .MajorityBlock__button-yes {
+    padding: 3rem;
+    font-size: 2.8rem;
+  }
+  .MajorityBlock__button-no {
+    padding: 3.4rem;
+    font-size: 2.8rem;
+  }
 }
