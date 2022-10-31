@@ -1,9 +1,7 @@
 import "./MajorityBlock.css";
-import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-const MajorityBlock = () => {
-  const [show, setShow] = useState(true);
-
+const MajorityBlock = ({ show, setShow }) => {
   return (
     <div className={show ? "MajorityBlock__container" : "hide"}>
       <p className="MajorityBlock__para">Are you 18 years or older ?</p>
@@ -21,10 +19,14 @@ const MajorityBlock = () => {
           type="button"
           className="MajorityBlock__button-no"
         >
-          N0
+          NO
         </a>
       </div>
     </div>
   );
+};
+MajorityBlock.propTypes = {
+  setShow: PropTypes.objectOf.isRequired,
+  show: PropTypes.string.isRequired,
 };
 export default MajorityBlock;
