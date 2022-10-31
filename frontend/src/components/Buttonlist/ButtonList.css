@@ -51,19 +51,35 @@
   margin: auto;
   height: 100vh;
 }
-
-.button-list__container .list__searchbar {
+.list__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 3rem;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 10px 10px black;
+  background-color: #ffff9e;
+  margin: 0;
+  z-index: 19;
+  font-family: var(--text-font-family);
+  font-size: 1.1rem;
+}
+.list__searchbar {
   position: relative;
   padding: 1rem 0;
-  width: 80%;
-  margin: 1rem 0;
+  width: 100%;
+  height: 3rem;
+  margin: 0;
   border: none;
   box-shadow: 10px 10px black;
   border-radius: 100px;
   background-color: var(--btn-bg-color);
   color: var(--btn-font-color);
   font-family: var(--text-font-family);
-  font-size: var(--h3-font-size);
+  font-size: 1rem;
   transition: all 0.2s ease;
 }
 
@@ -74,37 +90,6 @@
   width: 100%;
 }
 
-.button-list__form .list__searchbar {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40%;
-  height: 5rem;
-  border-radius: 100px;
-  border: none;
-  box-shadow: 10px 10px black;
-  background-color: #ffff9e;
-  margin: 1rem;
-  /* position: relative;
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  border: none;
-  box-shadow: var(--btn-box-shadow);
-  border-radius: 100px;
-  background-color: var(--btn-bg-color);
-  color: var(--btn-font-color);
-  font-family: var(--text-font-family);
-  font-size: var(--h3-font-size); */
-}
-input[type="text"] {
-  padding-left: 50px;
-  margin-left: 20px;
-}
 .button-list__container .btn:hover {
   cursor: pointer;
 }
@@ -142,21 +127,6 @@ input[type="text"] {
   cursor: pointer;
 }
 
-.list__btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40%;
-  height: 5rem;
-  border-radius: 100px;
-  border: none;
-  box-shadow: 10px 10px black;
-  background-color: #ffff9e;
-  margin: 1rem;
-  z-index: 19;
-  font-family: var(--text-font-family);
-}
 .list__btn:hover {
   box-shadow: 0 0;
   transform: translate(-49%, -50%);
@@ -170,16 +140,37 @@ input[type="text"] {
 }
 .btn-up {
   animation-name: buttons-up;
-  animation-duration: 0.4s;
+  animation-duration: 0.3s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.8, 1.28, 0.79, 1.29);
 }
-
+.btn-up::before {
+  content: "->";
+  position: absolute;
+  right: 5rem;
+  opacity: 0;
+}
+.btn-up:hover::before {
+  right: 2rem;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
 .btn-down {
   animation-name: buttons-down;
-  animation-duration: 0.4s;
+  animation-duration: 0.3s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.8, 1.28, 0.79, 1.29);
+}
+.btn-midle::before {
+  content: "->";
+  position: absolute;
+  right: 5rem;
+  opacity: 0;
+}
+.btn-midle:hover::before {
+  right: 2rem;
+  transition: all 0.3s ease;
+  opacity: 1;
 }
 
 @keyframes buttons-up {
@@ -219,6 +210,14 @@ input[type="text"] {
     top: 35%;
     left: -15%;
   }
+  .list__btn {
+    width: 20rem;
+    font-size: 1.5rem;
+  }
+  .button-list__form .list__searchbar {
+    width: 20rem;
+    font-size: 1.5rem;
+  }
 }
 @media all and (min-width: 519px) {
   .home__bg-pink {
@@ -244,6 +243,16 @@ input[type="text"] {
     top: 35%;
     left: 5%;
   }
+  .list__btn {
+    width: 20rem;
+    font-size: 1.5rem;
+    height: 4rem;
+  }
+  .button-list__form .list__searchbar {
+    width: 20rem;
+    font-size: 1.5rem;
+    height: 4rem;
+  }
 }
 @media all and (min-width: 800px) {
   .button-list__container .list__btn,
@@ -255,10 +264,26 @@ input[type="text"] {
 @media all and (min-width: 950px) {
   .button-list__container .list__btn,
   .button-list__container .list__searchbar {
-    width: 40%;
+    width: 50%;
     padding: 1rem 0;
   }
-  .list__btn--go {
-    width: 20%;
+}
+@media all and (min-width: 1020px) {
+  .button-list__container .list__btn,
+  .button-list__container .list__searchbar {
+    width: 30rem;
+    font-size: 1.5rem;
+    height: 5rem;
+  }
+}
+@media all and (min-width: 1600px) {
+  .button-list__container .list__btn,
+  .button-list__container .list__searchbar {
+    width: 50%;
+    font-size: 3rem;
+    height: 7rem;
+  }
+  path {
+    border: 1px solid red;
   }
 }

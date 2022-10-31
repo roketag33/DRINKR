@@ -1,5 +1,10 @@
+.faded {
+  background-color: var(--home-bg-color);
+  opacity: 0.3;
+}
 .homePage__container {
   background-color: var(--home-bg-color);
+  transition: all 0.3s ease;
 }
 .cocktail__mainpage {
   position: fixed;
