@@ -1,0 +1,329 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "title-saint-regus";
+  src: url("./assets/sonar-hubermann-saintregus/Sonar\ Hubermann\ -\ SaintRegus-SemiBold.otf");
+}
+@font-face {
+  font-family: "text";
+  src: url("./assets/Poppins-Medium.ttf");
+}
+:root {
+  --home-bg-color: #eb9ca4;
+  --cocktail-list-bg-color: #80c487;
+  --recipe-bg-color: #46a9bf;
+  --btn-bg-color: #ffff9e;
+  --btn-font-color: #131313;
+  --btn-box-shadow: 10px 10px #131313;
+  --title-font-family: Saint-Regus-Gras;
+  --text-font-family: text;
+  --h1-font-size: 5rem;
+  --h1-font-size-mobile: 2rem;
+  --h2-font-size: 2.5rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1rem;
+  --h4-font-size: 1rem;
+}
+.MajorityBlock__container {
+  position: absolute;
+  display: flex;
+  border: 1px solid grey;
+  background-color: #ffff9e;
+  padding: 40px 20px 10px 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  box-shadow: 10px 10px black;
+  width: 90%;
+  height: 30vh;
+}
+.MajorityBlock__para {
+  font-size: 1rem;
+  font-family: var(--text-font-family);
+  background-color: #ffff9e;
+  padding-bottom: 3rem;
+}
+.MajorityBlock__buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  background-color: #ffff9e;
+}
+.MajorityBlock__button-yes {
+  position: relative;
+  background-color: #80c487;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 5px black;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  font-family: title-saint-regus;
+}
+.MajorityBlock__button-yes:active {
+  box-shadow: none;
+}
+
+.MajorityBlock__button-no {
+  position: relative;
+  background-color: #c68080;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 5px black;
+  padding: 0.7rem;
+  font-size: 1rem;
+  color: white;
+  font-family: title-saint-regus;
+}
+
+.MajorityBlock__button-no:active {
+  box-shadow: none;
+}
+
+.MajorityBlock__buttons button {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+@media all and (min-width: 430px) {
+  .MajorityBlock__container {
+    width: 22rem;
+  }
+}
+@media all and (min-width: 500px) {
+  .MajorityBlock__para {
+    font-size: 1.4rem;
+  }
+  .MajorityBlock__button-yes {
+    padding: 1rem;
+  }
+  .MajorityBlock__button-no {
+    padding: 1.2rem;
+  }
+}
+@media all and (min-width: 640px) {
+  .MajorityBlock__container {
+    width: 50%;
+    height: 40vh;
+    white-space: nowrap;
+  }
+  .MajorityBlock__buttons {
+    width: 60%;
+  }
+  .MajorityBlock__para {
+    padding-bottom: 4.5rem;
+  }
+}
+@media all and (min-width: 780px) {
+  .MajorityBlock__button-yes {
+    padding: 1.3rem;
+  }
+  .MajorityBlock__button-no {
+    padding: 1.5rem;
+  }
+}
+
+@media all and (min-width: 850px) {
+  .MajorityBlock__container {
+    position: absolute;
+    display: flex;
+    border: 1px solid grey;
+    background-color: #ffff9e;
+    padding: 40px 20px 10px 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    box-shadow: 10px 10px black;
+    width: 40%;
+    height: 40vh;
+  }
+  .MajorityBlock__para {
+    font-size: 1.5rem;
+    padding-bottom: 6rem;
+  }
+  .MajorityBlock__buttons {
+    width: 60%;
+  }
+}
+@media all and (min-width: 1000px) {
+  .MajorityBlock__buttons {
+    width: 50%;
+  }
+}
+@media all and (min-width: 1140px) {
+  .MajorityBlock__para {
+    font-size: 2rem;
+  }
+  .MajorityBlock__button-yes {
+    padding: 1.8rem;
+  }
+  .MajorityBlock__button-no {
+    padding: 2rem;
+  }
+}
+@media all and (min-width: 1700px) {
+  .MajorityBlock__para {
+    font-size: 2.5rem;
+  }
+  .MajorityBlock__button-yes {
+    padding: 2.3rem;
+  }
+  .MajorityBlock__button-no {
+    padding: 2.5rem;
+  }
+}
+@media all and (min-width: 2000px) {
+  .MajorityBlock__para {
+    font-size: 3.4rem;
+    padding-top: 2rem;
+    padding-bottom: 18rem;
+  }
+  .MajorityBlock__button-yes {
+    padding: 3rem;
+    font-size: 2.8rem;
+  }
+  .MajorityBlock__button-no {
+    padding: 3.4rem;
+    font-size: 2.8rem;
+  }
+}

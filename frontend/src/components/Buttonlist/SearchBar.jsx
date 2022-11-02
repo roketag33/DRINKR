@@ -1,0 +1,19 @@
+import React from "react";
+import PropTypes from "prop-types";
+
+const SearchBar = ({ onChange, value }) => {
+  return (
+    <input
+      value={value}
+      onChange={onChange}
+      className="list__searchbar"
+      type="text"
+      placeholder="Search your cocktail"
+    />
+  );
+};
+SearchBar.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
+export default SearchBar;
