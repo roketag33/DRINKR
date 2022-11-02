@@ -10,14 +10,14 @@ const MajorityBlock = ({ show, setShow }) => {
         <button
           type="button"
           onClick={() => setShow(false)}
-          className="MajorityBlock__button-yes"
+          className="MajorityBlock__button-yes btn"
         >
           YES
         </button>
         <a
           href="https://www.disneyplus.com/fr-fr"
           type="button"
-          className="MajorityBlock__button-no"
+          className="MajorityBlock__button-no btn"
         >
           NO
         </a>
@@ -26,7 +26,7 @@ const MajorityBlock = ({ show, setShow }) => {
   );
 };
 MajorityBlock.propTypes = {
-  setShow: PropTypes.objectOf.isRequired,
-  show: PropTypes.string.isRequired,
+  setShow: PropTypes.func.isRequired,
+  show: PropTypes.bool.isRequired,
 };
 export default MajorityBlock;

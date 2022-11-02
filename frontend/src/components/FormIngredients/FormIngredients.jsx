@@ -40,7 +40,7 @@ const ingredients = {
 
 const FormIngredients = () => {
   return (
-    <div>
+    <div className="homePage">
       <Title />
       <div className="form__container">
         <h4 className="form__title">1-ALCOOL</h4>

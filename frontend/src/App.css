@@ -151,7 +151,6 @@ table {
 }
 .App {
   position: relative;
-  background-color: var(--home-bg-color);
   height: 100vh;
 }
 .btn {

@@ -65,7 +65,9 @@ const ButtonList = () => {
           search
             .filter((el) => el.strDrink.toLowerCase().includes(userInput))
             .map((el) => (
-              <ResultList el={el} className="button-list__result__li" />
+              <NavLink test={el.strDrink} to={`/CocktailRecipe/${el.idDrink}`}>
+                <ResultList el={el} />
+              </NavLink>
             ))}
       </div>
     </div>
