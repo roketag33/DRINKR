@@ -8,7 +8,7 @@ const Homepage = () => {
   const [show, setShow] = useState(true);
 
   return (
-    <div>
+    <div className="homePage">
       <MajorityBlock show={show} setShow={setShow} />
       <div className={!show ? "homePage__container" : "faded"}>
         <Titleblock />
