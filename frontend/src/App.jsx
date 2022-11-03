@@ -1,11 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
 import CocktailRecipe from "./components/CocktailRecipe/CocktailRecipe";
 import FormIngredients from "./components/FormIngredients/FormIngredients";
 import Homepage from "./components/Homepage/Homepage";
 import ButtonList from "./components/Buttonlist/ButtonList";
-// import RecipePage from "./components/RecipePage/RecipePage";
-// import AllCocktails from "./components/RecipePage/AllCocktails";
+import "./App.css";
 
 const App = () => {
   return (

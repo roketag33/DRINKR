@@ -1,42 +1,7 @@
 import React from "react";
 import Title from "../titleblock/title/Title";
+import ingredients from "./IngredientsArray";
 import "./FormIngredients.css";
-
-const ingredients = {
-  alcool: ["GIN", "VODKA", "RHUM", "WHISKY"],
-  soft: [
-    "TONIC",
-    "JUICE",
-    "MILK",
-    "WATER",
-    "COKE",
-    "SWEPPS",
-    "GINGER BEER",
-    "SPRITE",
-    "TONIC",
-    "JUICE",
-    "MILK",
-    "WATER",
-    "COKE",
-    "SWEPPS",
-    "GINGER BEER",
-    "SPRITE",
-  ],
-  extra: [
-    "LEMON",
-    "LIME",
-    "FRUITS",
-    "ICE",
-    "LEMON",
-    "LIME",
-    "FRUITS",
-    "ICE",
-    "LEMON",
-    "LIME",
-    "FRUITS",
-    "ICE",
-  ],
-};
 
 const FormIngredients = () => {
   return (
