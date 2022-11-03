@@ -4,8 +4,8 @@ import axios from "axios";
 import Buttons from "./Buttons";
 import SearchBar from "./SearchBar";
 import ResultList from "./ResultList";
-import "./ButtonList.css";
 import Titleblock from "../titleblock/Titleblock";
+import "./ButtonList.css";
 
 const ButtonList = () => {
   const [search, setSearch] = useState();
@@ -64,9 +64,9 @@ const ButtonList = () => {
         {search &&
           search
             .filter((el) => el.strDrink.toLowerCase().includes(userInput))
-            .map((el) => (
+            .map((el, id) => (
               <NavLink test={el.strDrink} to={`/CocktailRecipe/${el.idDrink}`}>
-                <ResultList el={el} />
+                <ResultList id={id} el={el} />
               </NavLink>
             ))}
       </div>

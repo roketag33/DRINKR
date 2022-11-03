@@ -1,8 +1,8 @@
-import "./Homepage.css";
 import { useState } from "react";
 import Navigation from "../Navigation";
 import Titleblock from "../titleblock/Titleblock";
 import MajorityBlock from "../MajorityBlock/MajorityBlock";
+import "./Homepage.css";
 
 const Homepage = () => {
   const [show, setShow] = useState(true);

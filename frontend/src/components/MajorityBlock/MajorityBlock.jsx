@@ -1,5 +1,5 @@
-import "./MajorityBlock.css";
 import PropTypes from "prop-types";
+import "./MajorityBlock.css";
 
 const MajorityBlock = ({ show, setShow }) => {
   return (
