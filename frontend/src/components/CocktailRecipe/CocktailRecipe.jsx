@@ -11,7 +11,8 @@ const CocktailRecipe = () => {
     axios
       .get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then((response) => setCocktail(response.data.drinks[0]));
-  }, [cocktail]);
+  }, []);
+
   const ingredients = [
     cocktail.strIngredient1,
     cocktail.strIngredient2,

@@ -1,7 +1,7 @@
 import React from "react";
-import "./titleblock.css";
 import Title from "./title/Title";
 import Subtitle from "./subtitle/Subtitle";
+import "./titleblock.css";
 
 const Titleblock = () => {
   return (

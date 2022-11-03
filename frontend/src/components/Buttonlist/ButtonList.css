@@ -1,28 +1,3 @@
-@font-face {
-  font-family: "title-saint-regus";
-  src: url("./assets/sonar-hubermann-saintregus/Sonar\ Hubermann\ -\ SaintRegus-SemiBold.otf");
-}
-@font-face {
-  font-family: "text";
-  src: url("./assets/Poppins-Medium.ttf");
-}
-:root {
-  --home-bg-color: #eb9ca4;
-  --cocktail-list-bg-color: #80c487;
-  --recipe-bg-color: #46a9bf;
-  --btn-bg-color: #ffff9e;
-  --btn-font-color: #9105e1;
-  --btn-box-shadow: 5px 5px #131313;
-  --btn-clicked-bg-color: #fbfbb2;
-  --title-font-family: Saint-Regus-Gras;
-  --text-font-family: text;
-  --h1-font-size: 5rem;
-  --h1-font-size-mobile: 2rem;
-  --h2-font-size: 2.5rem;
-  --h2-font-size: 1.5rem;
-  --h3-font-size: 1rem;
-  --h4-font-size: 1rem;
-}
 .home__bg-pink {
   position: fixed;
   bottom: 0;
@@ -39,9 +14,6 @@
 
 .button-list__container {
   position: relative;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);  */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +42,7 @@
 }
 .list__searchbar {
   position: relative;
-  padding: 1rem 0;
+  padding: 0 1rem;
   width: 100%;
   height: 3rem;
   margin: 0;
@@ -119,7 +91,6 @@
   text-align: center;
   width: 100%;
   height: 13.5rem;
-  overflow: scroll;
   margin: 0;
 }
 .button-list__result__li {
@@ -261,14 +232,14 @@
   .button-list__container .list__btn,
   .button-list__container .list__searchbar {
     width: 50%;
-    padding: 1rem 0;
+    padding: 0 1rem;
   }
 }
 @media all and (min-width: 950px) {
   .button-list__container .list__btn,
   .button-list__container .list__searchbar {
     width: 50%;
-    padding: 1rem 0;
+    padding: 0 1rem;
   }
 }
 @media all and (min-width: 1020px) {
@@ -285,8 +256,5 @@
     width: 50%;
     font-size: 3rem;
     height: 7rem;
-  }
-  path {
-    border: 1px solid red;
   }
 }
