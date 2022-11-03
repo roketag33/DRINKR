@@ -4,8 +4,8 @@ import axios from "axios";
 import Buttons from "./Buttons";
 import SearchBar from "./SearchBar";
 import ResultList from "./ResultList";
-import Titleblock from "../titleblock/Titleblock";
 import "./ButtonList.css";
+import Titleblock from "../titleblock/Titleblock";
 
 const ButtonList = () => {
   const [search, setSearch] = useState();
