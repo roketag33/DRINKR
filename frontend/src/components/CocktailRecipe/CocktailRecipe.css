@@ -1,0 +1,66 @@
+.cocktailRecipe__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--recipe-bg-color);
+  min-height: 100vh;
+  padding-top: 5rem;
+  font-family: text;
+}
+.cocktailRecipe__container .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 10px 10px black;
+  background-color: var(--home-bg-color);
+}
+.cocktailRecipe__container .cocktailRecipe__front-card {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: none;
+}
+.cocktailRecipe__container .cocktailRecipe__back-card {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  box-shadow: 10px 10px black;
+  border-top: none;
+}
+
+.cocktailRecipe__container .cocktailRecipe__Front-img {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+.cocktailRecipe__container .cocktailRecipe__front-title {
+  position: relative;
+  margin: 0.5rem 0;
+  font-family: title-saint-regus;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.cocktailRecipe__front-ingredientsList {
+  position: relative;
+  align-self: start;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.cocktailRecipe__container .cocktailRecipe__front-li {
+  position: relative;
+  padding: 1rem;
+}
+.cocktailRecipe__container .cocktailRecipe__front-li::before {
+  content: "-";
+  position: relative;
+  left: 0;
+}
