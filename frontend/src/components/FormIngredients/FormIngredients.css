@@ -1,46 +1,28 @@
-:root {
-  --home-bg-color: #eb9ca4;
-  --cocktail-list-bg-color: #80c487;
-  --recipe-bg-color: #46a9bf;
-  --btn-bg-color: #ffff9e;
-  --btn-font-color: #131313;
-  --btn-box-shadow: 10px 10px #131313;
-  --title-font-family: Saint-Regus-Gras;
-  --text-font-family: text;
-  --h1-font-size: 5rem;
-  --h1-font-size-mobile: 2rem;
-  --h2-font-size: 2.5rem;
-  --h2-font-size: 1.5rem;
-  --h3-font-size: 1rem;
-  --h4-font-size: 1rem;
-  --from-bg-color: #ffff9e;
-}
-
-@font-face {
-  font-family: "title-saint-regus";
-  src: url("./assets/sonar-hubermann-saintregus/Sonar\ Hubermann\ -\ SaintRegus-SemiBold.otf");
-}
-
-@font-face {
-  font-family: "text";
-  src: url("./assets/Poppins-Medium.ttf");
-}
 .form__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  position: relative;
   background-color: var(--from-bg-color);
   border-radius: 30px;
-  width: 60%;
-  height: auto;
+  width: 95%;
+  height: 100vh;
   padding: 1rem;
   box-shadow: 10px 10px #131313;
+  animation-name: anim-form;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.8, 1.28, 0.79, 1.29);
+  overflow: hidden;
 }
 .form__title {
   position: relative;
   margin: 1rem;
+  font-family: title-saint-regus;
   background-color: var(--btn-bg-color);
 }
 .form__btn {
@@ -48,7 +30,8 @@
   border-radius: 30px;
   background-color: var(--btn-bg-color);
   box-shadow: 3px 3px #131313;
-  font-size: var(--text-font-family);
+  border: 1px solid rgb(100, 100, 100);
+  font-family: var(--text-font-family);
 }
 .form__container__ingredients {
   position: relative;
@@ -67,18 +50,32 @@
   margin-top: 20px;
   font-size: 30px;
   padding: 10px;
+  border: 1px solid rgb(100, 100, 100);
+  font-family: var(--text-font-family);
+}
+@keyframes anim-form {
+  from {
+    height: 5rem;
+  }
+  to {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70vh;
+  }
 }
 
 @media screen and (min-width: 700px) {
   .form__container {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    position: relative;
     background-color: var(--from-bg-color);
     border-radius: 30px;
-    width: 30%;
+    width: 40%;
     height: auto;
     padding: 1rem;
     box-shadow: 10px 10px #131313;
@@ -88,7 +85,7 @@
     display: flex;
     justify-content: start;
     margin: 1rem;
-    font-size: var(--title-font-family);
+    font-size: 1.5rem;
     background-color: var(--btn-bg-color);
   }
 

@@ -1,9 +1,7 @@
+import PropTypes from "prop-types";
 import "./MajorityBlock.css";
-import React, { useState } from "react";
 
-const MajorityBlock = () => {
-  const [show, setShow] = useState(true);
-
+const MajorityBlock = ({ show, setShow }) => {
   return (
     <div className={show ? "MajorityBlock__container" : "hide"}>
       <p className="MajorityBlock__para">Are you 18 years or older ?</p>
@@ -12,19 +10,23 @@ const MajorityBlock = () => {
         <button
           type="button"
           onClick={() => setShow(false)}
-          className="MajorityBlock__button-yes"
+          className="MajorityBlock__button-yes btn"
         >
-          Yes
+          YES
         </button>
         <a
           href="https://www.disneyplus.com/fr-fr"
           type="button"
-          className="MajorityBlock__button-no"
+          className="MajorityBlock__button-no btn"
         >
-          No
+          NO
         </a>
       </div>
     </div>
   );
+};
+MajorityBlock.propTypes = {
+  setShow: PropTypes.func.isRequired,
+  show: PropTypes.bool.isRequired,
 };
 export default MajorityBlock;

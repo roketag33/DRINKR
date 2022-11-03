@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 import Buttons from "./Buttons";
 import SearchBar from "./SearchBar";
 import ResultList from "./ResultList";
-import "./ButtonList.css";
 import Titleblock from "../titleblock/Titleblock";
+import "./ButtonList.css";
 
 const ButtonList = () => {
   const [search, setSearch] = useState();
@@ -44,29 +45,29 @@ const ButtonList = () => {
         src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG 16.48.26.png"
         alt=""
       />
-      <Buttons
-        type=""
-        className="list__btn  btn-up btn"
-        value="Add your ingredients"
-      />
+      <NavLink to="/FormIngredients">
+        <Buttons
+          type=""
+          className="list__btn  btn-up btn"
+          value="Add your ingredients"
+        />
+      </NavLink>
       <Buttons
         type=""
         className="list__btn btn-midle btn"
         value="Search all cocktails"
       />
-      <form action="submit" className="button-list__form">
-        <SearchBar
-          className="btn-down"
-          value={userInput}
-          onChange={handleChange}
-        />
+      <form action="submit" className="button-list__form btn-down">
+        <SearchBar value={userInput} onChange={handleChange} />
       </form>
       <div className="button-list__result-container">
         {search &&
           search
             .filter((el) => el.strDrink.toLowerCase().includes(userInput))
-            .map((el) => (
-              <ResultList el={el} className="button-list__result__li" />
+            .map((el, id) => (
+              <NavLink test={el.strDrink} to={`/CocktailRecipe/${el.idDrink}`}>
+                <ResultList id={id} el={el} />
+              </NavLink>
             ))}
       </div>
     </div>

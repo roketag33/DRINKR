@@ -1,6 +1,8 @@
 .main__title-logo {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 2rem;
   font-family: title-saint-regus;
   padding-top: 2rem;
@@ -24,5 +26,10 @@
 @media screen and (min-width: 700px) {
   .main__title-logo {
     font-size: 5rem;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .main__title-logo {
+    font-size: 7rem;
   }
 }

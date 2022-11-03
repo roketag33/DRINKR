@@ -151,6 +151,13 @@ table {
 }
 .App {
   position: relative;
-  background-color: var(--home-bg-color);
   height: 100vh;
+}
+.btn {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 0;
+  transition: all 0.3s ease;
 }

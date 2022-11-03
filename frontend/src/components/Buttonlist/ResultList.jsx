@@ -1,12 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ResultList = ({ className, el }) => {
-  return <li className={className}>{el.strDrink}</li>;
+const ResultList = ({ el, id }) => {
+  return (
+    <li key={id} className="button-list__result__li">
+      {el.strDrink}
+    </li>
+  );
 };
 
 ResultList.propTypes = {
-  className: PropTypes.string.isRequired,
   el: PropTypes.objectOf.isRequired,
+  id: PropTypes.number.isRequired,
 };
 export default ResultList;
