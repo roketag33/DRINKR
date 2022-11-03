@@ -14,9 +14,6 @@ const App = () => {
           <Route path="/ButtonList" element={<ButtonList />} />
           <Route path="/FormIngredients" element={<FormIngredients />} />
           <Route path="/CocktailRecipe/:id" element={<CocktailRecipe />} />
-
-          {/* <Route path="/recipe" element={<Recipepage/>}/>
-    <Route path="/allcocktails" element={<Allcocktails/>}/> */}
         </Routes>
       </BrowserRouter>
     </div>

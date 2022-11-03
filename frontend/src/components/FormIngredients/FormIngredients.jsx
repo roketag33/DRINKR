@@ -4,6 +4,11 @@ import ingredients from "./IngredientsArray";
 import "./FormIngredients.css";
 
 const FormIngredients = () => {
+  const [ingredient, setIngredient] = React.useState([]);
+  const display = (e) => {
+    e.preventDefault();
+    console.log(ingredient);
+  };
   return (
     <div className="homePage">
       <Title />
@@ -11,7 +16,7 @@ const FormIngredients = () => {
         <h4 className="form__title">1-ALCOOL</h4>
         <div className="form__container__ingredients">
           {ingredients.alcool.map((elements) => (
-            <button className="form__btn btn" type="button">
+            <button onClick={display} className="form__btn btn" type="button">
               {elements}
             </button>
           ))}
