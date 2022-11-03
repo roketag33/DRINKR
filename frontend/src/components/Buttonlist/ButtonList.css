@@ -1,28 +1,3 @@
-@font-face {
-  font-family: "title-saint-regus";
-  src: url("./assets/sonar-hubermann-saintregus/Sonar\ Hubermann\ -\ SaintRegus-SemiBold.otf");
-}
-@font-face {
-  font-family: "text";
-  src: url("./assets/Poppins-Medium.ttf");
-}
-:root {
-  --home-bg-color: #eb9ca4;
-  --cocktail-list-bg-color: #80c487;
-  --recipe-bg-color: #46a9bf;
-  --btn-bg-color: #ffff9e;
-  --btn-font-color: #9105e1;
-  --btn-box-shadow: 5px 5px #131313;
-  --btn-clicked-bg-color: #fbfbb2;
-  --title-font-family: Saint-Regus-Gras;
-  --text-font-family: text;
-  --h1-font-size: 5rem;
-  --h1-font-size-mobile: 2rem;
-  --h2-font-size: 2.5rem;
-  --h2-font-size: 1.5rem;
-  --h3-font-size: 1rem;
-  --h4-font-size: 1rem;
-}
 .home__bg-pink {
   position: fixed;
   bottom: 0;
