@@ -29,6 +29,7 @@
   }
 
   .list__allcocktails {
+    padding-top: 20vh;
     width: 55%;
   }
 }

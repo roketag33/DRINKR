@@ -5,20 +5,45 @@
   justify-content: start;
   align-items: center;
   background-color: var(--crd-bg-color);
-  min-height: 30vh;
-  min-width: 50vw;
-  padding-top: 5rem;
+  min-height: 40vh;
+  min-width: 30vw;
+  padding-top: 3vh;
   font-family: text;
   border: 1px solid black;
   border-radius: 20px;
   box-shadow: 10px 10px black;
-  margin: 2vw;
+  margin-bottom: 3vh;
+}
+
+.allcocktails__frontcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.allcocktails__card h1 {
+  padding: 2vh;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.allcocktails__img {
+  max-width: 55vw;
+  margin: 0;
+}
+
+.allcocktails__backcard {
+  padding: 1vh 4vw;
 }
 
 @media screen and (min-width: 600px) {
-.allcocktails__card
-{
-min-width :20vw;
-min-height: 40vh;
-}
+  .allcocktails__card {
+    width: 10vw;
+    height: 0vh;
+  }
+
+  .allcocktails__img {
+    max-width: 15vw;
+  }
 }
