@@ -52,11 +52,13 @@ const ButtonList = () => {
           value="Add your ingredients"
         />
       </NavLink>
-      <Buttons
-        type=""
-        className="list__btn btn-midle btn"
-        value="Search all cocktails"
-      />
+      <NavLink to="/AllCocktails">
+        <Buttons
+          type=""
+          className="list__btn btn-midle btn"
+          value="Search all cocktails"
+        />
+      </NavLink>
       <form action="submit" className="button-list__form btn-down">
         <SearchBar value={userInput} onChange={handleChange} />
       </form>
