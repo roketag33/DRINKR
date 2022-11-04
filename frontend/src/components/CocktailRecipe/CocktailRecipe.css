@@ -1,3 +1,10 @@
+.cocktailRecipe__bg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+}
+
 .cocktailRecipe__container {
   position: relative;
   display: flex;
@@ -6,8 +13,33 @@
   align-items: center;
   background-color: var(--recipe-bg-color);
   min-height: 100vh;
-  padding-top: 5rem;
   font-family: text;
+  padding-bottom: 2rem;
+}
+.cocktailRecipe__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cocktailRecipe__searchbar {
+  position: relative;
+  width: calc(90% - 2rem);
+  height: 3rem;
+  background-color: var(--recipe-bg-color);
+  border: 1px solid black;
+  border-radius: 100px;
+  box-shadow: 5px 5px black;
+  margin: 1rem 0;
+  color: var(--btn-font-color);
+  font-family: var(--text-font-family);
+  padding: 0 1rem;
+}
+.cocktailRecipe__resultList {
+  position: relative;
+  width: calc(90% - 2rem);
 }
 .cocktailRecipe__container .card {
   position: relative;
@@ -22,45 +54,142 @@
   box-shadow: 10px 10px black;
   background-color: var(--home-bg-color);
 }
-.cocktailRecipe__container .cocktailRecipe__front-card {
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-bottom: none;
-}
-.cocktailRecipe__container .cocktailRecipe__back-card {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  box-shadow: 10px 10px black;
-  border-top: none;
+.cocktailRecipe__container .card .card__star {
+  position: absolute;
+  top: -3rem;
+  left: -1.5rem;
+  height: 6rem;
+  width: 3rem;
 }
 
-.cocktailRecipe__container .cocktailRecipe__Front-img {
+.cocktailRecipe__container .cocktailRecipe__img {
   position: relative;
   width: 90%;
   height: auto;
   margin-top: 2rem;
   border-radius: 10px;
 }
-.cocktailRecipe__container .cocktailRecipe__front-title {
+.cocktailRecipe__container .cocktailRecipe__title {
   position: relative;
   margin: 0.5rem 0;
   font-family: title-saint-regus;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
-.cocktailRecipe__front-ingredientsList {
+
+.cocktailRecipe__subTitle {
   position: relative;
   align-self: start;
-  padding-left: 1rem;
+
   font-size: 1.5rem;
-  padding: 0.5rem;
+  padding: 1rem 0 0.5rem 0.5rem;
 }
-.cocktailRecipe__container .cocktailRecipe__front-li {
+.cocktailRecipe__ingredientsList {
+  align-self: start;
+  padding-left: 0.5rem;
+}
+.cocktailRecipe__container .cocktailRecipe__li {
   position: relative;
-  padding: 1rem;
+  padding: 0.2rem;
 }
-.cocktailRecipe__container .cocktailRecipe__front-li::before {
+.cocktailRecipe__container .cocktailRecipe__li::before {
   content: "-";
   position: relative;
   left: 0;
+}
+.cocktailRecipe__instructions {
+  position: relative;
+  padding: 1rem 0.5rem;
+}
+.cocktailRecipe__form {
+  position: relative;
+}
+.cocktailRecipe__resultList {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  height: 15rem;
+  overflow: scroll;
+  z-index: 100;
+}
+@media all and (min-width: 500px) {
+  .cocktailRecipe__bg {
+    width: 50%;
+  }
+  .cocktailRecipe__container .card {
+    width: 70%;
+  }
+  .cocktailRecipe__searchbar {
+    width: calc(70% - 2rem);
+  }
+}
+@media all and (min-width: 800px) {
+  .cocktailRecipe__bg {
+    width: 40%;
+  }
+  .cocktailRecipe__container .card {
+    width: 60%;
+  }
+  .cocktailRecipe__searchbar {
+    width: calc(60% - 2rem);
+  }
+}
+@media all and (min-width: 900px) {
+  .cocktailRecipe__bg {
+    width: 30%;
+  }
+  .cocktailRecipe__form {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    top: 2rem;
+    right: 0;
+    margin-right: 1rem;
+    width: 40%;
+    z-index: 40;
+  }
+  .cocktailRecipe__resultList {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 13rem;
+    overflow-y: scroll;
+  }
+  .cocktailRecipe__resultLi {
+    position: relative;
+    padding: 0.5rem 0;
+    list-style: none;
+  }
+  .cocktailRecipe__container .card {
+    position: relative;
+    margin-top: 2rem;
+    width: 40%;
+    min-height: 75vh;
+    height: auto;
+  }
+  .cocktailRecipe__container .card .card__star {
+    position: absolute;
+    top: -10rem;
+    left: -5rem;
+    width: 10rem;
+    height: 20rem;
+  }
+
+  .cocktailRecipe__container .cocktailRecipe__img {
+    position: relative;
+    width: 50%;
+    height: auto;
+  }
+  .cocktailRecipe__container .cocktailRecipe__title {
+    position: relative;
+    margin: 1rem 0;
+    font-family: title-saint-regus;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
 }

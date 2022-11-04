@@ -6,7 +6,18 @@ import "./FormIngredients.css";
 const FormIngredients = () => {
   return (
     <div className="homePage">
+      <img
+        className="home__bg-pink"
+        src="/src/assets/images/pink_cocktailtrans.png"
+        alt=""
+      />
+      <img
+        className="home__bg-mint"
+        src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG 16.48.26.png"
+        alt=""
+      />
       <Title />
+      <h2 className="subtitle">Choose your ingredients</h2>
       <div className="form__container">
         <h4 className="form__title">1-ALCOOL</h4>
         <div className="form__container__ingredients">
