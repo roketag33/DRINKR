@@ -28,11 +28,13 @@ const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
           value="Add your ingredients"
         />
       </NavLink>
-      <Buttons
-        type=""
-        className="list__btn btn-midle btn margin"
-        value="Search all cocktails"
-      />
+      <NavLink to="/AllCocktails">
+        <Buttons
+          type=""
+          className="list__btn btn-midle btn"
+          value="Search all cocktails"
+        />
+      </NavLink>
       <form
         action="submit"
         className="button_list_form button-list__form btn-down margin "
