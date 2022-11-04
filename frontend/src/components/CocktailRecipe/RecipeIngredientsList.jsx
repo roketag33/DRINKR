@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const RecipeIngredientsList = ({ ingredient }) => {
-  return <li className="cocktailRecipe__front-li">{ingredient}</li>;
+  return <li className="cocktailRecipe__li">{ingredient}</li>;
 };
 
 export default RecipeIngredientsList;

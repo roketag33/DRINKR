@@ -86,6 +86,7 @@ video {
   font: inherit;
   vertical-align: baseline;
   text-decoration: none;
+  color: black;
 }
 
 article,
@@ -137,6 +138,7 @@ table {
   --cocktail-list-bg-color: #80c487;
   --recipe-bg-color: #46a9bf;
   --btn-bg-color: #ffff9e;
+  --crd-bg-color: #fe9971;
   --btn-font-color: #131313;
   --btn-box-shadow: 10px 10px #131313;
   --title-font-family: Saint-Regus-Gras;
@@ -151,7 +153,7 @@ table {
 }
 .App {
   position: relative;
-  height: 100vh;
+  height: auto;
 }
 .btn {
   transition: all 0.3s ease;
