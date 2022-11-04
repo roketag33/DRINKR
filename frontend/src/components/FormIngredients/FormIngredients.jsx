@@ -1,20 +1,23 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 import Title from "../titleblock/title/Title";
 import ingredients from "./IngredientsArray";
 import "./FormIngredients.css";
 
-const FormIngredients = () => {
-  const [ingredient, setIngredient] = useState([]);
-  const [fetche, setFetche] = useState();
+const FormIngredients = ({
+  propsIngredient,
+  propsSetIngredient,
+  propsSetFetche,
+}) => {
   useEffect(() => {
     axios
       .get(
-        `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${ingredient}`
+        `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${propsIngredient}`
       )
-      .then((response) => setFetche(response.data.drinks));
-  }, [ingredient]);
+      .then((response) => propsSetFetche(response.data.drinks));
+  }, [propsIngredient]);
 
   return (
     <div className="homePage">
@@ -28,7 +31,7 @@ const FormIngredients = () => {
               type="button"
               value={elements}
               onClick={(event) =>
-                setIngredient([...ingredient, event.target.value])
+                propsSetIngredient(...propsIngredient, event.target.value)
               }
             >
               {elements}
@@ -43,7 +46,7 @@ const FormIngredients = () => {
               type="button"
               value={elements}
               onClick={(event) =>
-                setIngredient([...ingredient, event.target.value])
+                propsSetIngredient(...propsIngredient, event.target.value)
               }
             >
               {elements}
@@ -58,14 +61,14 @@ const FormIngredients = () => {
               type="button"
               value={elements}
               onClick={(event) =>
-                setIngredient([...ingredient, event.target.value])
+                propsSetIngredient(...propsIngredient, event.target.value)
               }
             >
               {elements}
             </button>
           ))}
         </div>
-        <NavLink to={`/TestAllCocktail/${ingredient}`}>
+        <NavLink to={`/TestAllCocktail/${propsIngredient}`}>
           <button className="form__btn__go btn" type="button">
             LET'S GO
           </button>
@@ -75,4 +78,9 @@ const FormIngredients = () => {
   );
 };
 
+FormIngredients.propTypes = {
+  propsIngredient: PropTypes.objectOf.isRequired,
+  propsSetIngredient: PropTypes.objectOf.isRequired,
+  propsSetFetche: PropTypes.objectOf.isRequired,
+};
 export default FormIngredients;
