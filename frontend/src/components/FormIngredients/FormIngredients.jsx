@@ -42,7 +42,7 @@ const FormIngredients = ({
               type="button"
               value={elements}
               onClick={(event) =>
-                propsSetIngredient(...propsIngredient, event.target.value)
+                propsSetIngredient([...propsIngredient, event.target.value])
               }
             >
               {elements}
@@ -57,7 +57,7 @@ const FormIngredients = ({
               type="button"
               value={elements}
               onClick={(event) =>
-                propsSetIngredient(...propsIngredient, event.target.value)
+                propsSetIngredient([...propsIngredient, event.target.value])
               }
             >
               {elements}
@@ -72,14 +72,14 @@ const FormIngredients = ({
               type="button"
               value={elements}
               onClick={(event) =>
-                propsSetIngredient(...propsIngredient, event.target.value)
+                propsSetIngredient([...propsIngredient, event.target.value])
               }
             >
               {elements}
             </button>
           ))}
         </div>
-        <NavLink to={`/TestAllCocktail/${propsIngredient}`}>
+        <NavLink to={`/AllCocktailsIngredients/${propsIngredient}`}>
           <button className="form__btn__go btn" type="button">
             LET'S GO
           </button>

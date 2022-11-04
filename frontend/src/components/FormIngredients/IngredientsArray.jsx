@@ -1,5 +1,5 @@
 const ingredients = {
-  alcool: ["GIN", "VODKA", "RHUM", "WHISKY"],
+  alcool: ["GIN", "VODKA", "RUM", "WHISKY", "TEQUILA"],
   soft: [
     "TONIC",
     "JUICE",

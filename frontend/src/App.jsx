@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import AllCocktailsIngredients from "./components/AllCocktailsIngredients/AllCocktailsIngredients";
 import CocktailRecipe from "./components/CocktailRecipe/CocktailRecipe";
 import FormIngredients from "./components/FormIngredients/FormIngredients";
 import Homepage from "./components/Homepage/Homepage";
@@ -50,7 +51,17 @@ const App = () => {
               />
             }
           />
-          <Route path="/FormIngredients" element={<FormIngredients />} />
+          <Route
+            path="/FormIngredients"
+            element={
+              <FormIngredients
+                propsIngredient={ingredient}
+                propsSetIngredient={setIngredient}
+                propsFetche={fetche}
+                propsSetFetche={setFetche}
+              />
+            }
+          />
           <Route
             path="/CocktailRecipe/:id"
             element={
@@ -65,6 +76,15 @@ const App = () => {
           />
 
           <Route path="/AllCocktails" element={<AllCocktails />} />
+          <Route
+            path="/AllCocktailsIngredients/:propsIngredient"
+            element={
+              <AllCocktailsIngredients
+                propsFetche={fetche}
+                propsSetFetche={setFetche}
+              />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
