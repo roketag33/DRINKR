@@ -1,10 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ResultList = ({ el, id, setSearch, className }) => {
+
+const ResultList = ({ el, id, setSearch, className}) => {
   const handleClick = () => {
+
     setSearch("");
   };
+
   function handleKeyDown(e) {
     if (e.keyCode === 13) {
       handleClick();
@@ -12,7 +15,7 @@ const ResultList = ({ el, id, setSearch, className }) => {
   }
   return (
     <li
-      className={className}
+      className={ className}
       onClick={handleClick}
       role="presentation"
       onKeyDown={handleKeyDown}

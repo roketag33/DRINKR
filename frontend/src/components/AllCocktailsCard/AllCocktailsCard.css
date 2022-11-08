@@ -5,14 +5,14 @@
   justify-content: start;
   align-items: center;
   background-color: var(--crd-bg-color);
-  min-height: 40vh;
+  min-height: 50vh;
   min-width: 30vw;
   padding-top: 3vh;
   font-family: text;
   border: 1px solid black;
   border-radius: 20px;
   box-shadow: 10px 10px black;
-  margin-bottom: 3vh;
+  margin: 2rem 1rem 1rem 1rem;
 }
 
 .allcocktails__frontcard {

@@ -8,7 +8,7 @@ import RecipeIngredientsList from "./RecipeIngredientsList";
 import "./CocktailRecipe.css";
 import Title from "../titleblock/title/Title";
 
-const CocktailRecipe = ({ userInput, handleChange, search }) => {
+const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
   const [cocktail, setCocktail] = useState({});
   const { id } = useParams();
   useEffect(() => {
@@ -46,7 +46,6 @@ const CocktailRecipe = ({ userInput, handleChange, search }) => {
       <form action="submit" className="cocktailRecipe__form ">
         <SearchBar
           className="cocktailRecipe__searchbar"
-          value={userInput}
           handleChange={handleChange}
         />
 
@@ -54,12 +53,12 @@ const CocktailRecipe = ({ userInput, handleChange, search }) => {
           {search &&
             search
               .filter((el) => el.strDrink.toLowerCase().includes(userInput))
-              .map((el) => (
-                <NavLink
+              .map((el,id) => (
+                <NavLink reloadDocument
                   test={el.strDrink}
                   to={`/CocktailRecipe/${el.idDrink}`}
                 >
-                  <ResultList className="cocktailRecipe__resultLi" el={el} />
+                  <ResultList setSearch={setSearch} id={id} className="cocktailRecipe__resultLi" el={el} />
                 </NavLink>
               ))}
         </div>

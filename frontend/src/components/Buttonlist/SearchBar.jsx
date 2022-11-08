@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SearchBar = ({ className, handleChange, value }) => {
+const SearchBar = ({ className, handleChange }) => {
+
   return (
     <input
-      value={value}
+
       onChange={handleChange}
       className={className}
       type="text"
-      placeholder="Search your cocktail"
+      placeholder=" 🔍 Search your cocktail"
     />
   );
 };

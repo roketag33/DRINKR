@@ -31,7 +31,9 @@ const App = () => {
         .then((response) => setSearch(response.data.drinks));
     }
     setUserInput(event.target.value);
+    
   };
+  
   return (
     <div className="App">
       <BrowserRouter>
