@@ -1,3 +1,15 @@
+.list__allcocktails {
+  margin: 0 10vw;
+  padding-top: 15vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 5;
+      perspective: 2000px;
+}
+
 .allcocktails__card {
   position: relative;
   display: flex;
@@ -13,13 +25,18 @@
   border-radius: 20px;
   box-shadow: 10px 10px black;
   margin-bottom: 3vh;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+
 }
 
 .allcocktails__frontcard {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  backface-visibility: hidden;
 }
 
 .allcocktails__card h1 {
@@ -34,7 +51,14 @@
 }
 
 .allcocktails__backcard {
+    position: absolute;
   padding: 1vh 4vw;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.container_card:hover .allcocktails__card {
+   transform: rotateY(180deg);
 }
 
 @media screen and (min-width: 600px) {
