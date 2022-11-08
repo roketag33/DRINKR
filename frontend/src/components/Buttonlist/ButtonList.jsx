@@ -21,20 +21,20 @@ const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
         src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG 16.48.26.png"
         alt=""
       />
-      <NavLink className='margin' to="/FormIngredients">
+      <NavLink className="margin" to="/FormIngredients">
         <Buttons
           type=""
           className="list__btn  btn-up btn"
           value="Add your ingredients"
         />
       </NavLink>
-      <NavLink className='margin' to="/AllCocktails"> 
+      <NavLink className="margin" to="/AllCocktails">
         <Buttons
           type=""
           className="list__btn btn-midle btn"
           value="Search all cocktails"
         />
-       </NavLink> 
+      </NavLink>
       <form
         action="submit"
         className="button_list_form button-list__form btn-down margin "
@@ -52,7 +52,7 @@ const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
                 el.strDrink.toLowerCase().includes(userInput.toLowerCase())
               )
               .map((el, id) => (
-                <NavLink  to={`/CocktailRecipe/${el.idDrink}`}>
+                <NavLink to={`/CocktailRecipe/${el.idDrink}`}>
                   <ResultList
                     className="button-list__result__li"
                     setSearch={setSearch}

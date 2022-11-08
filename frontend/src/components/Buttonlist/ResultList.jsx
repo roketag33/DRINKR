@@ -1,10 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-
-const ResultList = ({ el, id, setSearch, className}) => {
+const ResultList = ({ el, id, setSearch, className }) => {
   const handleClick = () => {
-
     setSearch("");
   };
 
@@ -15,7 +13,7 @@ const ResultList = ({ el, id, setSearch, className}) => {
   }
   return (
     <li
-      className={ className}
+      className={className}
       onClick={handleClick}
       role="presentation"
       onKeyDown={handleKeyDown}

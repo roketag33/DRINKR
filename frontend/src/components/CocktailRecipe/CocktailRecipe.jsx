@@ -53,12 +53,18 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
           {search &&
             search
               .filter((el) => el.strDrink.toLowerCase().includes(userInput))
-              .map((el,id) => (
-                <NavLink reloadDocument
+              .map((el) => (
+                <NavLink
+                  reloadDocument
                   test={el.strDrink}
                   to={`/CocktailRecipe/${el.idDrink}`}
                 >
-                  <ResultList setSearch={setSearch} id={id} className="cocktailRecipe__resultLi" el={el} />
+                  <ResultList
+                    setSearch={setSearch}
+                    id={id}
+                    className="cocktailRecipe__resultLi"
+                    el={el}
+                  />
                 </NavLink>
               ))}
         </div>

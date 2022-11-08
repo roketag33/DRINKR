@@ -2,10 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const SearchBar = ({ className, handleChange }) => {
-
   return (
     <input
-
       onChange={handleChange}
       className={className}
       type="text"
@@ -14,7 +12,6 @@ const SearchBar = ({ className, handleChange }) => {
   );
 };
 SearchBar.propTypes = {
-  value: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   className: PropTypes.string.isRequired,
 };
