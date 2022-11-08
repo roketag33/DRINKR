@@ -32,9 +32,8 @@ const AllCocktails = () => {
     <div className="allcocktails_section">
       <Title />
       <div className="list__allcocktails">
-        {cocktails.map((cocktail, id) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <AllCocktailsCard key={id} cocktail={cocktail} />
+        {cocktails.map((cocktail) => (
+          <AllCocktailsCard key={cocktail.id} cocktail={cocktail} />
         ))}
       </div>
       <img

@@ -1,3 +1,17 @@
+.home__bg-pink {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+}
+.home__bg-mint {
+  position: fixed;
+  transform: rotate(-25deg);
+  top: 35%;
+  left: 5%;
+  width: 45%;
+}
+
 .form__container {
   position: absolute;
   top: 50%;
