@@ -1,4 +1,4 @@
-/* .home__bg-pink {
+.home__bg-pink {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -10,7 +10,7 @@
   top: 35%;
   left: 5%;
   width: 45%;
-} */
+}
 
 .form__container {
   position: absolute;

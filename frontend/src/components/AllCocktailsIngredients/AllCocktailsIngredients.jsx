@@ -1,4 +1,3 @@
-/* eslint-disable no-shadow */
 import React from "react";
 import PropTypes from "prop-types";
 import Title from "../titleblock/title/Title";
@@ -10,9 +9,8 @@ const AllCocktailsIngredients = ({ propsFetche }) => {
     <div className="allcocktails_section">
       <Title />
       <div className="list__allcocktails">
-        {propsFetche.map((propsFetche, id) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <AllCocktailsCardIngredients key={id} propsFetche={propsFetche} />
+        {propsFetche.map((e) => (
+          <AllCocktailsCardIngredients key={e.id} propsFetche={e} />
         ))}
       </div>
       <img
