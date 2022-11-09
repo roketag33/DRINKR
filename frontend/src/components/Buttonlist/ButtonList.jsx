@@ -32,7 +32,7 @@ const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
         <Buttons
           type=""
           className="list__btn btn-midle btn"
-          value="Search all cocktails"
+          value="Find new cocktail ideas"
         />
       </NavLink>
       <form

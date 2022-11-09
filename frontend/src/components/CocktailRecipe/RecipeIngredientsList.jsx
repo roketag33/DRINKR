@@ -8,4 +8,5 @@ const RecipeIngredientsList = ({ ingredient, className }) => {
 export default RecipeIngredientsList;
 RecipeIngredientsList.propTypes = {
   ingredient: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
 };

@@ -13,6 +13,7 @@ const Homepage = () => {
       <div className={!show ? "homePage__container" : "faded"}>
         <Titleblock />
         <Navigation />
+
         <img
           className="cocktail__mainpage"
           src="/src/assets/images/pink_cocktailtrans.png"

@@ -9,6 +9,7 @@ import SearchBar from "../Buttonlist/SearchBar";
 import RecipeIngredientsList from "./RecipeIngredientsList";
 import "./CocktailRecipe.css";
 import Title from "../titleblock/title/Title";
+import MenuBurger from "../MenuBurger/MenuBurger";
 
 const calc = (x, y) => [
   -(y - window.innerHeight / 2) / 100,
@@ -74,6 +75,7 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
         src="../src/assets/images/blue_transparent.png"
         alt=""
       />
+      <MenuBurger />
       <Title />
       <form action="submit" className="cocktailRecipe__form ">
         <SearchBar
@@ -152,5 +154,7 @@ CocktailRecipe.propTypes = {
   handleChange: PropTypes.func.isRequired,
   userInput: PropTypes.string.isRequired,
   search: PropTypes.func.isRequired,
+  setSearch: PropTypes.func.isRequired,
+  xys: PropTypes.number.isRequired,
 };
 export default CocktailRecipe;

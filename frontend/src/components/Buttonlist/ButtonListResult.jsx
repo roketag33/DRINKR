@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 import ResultList from "./ResultList";
 
 const ButtonListResult = ({
@@ -28,6 +29,13 @@ const ButtonListResult = ({
           ))}
     </div>
   );
+};
+ButtonListResult.propTypes = {
+  userInput: PropTypes.string.isRequired,
+  search: PropTypes.func.isRequired,
+  setSearch: PropTypes.func.isRequired,
+  classname: PropTypes.string.isRequired,
+  classeNameLi: PropTypes.string.isRequired,
 };
 
 export default ButtonListResult;

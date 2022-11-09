@@ -1,0 +1,120 @@
+.Burger-style span {
+  display: block;
+  width: 85px;
+  height: 5px;
+  background-color: black;
+  margin: 4px 0;
+}
+.Burger-style span:nth-last-child(2) {
+  transform: rotate(15deg);
+  width: 45px;
+}
+
+.Burger-style {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.modalContainer {
+  border: 1px solid grey;
+  background-color: #b8efe2;
+  padding: 40px 20px 10px 10px;
+
+  align-items: flex-start;
+  justify-content: start;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  left: 34px;
+  z-index: 100;
+  box-shadow: 10px 10px black;
+  width: 100%;
+  height: 100%;
+}
+
+.Menu-Burger {
+  position: absolute;
+  top: 6rem;
+  left: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 30vw;
+  height: 40vh;
+}
+
+.span-right {
+  transform: rotate(45deg);
+  width: 75px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.4s ease;
+  margin: 4px 0;
+}
+.hide__midlespan {
+  opacity: 0;
+}
+.span-left {
+  transform: rotate(-45deg);
+  width: 75px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.4s ease;
+}
+
+.span-right-close {
+  transform: rotate(0deg);
+  width: 75px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.4s ease;
+  margin: 4px 0;
+}
+.show__midlespan {
+  opacity: 1;
+}
+.span-left-close {
+  transform: rotate(0deg);
+  width: 75px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.4s ease;
+}
+
+.menu_burger__btn {
+  position: relative;
+  width: 90%;
+  height: 3rem;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 10px 10px black;
+  background-color: #ffff9e;
+  z-index: 19;
+  font-family: var(--text-font-family);
+  font-size: 1.1rem;
+  width: 96%;
+  margin-top: 12%;
+}
+
+@media screen and (max-width: 600px) {
+  .Menu-Burger {
+    top: 2rem;
+    left: 1rem;
+  }
+
+  .Burger-style span {
+    width: auto;
+    width: 45px;
+    height: 3px;
+  }
+
+  .modalContainer {
+    left: 1rem;
+    width: 250%;
+  }
+  .menu_burger__btn {
+    margin-top: 18%;
+  }
+}

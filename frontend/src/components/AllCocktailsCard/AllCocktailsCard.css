@@ -1,14 +1,3 @@
-.list__allcocktails {
-  margin: 0 10vw;
-  padding-top: 15vh;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  z-index: 5;
-}
-
 .allcocktails__card {
   position: relative;
   display: flex;
@@ -16,8 +5,8 @@
   justify-content: start;
   align-items: center;
   background-color: var(--crd-bg-color);
-  min-height: 50vh;
-  min-width: 30vw;
+  height: 45vh;
+  width: 75vw;
   padding-top: 3vh;
   font-family: text;
   border: 1px solid black;
@@ -37,18 +26,24 @@
   align-items: center;
   transform-style: preserve-3d;
   backface-visibility: hidden;
+  margin-top: 5vh;
 }
 
 .allcocktails__card h1 {
-  padding: 2vh;
+  padding-top: 4vh;
   font-size: 1.5rem;
   font-weight: bold;
+  margin: 0 5vw;
+  text-align: center;
 }
 
 .allcocktails__img {
   max-width: 55vw;
   margin: 0;
   border-radius: 10px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
 }
 
 .allcocktails__backcard {
@@ -57,19 +52,111 @@
   transform: rotateY(180deg);
   transform-style: preserve-3d;
   backface-visibility: hidden;
+  overflow-y: auto;
+}
+
+.drink_picto {
+  width: 5%;
+  height: auto;
+  margin-right: 0.5vh;
+}
+
+.shaker_picto {
+  width: 9%;
+  height: auto;
+  margin-right: 0.5vh;
+}
+
+.allcocktails__backcard h5 {
+  font-weight: bold;
+}
+
+.firstblock__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2.5vh;
+}
+
+.secondblock__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2.5vh;
 }
 
 .container_card:hover .allcocktails__card {
   transform: rotateY(180deg);
 }
 
+.allcocktails__subTitle {
+  position: relative;
+  align-self: start;
+  font-size: 1.5rem;
+  padding: 1rem 0 0.5rem 0.5rem;
+}
+
+.allcocktails__ingredientsList {
+  list-style-type: disc;
+}
+
+/*Scroll part*/
+
+.allcocktails__backcard::-webkit-scrollbar {
+  width: 20px;
+}
+
+.allcocktails__backcard::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+.allcocktails__backcard::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+.allcocktails__backcard::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
 @media screen and (min-width: 600px) {
   .allcocktails__card {
-    width: 10vw;
-    height: 0vh;
+    height: 55vh;
+    width: 70vw;
+  }
+
+  .allcocktails__img {
+    max-width: 45vw;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .allcocktails__card {
+    height: 55vh;
+    width: 60vw;
+  }
+
+  .allcocktails__img {
+    max-width: 45vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .allcocktails__card {
+    height: 55vh;
+    width: 25vw;
   }
 
   .allcocktails__img {
     max-width: 15vw;
+  }
+
+  .allcocktails__backcard {
+    max-height: 50vh;
+  }
+
+  .allcocktails__card h1 {
+    max-width: 20vw;
   }
 }
