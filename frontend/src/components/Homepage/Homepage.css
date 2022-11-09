@@ -1,6 +1,8 @@
 .homePage {
+  position: relative;
   background-color: var(--home-bg-color);
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 .faded {
   background-color: var(--home-bg-color);
@@ -9,6 +11,7 @@
 .homePage__container {
   background-color: var(--home-bg-color);
   transition: all 0.3s ease;
+  width: 100vw;
 }
 .cocktail__mainpage {
   position: fixed;
