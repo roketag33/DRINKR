@@ -3,6 +3,7 @@ import axios from "axios";
 import Title from "../titleblock/title/Title";
 import AllCocktailsCard from "../AllCocktailsCard/AllCocktailsCard";
 import "./AllCocktails.css";
+import MenuBurger from "../MenuBurger/MenuBurger";
 
 const AllCocktails = () => {
   const [cocktails, setCocktails] = useState([]);
@@ -30,6 +31,7 @@ const AllCocktails = () => {
   if (!cocktails) return null;
   return (
     <div className="allcocktails_section">
+      <MenuBurger />
       <Title />
       <div className="list__allcocktails">
         {cocktails.map((cocktail) => (

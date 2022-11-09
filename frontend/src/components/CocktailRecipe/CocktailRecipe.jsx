@@ -7,6 +7,7 @@ import SearchBar from "../Buttonlist/SearchBar";
 import RecipeIngredientsList from "./RecipeIngredientsList";
 import "./CocktailRecipe.css";
 import Title from "../titleblock/title/Title";
+import MenuBurger from "../MenuBurger/MenuBurger";
 
 const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
   const [cocktail, setCocktail] = useState({});
@@ -42,6 +43,7 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
         src="../src/assets/images/blue_transparent.png"
         alt=""
       />
+      <MenuBurger />
       <Title />
       <form action="submit" className="cocktailRecipe__form ">
         <SearchBar
