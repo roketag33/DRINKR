@@ -1,32 +1,121 @@
 const ingredients = {
-  alcool: [
-    "GIN",
-    "VODKA",
-    "RUM",
-    "WHISKY",
-    "TEQUILA",
-    "GRAND MARNIER",
-    "COGNAC",
-    "CHAMPAGNE",
-    "GRAND MARNIER",
-    "PASSOA",
+  ALCOOL: [
+    {
+      name: "GIN",
+      isActive: false,
+    },
+    {
+      name: "VODKA",
+      isActive: false,
+    },
+    {
+      name: "RUM",
+      isActive: false,
+    },
+    {
+      name: "WHISKY",
+      isActive: false,
+    },
+    {
+      name: "TEQUILA",
+      isActive: false,
+    },
+    {
+      name: "GRAND MARNIER",
+      isActive: false,
+    },
+    {
+      name: "COGNAC",
+      isActive: false,
+    },
+    {
+      name: "CHAMPAGNE",
+      isActive: false,
+    },
+    {
+      name: "PASSOA",
+      isActive: false,
+    },
   ],
-  soft: [
-    "TONIC WATER",
-    "WATER",
-    "PINEAPPLE",
-    "PASSION FRUIT JUICE",
-    "GINGER BEER",
-    "SPRITE",
-    "ORANGE",
-    "CHERRY",
-    "GRENADINE",
-    "COCA-COLA",
-    "LEMONADE",
-    "7-Up",
-    "SPRITE",
-    "MINT",
+  SOFT: [
+    {
+      name: "TONIC WATER",
+      isActive: false,
+    },
+    {
+      name: "WATER",
+      isActive: false,
+    },
+    {
+      name: "PINEAPPLE",
+      isActive: false,
+    },
+    {
+      name: "PASSION FRUIT JUICE",
+      isActive: false,
+    },
+    {
+      name: "GINGER BEER",
+      isActive: false,
+    },
+    {
+      name: "SPRITE",
+      isActive: false,
+    },
+    {
+      name: "ORANGE",
+      isActive: false,
+    },
+    {
+      name: "CHERRY",
+      isActive: false,
+    },
+    {
+      name: "GRENADINE",
+      isActive: false,
+    },
+    {
+      name: "COCA-COLA",
+      isActive: false,
+    },
+    {
+      name: "LEMONADE",
+      isActive: false,
+    },
+    {
+      name: "7-UP",
+      isActive: false,
+    },
+    {
+      name: "MINT",
+      isActive: false,
+    },
   ],
-  extra: ["SUGAR", "LIME", "ICE", "LEMON", "MILK", "CACAO"],
+  EXTRA: [
+    {
+      name: "SUGAR",
+      isActive: false,
+    },
+    {
+      name: "LIME",
+      isActive: false,
+    },
+    {
+      name: "ICE",
+      isActive: false,
+    },
+    {
+      name: "LEMON",
+      isActive: false,
+    },
+    {
+      name: "MILK",
+      isActive: false,
+    },
+    {
+      name: "CACAO",
+      isActive: false,
+    },
+  ],
 };
 export default ingredients;
