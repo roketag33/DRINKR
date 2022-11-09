@@ -102,7 +102,9 @@
   font-size: 1rem;
   cursor: pointer;
 }
-
+.button-list__result__li:hover {
+  background-color: rgb(166, 216, 199);
+}
 .list__btn:hover {
   box-shadow: 0 0;
   transform: translate(10px);
@@ -274,6 +276,11 @@
     width: 50vw;
     font-size: 3rem;
     height: 9rem;
+  }
+  .button-list__result__li {
+    width: 50vw;
+    height: 5rem;
+    font-size: 3rem;
   }
 }
 @media all and (max-height: 600px) {

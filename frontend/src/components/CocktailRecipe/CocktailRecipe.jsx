@@ -1,16 +1,30 @@
 import PropTypes from "prop-types";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useParams, NavLink } from "react-router-dom";
-import ResultList from "../Buttonlist/ResultList";
+import { useParams } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
+import { motion } from "framer-motion";
+import ButtonListResult from "../Buttonlist/ButtonListResult";
 import SearchBar from "../Buttonlist/SearchBar";
 import RecipeIngredientsList from "./RecipeIngredientsList";
 import "./CocktailRecipe.css";
 import Title from "../titleblock/title/Title";
 
+const calc = (x, y) => [
+  -(y - window.innerHeight / 2) / 100,
+  (x - window.innerWidth / 2) / 100,
+  1.01,
+];
+const trans = (x, y, s) =>
+  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+
 const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
   const [cocktail, setCocktail] = useState({});
   const { id } = useParams();
+  const [props, set] = useSpring(() => ({
+    xys: [0, 0, 1],
+    config: { mass: 5, tension: 350, friction: 40 },
+  }));
   useEffect(() => {
     axios
       .get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
@@ -35,6 +49,24 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
     cocktail.strIngredient15,
   ];
 
+  const mesures = [
+    cocktail.strMeasure1,
+    cocktail.strMeasure2,
+    cocktail.strMeasure3,
+    cocktail.strMeasure4,
+    cocktail.strMeasure5,
+    cocktail.strMeasure6,
+    cocktail.strMeasure7,
+    cocktail.strMeasure8,
+    cocktail.strMeasure9,
+    cocktail.strMeasure10,
+    cocktail.strMeasure11,
+    cocktail.strMeasure12,
+    cocktail.strMeasure13,
+    cocktail.strMeasure14,
+    cocktail.strMeasure15,
+  ];
+
   return (
     <div className="cocktailRecipe__container">
       <img
@@ -48,52 +80,71 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
           className="cocktailRecipe__searchbar"
           handleChange={handleChange}
         />
-
-        <div className={search && "cocktailRecipe__resultList"}>
-          {search &&
-            search
-              .filter((el) => el.strDrink.toLowerCase().includes(userInput))
-              .map((el) => (
-                <NavLink
-                  reloadDocument
-                  test={el.strDrink}
-                  to={`/CocktailRecipe/${el.idDrink}`}
-                >
-                  <ResultList
-                    setSearch={setSearch}
-                    id={id}
-                    className="cocktailRecipe__resultLi"
-                    el={el}
-                  />
-                </NavLink>
-              ))}
-        </div>
+        <ButtonListResult
+          classeNameLi="cocktailRecipe__resultLi"
+          classname="cocktailRecipe__resultList"
+          search={search}
+          userInput={userInput}
+          setSearch={setSearch}
+        />
       </form>
-      <div className="cocktailRecipe__card card ">
-        <img
-          className="card__star"
-          src="../src/assets/images/etoile.png"
-          alt=""
-        />
-        <img
-          src={cocktail.strDrinkThumb}
-          alt="of the cocktail"
-          className="cocktailRecipe__img"
-        />
-        <h1 className="cocktailRecipe__title">{cocktail.strDrink}</h1>
-        <h5 className="cocktailRecipe__subTitle">Ingredients: </h5>
-        <ul className="cocktailRecipe__ingredientsList">
-          {ingredients
-            .filter((el) => typeof el === "string")
-            .map((elem) => (
-              <RecipeIngredientsList ingredient={elem} />
-            ))}
-        </ul>
-        <h5 className="cocktailRecipe__subTitle">Let's do it : </h5>
-        <p className="cocktailRecipe__instructions">
-          {cocktail.strInstructions}
-        </p>
-      </div>
+      <motion.div
+        className="cocktailRecipe__motion"
+        initial={{ y: "100%" }}
+        animate={{ y: "0" }}
+        transition={{
+          duration: 0.8,
+          delay: 0,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+      >
+        <animated.div
+          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+          onMouseLeave={() => set({ xys: [0, 0, 1] })}
+          className="cocktailRecipe__card card "
+          style={{ transform: props.xys.to(trans) }}
+        >
+          <img
+            className="card__star"
+            src="../src/assets/images/etoile.png"
+            alt=""
+          />
+          <div className="cocktailRecipe__img-placeholder" />
+          <img
+            src={cocktail.strDrinkThumb}
+            alt="of the cocktail"
+            className="cocktailRecipe__img"
+          />
+          <h3 className="cocktailRecipe__title">{cocktail.strDrink}</h3>
+          <h5 className="cocktailRecipe__subTitle">Ingredients: </h5>
+          <div className="cocktailRecipe__ingredientsList">
+            <ul>
+              {ingredients
+                .filter((el) => typeof el === "string")
+                .map((elem) => (
+                  <RecipeIngredientsList
+                    className="cocktailRecipe__ingredients"
+                    ingredient={elem}
+                  />
+                ))}
+            </ul>
+            <ul>
+              {mesures
+                .filter((el) => typeof el === "string")
+                .map((elem) => (
+                  <RecipeIngredientsList
+                    className="cocktailRecipe__mesures"
+                    ingredient={elem}
+                  />
+                ))}
+            </ul>
+          </div>
+          <h5 className="cocktailRecipe__subTitle">Let's do it : </h5>
+          <p className="cocktailRecipe__instructions">
+            {cocktail.strInstructions}
+          </p>
+        </animated.div>
+      </motion.div>
     </div>
   );
 };

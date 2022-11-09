@@ -48,6 +48,7 @@
 .allcocktails__img {
   max-width: 55vw;
   margin: 0;
+  border-radius: 10px;
 }
 
 .allcocktails__backcard {

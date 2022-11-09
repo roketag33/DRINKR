@@ -1,0 +1,73 @@
+.allcocktails_section-placeholder {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--cocktail-list-bg-color);
+}
+
+.list__allcocktails-placeholder {
+  position: relative;
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+  flex-wrap: wrap;
+  z-index: 5;
+}
+.list__allcocktails-placeholder {
+  margin: 0 10vw;
+  padding-top: 15vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 5;
+}
+
+.allcocktails__card-placeholder {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  min-height: 50vh;
+  min-width: 30vw;
+  padding-top: 3vh;
+  font-family: text;
+  border-radius: 20px;
+  margin: 2rem 1rem 1rem 1rem;
+  margin-bottom: 3vh;
+  background-color: rgb(214, 214, 214);
+}
+
+.allcocktails__card-placeholder h1 {
+  width: 70%;
+  height: 2rem;
+  border-radius: 100px;
+  margin-top: 2rem;
+  background-color: rgb(163, 162, 162);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.allcocktails__img-placeholder {
+  width: 50%;
+  height: 50%;
+  background-color: grey;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .allcocktails__card-placeholder {
+    width: 10vw;
+    height: 0vh;
+  }
+
+  .allcocktails__img-placeholder {
+    max-width: 15vw;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Loading from "../Loading/Loading";
 import Title from "../titleblock/title/Title";
 import AllCocktailsCard from "../AllCocktailsCard/AllCocktailsCard";
 import "./AllCocktails.css";
@@ -25,7 +26,7 @@ const AllCocktails = () => {
     };
     fetchCocktails();
   }, []);
-  if (loading) return <div>loading...</div>;
+  if (loading) return <Loading />;
   if (error) return <div>error</div>;
   if (!cocktails) return null;
   return (

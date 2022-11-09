@@ -4,7 +4,12 @@
   left: 0;
   width: 70%;
 }
-
+.cocktailRecipe__motion {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .cocktailRecipe__container {
   position: relative;
   display: flex;
@@ -41,6 +46,9 @@
   position: relative;
   width: calc(90% - 2rem);
 }
+.cocktailRecipe__resultLi:hover {
+  text-decoration: underline;
+}
 .cocktailRecipe__container .card {
   position: relative;
   display: flex;
@@ -69,6 +77,14 @@
   margin-top: 2rem;
   border-radius: 10px;
 }
+.cocktailRecipe__container .cocktailRecipe__img-placeholder {
+  position: relative;
+  width: 60%;
+  height: 50%;
+  margin-top: 2rem;
+  border-radius: 10px;
+  background-color: grey;
+}
 .cocktailRecipe__container .cocktailRecipe__title {
   position: relative;
   margin: 0.5rem 0;
@@ -82,35 +98,61 @@
   align-self: start;
 
   font-size: 1.5rem;
-  padding: 1rem 0 0.5rem 0.5rem;
+  padding: 1rem 0 1rem 0.5rem;
 }
 .cocktailRecipe__ingredientsList {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
   align-self: start;
   padding-left: 0.5rem;
 }
-.cocktailRecipe__container .cocktailRecipe__li {
+.cocktailRecipe__container .cocktailRecipe__ingredients {
   position: relative;
   padding: 0.2rem;
 }
-.cocktailRecipe__container .cocktailRecipe__li::before {
+.cocktailRecipe__container .cocktailRecipe__ingredients::before {
   content: "-";
   position: relative;
   left: 0;
 }
+.cocktailRecipe__container .cocktailRecipe__mesures {
+  position: relative;
+  padding: 0.2rem;
+}
+
 .cocktailRecipe__instructions {
   position: relative;
+  line-height: 1.3rem;
   padding: 1rem 0.5rem;
 }
 .cocktailRecipe__form {
   position: relative;
 }
+
 .cocktailRecipe__resultList {
   position: absolute;
-  top: 2rem;
-  left: 0;
-  height: 15rem;
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  width: 90%;
+  height: auto;
+  max-height: 13rem;
   overflow: scroll;
+  margin: 0;
+  background-color: var(--recipe-bg-color);
   z-index: 100;
+  box-shadow: 10px 10px black;
+  border-radius: 30px;
+}
+.cocktailRecipe__resultLi {
+  list-style: none;
+  padding: 0.5rem 0;
 }
 @media all and (min-width: 500px) {
   .cocktailRecipe__bg {
@@ -119,6 +161,7 @@
   .cocktailRecipe__container .card {
     width: 70%;
   }
+  .cocktailRecipe__resultList,
   .cocktailRecipe__searchbar {
     width: calc(70% - 2rem);
   }
@@ -130,7 +173,8 @@
   .cocktailRecipe__container .card {
     width: 60%;
   }
-  .cocktailRecipe__searchbar {
+  .cocktailRecipe__searchbar,
+  .cocktailRecipe__resultList {
     width: calc(60% - 2rem);
   }
 }
@@ -153,17 +197,21 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    top: 100%;
+    top: 80%;
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
+    width: 55%;
     height: 13rem;
     overflow-y: scroll;
+    background-color: var(--recipe-bg-color);
+    border-radius: 20px;
+    box-shadow: 10px 10px black;
   }
   .cocktailRecipe__resultLi {
     position: relative;
     padding: 0.5rem 0;
     list-style: none;
+    font-size: 1rem;
   }
   .cocktailRecipe__container .card {
     position: relative;
