@@ -26,6 +26,12 @@
 
 @media screen and (min-width: 1500px) {
   .subtitle {
+    font-size: 3rem;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 2100px) {
+  .subtitle {
     font-size: 5rem;
     white-space: nowrap;
   }

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Loading from "../Loading/Loading";
 import Title from "../titleblock/title/Title";
 import AllCocktailsCard from "../AllCocktailsCard/AllCocktailsCard";
 import "./AllCocktails.css";
+import MenuBurger from "../MenuBurger/MenuBurger";
 
 const AllCocktails = ({ propsFetche }) => {
   const [cocktails, setCocktails] = useState([]);
@@ -25,11 +27,12 @@ const AllCocktails = ({ propsFetche }) => {
     };
     fetchCocktails();
   }, []);
-  if (loading) return <div>loading...</div>;
+  if (loading) return <Loading />;
   if (error) return <div>error</div>;
   if (!cocktails) return null;
   return (
     <div className="allcocktails_section">
+      <MenuBurger />
       <Title />
       <div className="list__allcocktails">
         {cocktails.map((cocktail) => (
