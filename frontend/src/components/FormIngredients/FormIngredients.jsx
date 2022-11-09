@@ -19,6 +19,10 @@ const FormIngredients = ({
       .then((response) => propsSetFetche(response.data.drinks));
   }, [propsIngredient]);
 
+  const deleteValeur = () => {
+    propsSetIngredient([]);
+  };
+
   return (
     <div className="homePage">
       <img
@@ -80,7 +84,11 @@ const FormIngredients = ({
           ))}
         </div>
         <NavLink to={`/AllCocktailsIngredients/${propsIngredient}`}>
-          <button className="form__btn__go btn" type="button">
+          <button
+            className="form__btn__go btn"
+            type="button"
+            onClick={deleteValeur}
+          >
             LET'S GO
           </button>
         </NavLink>

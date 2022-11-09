@@ -60,6 +60,17 @@
   transform: rotateY(180deg);
 }
 
+.allcocktails__subTitle{
+  position: relative;
+    align-self: start;
+    font-size: 1.5rem;
+    padding: 1rem 0 0.5rem 0.5rem;
+}
+
+.allcocktails__ingredientsList{
+  list-style-type: disc;
+}
+
 @media screen and (min-width: 600px) {
   .allcocktails__card {
     width: 10vw;
