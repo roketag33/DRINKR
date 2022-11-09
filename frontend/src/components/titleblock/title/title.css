@@ -17,11 +17,11 @@
 
 @media screen and (min-width: 700px) {
   .main__title-logo {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 @media screen and (min-width: 1500px) {
   .main__title-logo {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 }
