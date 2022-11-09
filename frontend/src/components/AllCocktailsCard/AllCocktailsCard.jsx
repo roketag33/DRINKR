@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import "./AllCocktailsCard.css";
 import axios from "axios";
 
@@ -29,40 +30,30 @@ const AllCocktailsCard = ({ propsFetche, cocktail }) => {
     cocktail.strIngredient14,
     cocktail.strIngredient15,
   ];
-import PropTypes from "prop-types";
 
   return (
-    <div className="flip-card">
-      <div className="container_card">
-        <div className="allcocktails__card">
-          <div className="allcocktails__frontcard">
-            <img
-              src={cocktail.strDrinkThumb}
-              alt={cocktail.strDrink}
-              className="allcocktails__img"
-            />
-            <h1 className="allcocktails__title">{cocktail.strDrink}</h1>
-          </div>
-          <div className="allcocktails__backcard">
-            <div className="firstblock__title">
-              <img
-                className="drink_picto"
-                src="src/assets/images/picto_drink.jpg"
-                alt="picto_drink"
-              />
-              <h5>Ingredients: </h5>
-            </div>
-            <ul className="allcocktails__ingredients" />
-            <div className="secondblock__title">
-              <img
-                className="shaker_picto"
-                src="src/assets/images/picto_shaker.png"
-                alt="picto_shaker"
-              />
-              <h5> Recipe :</h5>
-            </div>
-            <p>{cocktail.strInstructions}</p>
-          </div>
+    <div className="container_card">
+      <div className="allcocktails__card">
+        <div className="allcocktails__frontcard">
+          <img
+            src={cocktail.strDrinkThumb}
+            alt={cocktail.strDrink}
+            className="allcocktails__img"
+          />
+          <h1 className="allcocktails__title">{cocktail.strDrink}</h1>
+        </div>
+        <div className="allcocktails__backcard">
+          <h5 className="allcocktails__subTitle">Ingredients: </h5>
+          <ul className="allcocktails__ingredientsList">
+            {Filtreingredients.filter((el) => typeof el === "string").map(
+              (elem) => (
+                <li className="allcocktails__li">{elem}</li>
+              )
+            )}
+          </ul>
+          <ul className="allcocktails__ingredients" />
+          <h5 className="allcocktails__subTitle">Let's do it : </h5>
+          <p className="allcocktails__paraf">{cocktail.strInstructions}</p>
         </div>
       </div>
     </div>
@@ -71,6 +62,7 @@ import PropTypes from "prop-types";
 
 AllCocktailsCard.propTypes = {
   cocktail: PropTypes.string.isRequired,
+  propsFetche: PropTypes.objectOf.isRequired,
 };
 
 export default AllCocktailsCard;

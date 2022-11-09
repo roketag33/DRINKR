@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import PropTypes from "prop-types";
 import Loading from "../Loading/Loading";
 import Title from "../titleblock/title/Title";
 import AllCocktailsCard from "../AllCocktailsCard/AllCocktailsCard";
@@ -50,6 +51,10 @@ const AllCocktails = ({ propsFetche }) => {
       />
     </div>
   );
+};
+
+AllCocktails.propTypes = {
+  propsFetche: PropTypes.objectOf.isRequired,
 };
 
 export default AllCocktails;
