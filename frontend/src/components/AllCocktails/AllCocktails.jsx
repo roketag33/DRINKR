@@ -4,7 +4,7 @@ import Title from "../titleblock/title/Title";
 import AllCocktailsCard from "../AllCocktailsCard/AllCocktailsCard";
 import "./AllCocktails.css";
 
-const AllCocktails = () => {
+const AllCocktails = ({ propsFetche }) => {
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -33,7 +33,11 @@ const AllCocktails = () => {
       <Title />
       <div className="list__allcocktails">
         {cocktails.map((cocktail) => (
-          <AllCocktailsCard key={cocktail.id} cocktail={cocktail} />
+          <AllCocktailsCard
+            propsFetche={propsFetche}
+            key={cocktail.id}
+            cocktail={cocktail}
+          />
         ))}
       </div>
       <img

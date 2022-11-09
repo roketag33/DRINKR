@@ -10,7 +10,7 @@ const AllCocktailsIngredients = ({ propsFetche }) => {
       <Title />
       <div className="list__allcocktails">
         {propsFetche.map((e) => (
-          <AllCocktailsCardIngredients key={e.id} propsFetche={e} />
+          <AllCocktailsCardIngredients propsFetche={e} />
         ))}
       </div>
       <img
