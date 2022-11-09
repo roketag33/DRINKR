@@ -8,6 +8,8 @@ Projet 2 JS/React Septembre 2022 composé de :
 - Mehdy Guettache
 - Anthony Labadie
 
+https://thecocktaildb.com/api.php
+
 ## Concept
 
 Ce template est conçu pour servir de base à tous les projets (P2/P3) suivants la stack React-Node-MySQL telle qu'enseignée à la Wild Code School. Il est préconfiguré avec un ensemble d'outils qui aideront les élèves à produire un code correspondant mieux aux standards du monde du travail et plus facile à maintenir, tout en restant simple à utiliser.
