@@ -1,5 +1,6 @@
 import React from "react";
 import "./AllCocktailsCard.css";
+import PropTypes from "prop-types";
 
 const AllCocktailsCard = ({ cocktail }) => {
   return (
@@ -15,15 +16,33 @@ const AllCocktailsCard = ({ cocktail }) => {
             <h1 className="allcocktails__title">{cocktail.strDrink}</h1>
           </div>
           <div className="allcocktails__backcard">
-            <h5>Ingredients: </h5>
+            <div className="firstblock__title">
+              <img
+                className="drink_picto"
+                src="src/assets/images/picto_drink.jpg"
+                alt="picto_drink"
+              />
+              <h5>Ingredients: </h5>
+            </div>
             <ul className="allcocktails__ingredients" />
-            <h5> Recipe :</h5>
+            <div className="secondblock__title">
+              <img
+                className="shaker_picto"
+                src="src/assets/images/picto_shaker.png"
+                alt="picto_shaker"
+              />
+              <h5> Recipe :</h5>
+            </div>
             <p>{cocktail.strInstructions}</p>
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+AllCocktailsCard.propTypes = {
+  cocktail: PropTypes.string.isRequired,
 };
 
 export default AllCocktailsCard;
