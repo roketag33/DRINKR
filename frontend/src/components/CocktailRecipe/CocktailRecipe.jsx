@@ -101,5 +101,6 @@ CocktailRecipe.propTypes = {
   handleChange: PropTypes.func.isRequired,
   userInput: PropTypes.string.isRequired,
   search: PropTypes.func.isRequired,
+  setSearch: PropTypes.func.isRequired,
 };
 export default CocktailRecipe;
