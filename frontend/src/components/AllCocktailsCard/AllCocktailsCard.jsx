@@ -1,5 +1,6 @@
 import React from "react";
 import "./AllCocktailsCard.css";
+import PropTypes from "prop-types";
 
 const AllCocktailsCard = ({ cocktail }) => {
   return (
@@ -20,6 +21,10 @@ const AllCocktailsCard = ({ cocktail }) => {
       </div>
     </div>
   );
+};
+
+AllCocktailsCard.propTypes = {
+  cocktail: PropTypes.string.isRequired,
 };
 
 export default AllCocktailsCard;
