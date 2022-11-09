@@ -62,14 +62,14 @@
   transform: rotateY(180deg);
 }
 
-.allcocktails__subTitle{
+.allcocktails__subTitle {
   position: relative;
-    align-self: start;
-    font-size: 1.5rem;
-    padding: 1rem 0 0.5rem 0.5rem;
+  align-self: start;
+  font-size: 1.5rem;
+  padding: 1rem 0 0.5rem 0.5rem;
 }
 
-.allcocktails__ingredientsList{
+.allcocktails__ingredientsList {
   list-style-type: disc;
 }
 
