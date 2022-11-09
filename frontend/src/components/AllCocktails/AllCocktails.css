@@ -1,15 +1,19 @@
 .allcocktails_section {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
   background-color: var(--cocktail-list-bg-color);
 }
 
 .list__allcocktails {
-  margin: 0 10vw;
-  padding-top: 15vh;
   position: relative;
   display: flex;
+  width: 90%;
   flex-direction: row;
-  align-items: center;
+  align-items: end;
+  justify-content: end;
   flex-wrap: wrap;
   z-index: 5;
 }
@@ -22,7 +26,7 @@
   z-index: 0;
 }
 
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
   .allcocktails_section {
     display: flex;
     justify-content: flex-end;
@@ -32,4 +36,4 @@
     padding-top: 20vh;
     width: 55%;
   }
-}
+} */

@@ -1,37 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
+import PropTypes from "prop-types";
 import Buttons from "./Buttons";
 import SearchBar from "./SearchBar";
 import ResultList from "./ResultList";
 import Titleblock from "../titleblock/Titleblock";
 import "./ButtonList.css";
 
-const ButtonList = () => {
-  const [search, setSearch] = useState();
-  const [userInput, setUserInput] = useState("");
-
-  const handleChange = (event) => {
-    if (!search) {
-      axios
-        .get(
-          `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${event.target.value.charAt(
-            0
-          )}`
-        )
-        .then((response) => setSearch(response.data.drinks));
-    } else {
-      axios
-        .get(
-          `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${event.target.value.charAt(
-            0
-          )}`
-        )
-        .then((response) => setSearch(response.data.drinks));
-    }
-    setUserInput(event.target.value);
-  };
-
+const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
   return (
     <div className="button-list__container">
       <Titleblock />
@@ -45,35 +21,56 @@ const ButtonList = () => {
         src="/src/assets/images/Fresh-mint-leaves--on-transparent-background-PNG 16.48.26.png"
         alt=""
       />
-      <NavLink to="/FormIngredients">
+      <NavLink className="margin" to="/FormIngredients">
         <Buttons
           type=""
           className="list__btn  btn-up btn"
           value="Add your ingredients"
         />
       </NavLink>
-      <NavLink to="/AllCocktails">
+      <NavLink className="margin" to="/AllCocktails">
         <Buttons
           type=""
           className="list__btn btn-midle btn"
           value="Search all cocktails"
         />
       </NavLink>
-      <form action="submit" className="button-list__form btn-down">
-        <SearchBar value={userInput} onChange={handleChange} />
+      <form
+        action="submit"
+        className="button_list_form button-list__form btn-down margin "
+      >
+        <SearchBar
+          className="list__searchbar"
+          value={userInput}
+          handleChange={handleChange}
+        />
+
+        <div className={search && "button-list__result-container"}>
+          {search &&
+            search
+              .filter((el) =>
+                el.strDrink.toLowerCase().includes(userInput.toLowerCase())
+              )
+              .map((el, id) => (
+                <NavLink to={`/CocktailRecipe/${el.idDrink}`}>
+                  <ResultList
+                    className="button-list__result__li"
+                    setSearch={setSearch}
+                    id={id}
+                    el={el}
+                  />
+                </NavLink>
+              ))}
+        </div>
       </form>
-      <div className="button-list__result-container">
-        {search &&
-          search
-            .filter((el) => el.strDrink.toLowerCase().includes(userInput))
-            .map((el, id) => (
-              <NavLink test={el.strDrink} to={`/CocktailRecipe/${el.idDrink}`}>
-                <ResultList id={id} el={el} />
-              </NavLink>
-            ))}
-      </div>
     </div>
   );
+};
+ButtonList.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  userInput: PropTypes.string.isRequired,
+  search: PropTypes.func.isRequired,
+  setSearch: PropTypes.func.isRequired,
 };
 
 export default ButtonList;
