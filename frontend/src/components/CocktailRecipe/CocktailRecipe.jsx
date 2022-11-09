@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import RecipeIngredientsList from "./RecipeIngredientsList";
 import "./CocktailRecipe.css";
+import MenuBurger from "../MenuBurger/MenuBurger";
 
 const CocktailRecipe = () => {
   const [cocktail, setCocktail] = useState({});
@@ -33,6 +34,7 @@ const CocktailRecipe = () => {
 
   return (
     <div className="cocktailRecipe__container">
+      <MenuBurger />
       <div className="cocktailRecipe__front-card card ">
         <img
           src={cocktail.strDrinkThumb}
