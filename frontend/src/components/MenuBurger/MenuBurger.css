@@ -1,0 +1,38 @@
+.Burger-style span {
+  position: absolute;
+  display: block;
+  width: 75px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+.Burger-style span:nth-last-child(2) {
+  transform: rotate(15deg);
+  width: 45px;
+}
+
+.Burger-style {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.modalContainer {
+  position: absolute;
+  display: flex;
+  border: 1px solid grey;
+  background-color: #b8efe2;
+  padding: 40px 20px 10px 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  box-shadow: 10px 10px black;
+  width: 30%;
+  height: 30vh;
+}
