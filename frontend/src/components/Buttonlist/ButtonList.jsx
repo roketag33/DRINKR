@@ -28,7 +28,7 @@ const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
           value="Add your ingredients"
         />
       </NavLink>
-      <NavLink to="/AllCocktails">
+      <NavLink className="margin" to="/AllCocktails">
         <Buttons
           type=""
           className="list__btn btn-midle btn"

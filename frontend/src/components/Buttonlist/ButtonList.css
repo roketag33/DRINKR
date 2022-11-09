@@ -23,7 +23,7 @@
 }
 .list__btn {
   position: relative;
-  width: 90%;
+  width: 90vw;
   height: 3rem;
   border-radius: 100px;
   border: none;
@@ -232,7 +232,7 @@
 }
 @media all and (min-width: 800px) {
   .button-list__container .list__btn {
-    width: 50%;
+    width: 50vw;
   }
   .button-list__container .list__searchbar {
     width: 47%;
@@ -271,7 +271,7 @@
 @media all and (min-width: 1600px) {
   .button-list__container .list__btn,
   .button-list__container .list__searchbar {
-    width: 50%;
+    width: 50vw;
     font-size: 3rem;
     height: 9rem;
   }

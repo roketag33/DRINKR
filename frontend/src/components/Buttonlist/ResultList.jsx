@@ -5,6 +5,7 @@ const ResultList = ({ el, id, setSearch, className }) => {
   const handleClick = () => {
     setSearch("");
   };
+
   function handleKeyDown(e) {
     if (e.keyCode === 13) {
       handleClick();
