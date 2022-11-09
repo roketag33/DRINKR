@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import Title from "../titleblock/title/Title";
@@ -22,7 +22,10 @@ const FormIngredients = ({
   const deleteValeur = () => {
     propsSetIngredient([]);
   };
-
+  const [isActive, setIsActive] = useState(false);
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
   return (
     <div className="homePage">
       <img
@@ -42,12 +45,13 @@ const FormIngredients = ({
         <div className="form__container__ingredients">
           {ingredients.alcool.map((elements) => (
             <button
-              className="form__btn btn"
+              className={isActive ? "form__btn__click" : "form__btn btn"}
               type="button"
               value={elements}
-              onClick={(event) =>
-                propsSetIngredient([...propsIngredient, event.target.value])
-              }
+              onClick={(event) => {
+                handleClick();
+                propsSetIngredient([...propsIngredient, event.target.value]);
+              }}
             >
               {elements}
             </button>
@@ -99,7 +103,7 @@ const FormIngredients = ({
 
 FormIngredients.propTypes = {
   propsIngredient: PropTypes.objectOf.isRequired,
-  propsSetIngredient: PropTypes.objectOf.isRequired,
-  propsSetFetche: PropTypes.objectOf.isRequired,
+  propsSetIngredient: PropTypes.func.isRequired,
+  propsSetFetche: PropTypes.func.isRequired,
 };
 export default FormIngredients;
