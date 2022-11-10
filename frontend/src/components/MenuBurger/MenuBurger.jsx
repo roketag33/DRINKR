@@ -11,15 +11,15 @@ const MenuBurger = () => {
         type="button"
         className="Burger-style"
         onClick={() => {
-          setOpenModal(true);
+          setOpenModal(!openModal);
         }}
       >
-        <span />
-        <span />
-        <span />
+        <span className={openModal ? "span-left" : "span-left-close"} />
+        <span className={openModal ? "hide__midlespan" : "show__midlespan"} />
+        <span className={openModal ? "span-right" : "span-right-close"} />
       </button>
 
-      {openModal && <Modal closeModal={setOpenModal} />}
+      {openModal && <Modal />}
     </div>
   );
 };

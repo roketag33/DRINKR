@@ -22,10 +22,48 @@ const FormIngredients = ({
   const deleteValeur = () => {
     propsSetIngredient([]);
   };
-  const [isActive, setIsActive] = useState(false);
-  const handleClick = () => {
-    setIsActive(!isActive);
+  const [isActiveAlcool, setIsActiveAlcool] = useState(ingredients.ALCOOL);
+  const [isActiveSoft, setIsActiveSoft] = useState(ingredients.SOFT);
+  const [isActiveExtra, setIsActiveExtra] = useState(ingredients.EXTRA);
+
+  const handleClickAlcool = (ingredientsName) => {
+    const activeAlcool = isActiveAlcool.map((el) => {
+      if (el.name === ingredientsName) {
+        return {
+          ...el,
+          isActive: !el.isActive,
+        };
+      }
+      return { ...el };
+    });
+    setIsActiveAlcool(activeAlcool);
   };
+  const handleClickSoft = (ingredientsNameSoft) => {
+    const activeSoft = isActiveSoft.map((el) => {
+      if (el.name === ingredientsNameSoft) {
+        return {
+          ...el,
+          isActive: !el.isActive,
+        };
+      }
+      return { ...el };
+    });
+    setIsActiveSoft(activeSoft);
+  };
+
+  const handleClickExtra = (ingredientsNameExtra) => {
+    const activeExtra = isActiveExtra.map((el) => {
+      if (el.name === ingredientsNameExtra) {
+        return {
+          ...el,
+          isActive: !el.isActive,
+        };
+      }
+      return { ...el };
+    });
+    setIsActiveExtra(activeExtra);
+  };
+
   return (
     <div className="homePage">
       <img
@@ -43,47 +81,55 @@ const FormIngredients = ({
       <div className="form__container">
         <h4 className="form__title">1-ALCOOL</h4>
         <div className="form__container__ingredients">
-          {ingredients.alcool.map((elements) => (
+          {isActiveAlcool.map((elements) => (
             <button
-              className={isActive ? "form__btn__click" : "form__btn btn"}
+              className={
+                elements.isActive ? "form__btn__click" : "form__btn btn"
+              }
               type="button"
-              value={elements}
+              value={elements.name}
               onClick={(event) => {
-                handleClick();
+                handleClickAlcool(elements.name);
                 propsSetIngredient([...propsIngredient, event.target.value]);
               }}
             >
-              {elements}
+              {elements.name}
             </button>
           ))}
         </div>
         <h4 className="form__title">2-SOFT</h4>
         <div className="form__container__ingredients">
-          {ingredients.soft.map((elements) => (
+          {isActiveSoft.map((elements) => (
             <button
-              className="form__btn btn"
-              type="button"
-              value={elements}
-              onClick={(event) =>
-                propsSetIngredient([...propsIngredient, event.target.value])
+              className={
+                elements.isActive ? "form__btn__click" : "form__btn btn"
               }
+              type="button"
+              value={elements.name}
+              onClick={(event) => {
+                handleClickSoft(elements.name);
+                propsSetIngredient([...propsIngredient, event.target.value]);
+              }}
             >
-              {elements}
+              {elements.name}
             </button>
           ))}
         </div>
         <h4 className="form__title">3-EXTRA</h4>
         <div className="form__container__ingredients">
-          {ingredients.extra.map((elements) => (
+          {isActiveExtra.map((elements) => (
             <button
-              className="form__btn btn"
-              type="button"
-              value={elements}
-              onClick={(event) =>
-                propsSetIngredient([...propsIngredient, event.target.value])
+              className={
+                elements.isActive ? "form__btn__click" : "form__btn btn"
               }
+              type="button"
+              value={elements.name}
+              onClick={(event) => {
+                handleClickExtra(elements.name);
+                propsSetIngredient([...propsIngredient, event.target.value]);
+              }}
             >
-              {elements}
+              {elements.name}
             </button>
           ))}
         </div>

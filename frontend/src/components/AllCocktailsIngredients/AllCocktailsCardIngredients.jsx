@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
 
 const AllCocktailsCardIngredients = ({ propsFetche }) => {
@@ -56,6 +57,10 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
       </div>
     </div>
   );
+};
+
+AllCocktailsCardIngredients.propTypes = {
+  propsFetche: PropTypes.objectOf.isRequired,
 };
 
 export default AllCocktailsCardIngredients;

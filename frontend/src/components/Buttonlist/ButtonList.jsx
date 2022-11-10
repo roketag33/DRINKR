@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import Buttons from "./Buttons";
 import SearchBar from "./SearchBar";
-import ResultList from "./ResultList";
+import ButtonListResult from "./ButtonListResult";
 import Titleblock from "../titleblock/Titleblock";
 import "./ButtonList.css";
 
@@ -32,11 +32,11 @@ const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
         <Buttons
           type=""
           className="list__btn btn-midle btn"
-          value="Search all cocktails"
+          value="Find new cocktail ideas"
         />
       </NavLink>
       <form
-        action="submit"
+        // onSubmit={}
         className="button_list_form button-list__form btn-down margin "
       >
         <SearchBar
@@ -44,24 +44,14 @@ const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
           value={userInput}
           handleChange={handleChange}
         />
-
-        <div className={search && "button-list__result-container"}>
-          {search &&
-            search
-              .filter((el) =>
-                el.strDrink.toLowerCase().includes(userInput.toLowerCase())
-              )
-              .map((el, id) => (
-                <NavLink to={`/CocktailRecipe/${el.idDrink}`}>
-                  <ResultList
-                    className="button-list__result__li"
-                    setSearch={setSearch}
-                    id={id}
-                    el={el}
-                  />
-                </NavLink>
-              ))}
-        </div>
+        <ButtonListResult
+          classeNameLi="button-list__result__li"
+          classResultList="button-list__result__li"
+          classname="button-list__result-container"
+          search={search}
+          userInput={userInput}
+          setSearch={setSearch}
+        />
       </form>
     </div>
   );
