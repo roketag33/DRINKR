@@ -63,7 +63,6 @@ const FormIngredients = ({
     });
     setIsActiveExtra(activeExtra);
   };
-
   return (
     <div className="homePage">
       <img
