@@ -5,8 +5,8 @@ const LoadingCard = () => {
   return (
     <div className="flip-card-placeholder">
       <div className="allcocktails__card-placeholder">
-        <div className="allcocktails__img-placeholder"></div>
-        <span className="allcocktails__title-placeholder"></span>
+        <div className="allcocktails__img-placeholder" />
+        <span className="allcocktails__title-placeholder" />
       </div>
     </div>
   );
