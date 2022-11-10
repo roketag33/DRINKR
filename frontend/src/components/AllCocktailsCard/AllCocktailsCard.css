@@ -5,7 +5,7 @@
   justify-content: start;
   align-items: center;
   background-color: var(--crd-bg-color);
-  height: 45vh;
+  height: 65vh;
   width: 75vw;
   padding-top: 3vh;
   font-family: text;
@@ -26,7 +26,6 @@
   align-items: center;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  margin-top: 5vh;
 }
 
 .allcocktails__card h1 {
@@ -76,6 +75,7 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 2.5vh;
+  margin-bottom: 2vh;
 }
 
 .secondblock__title {
@@ -100,6 +100,14 @@
   list-style-type: disc;
 }
 
+.star__notFavourite {
+  width: 12vw;
+  position: relative;
+  z-index: 10;
+  top: -5vh;
+  right: -35vw;
+}
+
 /*Scroll part*/
 
 .allcocktails__backcard::-webkit-scrollbar {
@@ -120,43 +128,122 @@
   background: #b30000;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 400px) {
   .allcocktails__card {
-    height: 55vh;
-    width: 70vw;
+    height: 65vh;
+    width: 60vw;
   }
 
   .allcocktails__img {
-    max-width: 45vw;
+    width: 40vw;
+  }
+
+  .star__notFavourite {
+    width: 12vw;
+    top: -5vh;
+    right: -28vw;
+  }
+}
+
+@media screen and (min-width: 525px) {
+  .allcocktails__card {
+    height: 75vh;
+    width: 60vw;
+  }
+
+  .allcocktails__img {
+    max-width: 40vw;
   }
 }
 
 @media screen and (min-width: 600px) {
   .allcocktails__card {
-    height: 55vh;
-    width: 60vw;
+    height: 65vh;
+    width: 40vw;
   }
 
   .allcocktails__img {
-    max-width: 45vw;
+    max-width: 28vw;
+  }
+
+  .star__notFavourite {
+    width: 8vw;
+    top: -5vh;
+    right: -20vw;
+  }
+}
+
+@media screen and (min-width: 735px) {
+  .allcocktails__card {
+    height: 60vh;
+    width: 35vw;
+  }
+
+  .allcocktails__img {
+    max-width: 25vw;
+  }
+
+  .star__notFavourite {
+    width: 6vw;
+    top: -5vh;
+    right: -17vw;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .allcocktails__card {
+    height: 55vh;
+    width: 30vw;
+  }
+
+  .allcocktails__img {
+    max-width: 20vw;
+  }
+
+  .star__notFavourite {
+    width: 6vw;
+    top: -5vh;
+    right: -15vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .allcocktails__card {
+    height: 60vh;
+    width: 25vw;
+  }
+
+  .allcocktails__img {
+    max-width: 20vw;
+  }
+
+  .star__notFavourite {
+    width: 6vw;
+    top: -5vh;
+    right: -11vw;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .allcocktails__card {
-    height: 55vh;
+    height: 60vh;
     width: 25vw;
   }
 
   .allcocktails__img {
-    max-width: 15vw;
+    max-width: 16vw;
   }
 
   .allcocktails__backcard {
-    max-height: 50vh;
+    max-height: 55vh;
   }
 
   .allcocktails__card h1 {
     max-width: 20vw;
+  }
+  .star__notFavourite {
+    width: 4vw;
+    top: -5vh;
+    right: -11vw;
   }
 }

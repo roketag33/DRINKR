@@ -9,6 +9,11 @@ const AllCocktailsCard = ({ cocktail }) => {
         <div className="allcocktails__card">
           <div className="allcocktails__frontcard">
             <img
+              className="star__notFavourite"
+              src="src/assets/images/star_image.jpg"
+              alt="star"
+            />
+            <img
               src={cocktail.strDrinkThumb}
               alt={cocktail.strDrink}
               className="allcocktails__img"
