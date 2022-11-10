@@ -22,10 +22,12 @@ const FormIngredients = ({
   const deleteValeur = () => {
     propsSetIngredient([]);
   };
-  const [isActive, setIsActive] = useState(ingredients.ALCOOL);
+  const [isActiveAlcool, setIsActiveAlcool] = useState(ingredients.ALCOOL);
+  const [isActiveSoft, setIsActiveSoft] = useState(ingredients.SOFT);
+  const [isActiveExtra, setIsActiveExtra] = useState(ingredients.EXTRA);
 
-  const handleClick = (ingredientsName) => {
-    const toto = isActive.map((el) => {
+  const handleClickAlcool = (ingredientsName) => {
+    const activeAlcool = isActiveAlcool.map((el) => {
       if (el.name === ingredientsName) {
         return {
           ...el,
@@ -34,7 +36,32 @@ const FormIngredients = ({
       }
       return { ...el };
     });
-    setIsActive(toto);
+    setIsActiveAlcool(activeAlcool);
+  };
+  const handleClickSoft = (ingredientsNameSoft) => {
+    const activeSoft = isActiveSoft.map((el) => {
+      if (el.name === ingredientsNameSoft) {
+        return {
+          ...el,
+          isActive: !el.isActive,
+        };
+      }
+      return { ...el };
+    });
+    setIsActiveSoft(activeSoft);
+  };
+
+  const handleClickExtra = (ingredientsNameExtra) => {
+    const activeExtra = isActiveExtra.map((el) => {
+      if (el.name === ingredientsNameExtra) {
+        return {
+          ...el,
+          isActive: !el.isActive,
+        };
+      }
+      return { ...el };
+    });
+    setIsActiveExtra(activeExtra);
   };
 
   return (
@@ -54,7 +81,7 @@ const FormIngredients = ({
       <div className="form__container">
         <h4 className="form__title">1-ALCOOL</h4>
         <div className="form__container__ingredients">
-          {isActive.map((elements) => (
+          {isActiveAlcool.map((elements) => (
             <button
               className={
                 elements.isActive ? "form__btn__click" : "form__btn btn"
@@ -62,7 +89,7 @@ const FormIngredients = ({
               type="button"
               value={elements.name}
               onClick={(event) => {
-                handleClick(elements.name);
+                handleClickAlcool(elements.name);
                 propsSetIngredient([...propsIngredient, event.target.value]);
               }}
             >
@@ -72,14 +99,17 @@ const FormIngredients = ({
         </div>
         <h4 className="form__title">2-SOFT</h4>
         <div className="form__container__ingredients">
-          {ingredients.SOFT.map((elements) => (
+          {isActiveSoft.map((elements) => (
             <button
-              className="form__btn btn"
+              className={
+                elements.isActive ? "form__btn__click" : "form__btn btn"
+              }
               type="button"
               value={elements.name}
-              onClick={(event) =>
-                propsSetIngredient([...propsIngredient, event.target.value])
-              }
+              onClick={(event) => {
+                handleClickSoft(elements.name);
+                propsSetIngredient([...propsIngredient, event.target.value]);
+              }}
             >
               {elements.name}
             </button>
@@ -87,14 +117,17 @@ const FormIngredients = ({
         </div>
         <h4 className="form__title">3-EXTRA</h4>
         <div className="form__container__ingredients">
-          {ingredients.EXTRA.map((elements) => (
+          {isActiveExtra.map((elements) => (
             <button
-              className="form__btn btn"
+              className={
+                elements.isActive ? "form__btn__click" : "form__btn btn"
+              }
               type="button"
               value={elements.name}
-              onClick={(event) =>
-                propsSetIngredient([...propsIngredient, event.target.value])
-              }
+              onClick={(event) => {
+                handleClickExtra(elements.name);
+                propsSetIngredient([...propsIngredient, event.target.value]);
+              }}
             >
               {elements.name}
             </button>
