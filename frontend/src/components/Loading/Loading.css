@@ -34,8 +34,8 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  min-height: 50vh;
-  min-width: 30vw;
+  min-height: 45vh;
+  min-width: 75vw;
   padding-top: 3vh;
   font-family: text;
   border-radius: 20px;
@@ -44,19 +44,21 @@
   background-color: rgb(214, 214, 214);
 }
 
-.allcocktails__card-placeholder h1 {
+.allcocktails__title-placeholder {
   width: 70%;
   height: 2rem;
   border-radius: 100px;
   margin-top: 2rem;
   background-color: rgb(163, 162, 162);
-  font-size: 1.5rem;
-  font-weight: bold;
+
+
 }
 
 .allcocktails__img-placeholder {
-  width: 50%;
-  height: 50%;
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin-top: 1rem;
   background-color: grey;
   border-radius: 10px;
 }
