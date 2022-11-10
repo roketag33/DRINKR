@@ -14,7 +14,7 @@
   background-color: transparent;
   border: transparent;
   cursor: pointer;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .modalContainer {
@@ -99,20 +99,19 @@
 }
 
 @media all and (max-width: 403px) {
-  .Menu-Burger{
+  .Menu-Burger {
     top: 3rem;
     left: 2rem;
-    
   }
-  .Burger-style span{
+  .Burger-style span {
     width: 35px;
     height: 3px;
   }
-  .Burger-style span:nth-last-child(2){
+  .Burger-style span:nth-last-child(2) {
     width: 25px;
     height: 2px;
   }
-  .modalContainer{
+  .modalContainer {
     width: 200%;
     height: 40%;
     left: 1rem;
@@ -129,22 +128,19 @@
   }
 }
 
-
-
 @media all and (min-width: 404px) {
-  .Menu-Burger{
+  .Menu-Burger {
     top: 2.5rem;
     left: 2rem;
-    
   }
-  .Burger-style span{
+  .Burger-style span {
     width: 50px;
     height: 2px;
   }
-  .Burger-style span:nth-last-child(2){
+  .Burger-style span:nth-last-child(2) {
     width: 35px;
   }
-  .modalContainer{
+  .modalContainer {
     width: 200%;
     height: 50%;
     left: 1.5rem;
@@ -157,23 +153,21 @@
     height: 7vh;
     left: 7px;
     box-shadow: 5px 5px black;
-    
   }
 }
 @media all and (min-width: 519px) {
-  .Menu-Burger{
+  .Menu-Burger {
     top: 3rem;
     left: 2rem;
-    
   }
-  .Burger-style span{
+  .Burger-style span {
     width: 60px;
     height: 3px;
   }
-  .Burger-style span:nth-last-child(2){
+  .Burger-style span:nth-last-child(2) {
     width: 35px;
   }
-  .modalContainer{
+  .modalContainer {
     width: 150%;
     height: 65%;
     left: 1.5rem;
@@ -189,19 +183,18 @@
 }
 
 @media all and (min-width: 600px) {
-  .Menu-Burger{
+  .Menu-Burger {
     top: 4rem;
     left: 2rem;
-    
   }
-  .Burger-style span{
+  .Burger-style span {
     width: 70px;
     height: 4px;
   }
-  .Burger-style span:nth-last-child(2){
+  .Burger-style span:nth-last-child(2) {
     width: 38px;
   }
-  .modalContainer{
+  .modalContainer {
     width: 100%;
     height: 70%;
     left: 2rem;
@@ -213,22 +206,20 @@
     height: 7vh;
     left: -8px;
   }
-  
 }
 @media all and (min-width: 800px) {
-  .Menu-Burger{
+  .Menu-Burger {
     top: 4rem;
     left: 2rem;
-    
   }
-  .Burger-style span{
+  .Burger-style span {
     width: 70px;
     height: 4px;
   }
-  .Burger-style span:nth-last-child(2){
+  .Burger-style span:nth-last-child(2) {
     width: 38px;
   }
-  .modalContainer{
+  .modalContainer {
     width: 100%;
     height: 90%;
     left: 2rem;
@@ -243,7 +234,7 @@
   }
 }
 @media all and (min-width: 1020px) {
-  .modalContainer{
+  .modalContainer {
     width: 100%;
     height: 100%;
     left: 2rem;
@@ -256,16 +247,13 @@
     height: 8.5vh;
     left: 3px;
   }
-
-  
 }
-@media screen and (min-width: 1200px){
-  .Menu-Burger{
+@media screen and (min-width: 1200px) {
+  .Menu-Burger {
     top: 6rem;
     left: 2rem;
-    
   }
-  .modalContainer{
+  .modalContainer {
     width: 100%;
     height: 100%;
     left: 2rem;
@@ -280,6 +268,4 @@
     left: 3px;
     font-size: 1.5rem;
   }
-
 }
-
