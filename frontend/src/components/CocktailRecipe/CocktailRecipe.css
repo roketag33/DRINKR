@@ -98,7 +98,7 @@
   align-self: start;
 
   font-size: 1.5rem;
-  padding: 1rem 0 1rem 0.5rem;
+  padding: 1rem;
 }
 .cocktailRecipe__ingredientsList {
   position: relative;
@@ -125,7 +125,7 @@
 .cocktailRecipe__instructions {
   position: relative;
   line-height: 1.3rem;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
 }
 .cocktailRecipe__form {
   position: relative;
