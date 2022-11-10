@@ -76,7 +76,10 @@ const App = () => {
             }
           />
 
-          <Route path="/AllCocktails" element={<AllCocktails />} />
+          <Route
+            path="/AllCocktails"
+            element={<AllCocktails propsFetche={fetche} />}
+          />
           <Route
             path="/AllCocktailsIngredients/:propsIngredient"
             element={

@@ -40,9 +40,9 @@
   background-color: var(--btn-bg-color);
 }
 .form__btn {
-  position: relative;
+  position: absolute;
   border-radius: 30px;
-  background-color: var(--btn-bg-color);
+  background-color: var(--btn-bg-color-click);
   box-shadow: 3px 3px #131313;
   border: 1px solid rgb(100, 100, 100);
   font-family: var(--text-font-family);
@@ -107,6 +107,15 @@
     position: relative;
     border-radius: 30px;
     background-color: var(--btn-bg-color);
+    background-color: var(--btn-bg-color);
+    box-shadow: 3px 3px #131313;
+    font-size: var(--text-font-family);
+  }
+
+  .form__btn__click {
+    position: relative;
+    border-radius: 30px;
+    background-color: var(--btn-bg-color-click);
     box-shadow: 3px 3px #131313;
     font-size: var(--text-font-family);
   }

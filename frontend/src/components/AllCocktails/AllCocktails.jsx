@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import PropTypes from "prop-types";
 import Loading from "../Loading/Loading";
 import Title from "../titleblock/title/Title";
 import AllCocktailsCard from "../AllCocktailsCard/AllCocktailsCard";
 import "./AllCocktails.css";
 import MenuBurger from "../MenuBurger/MenuBurger";
 
-const AllCocktails = () => {
+const AllCocktails = ({ propsFetche }) => {
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -36,7 +37,11 @@ const AllCocktails = () => {
       <Title />
       <div className="list__allcocktails">
         {cocktails.map((cocktail) => (
-          <AllCocktailsCard key={cocktail.id} cocktail={cocktail} />
+          <AllCocktailsCard
+            propsFetche={propsFetche}
+            key={cocktail.id}
+            cocktail={cocktail}
+          />
         ))}
       </div>
       <img
@@ -46,6 +51,10 @@ const AllCocktails = () => {
       />
     </div>
   );
+};
+
+AllCocktails.propTypes = {
+  propsFetche: PropTypes.objectOf.isRequired,
 };
 
 export default AllCocktails;
