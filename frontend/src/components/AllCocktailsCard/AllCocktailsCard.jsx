@@ -1,13 +1,46 @@
-import React from "react";
-import "./AllCocktailsCard.css";
+import { React, useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import "./AllCocktailsCard.css";
+import axios from "axios";
 
-const AllCocktailsCard = ({ cocktail }) => {
+const AllCocktailsCard = ({ propsFetche, cocktail }) => {
+  const [cocktails, setCocktail] = useState({});
+  useEffect(() => {
+    axios
+      .get(
+        `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${propsFetche}`
+      )
+      .then((response) => setCocktail(response.data.drinks[0]));
+  }, [cocktails]);
+
+  const Filtreingredients = [
+    cocktail.strIngredient1,
+    cocktail.strIngredient2,
+    cocktail.strIngredient3,
+    cocktail.strIngredient4,
+    cocktail.strIngredient5,
+    cocktail.strIngredient6,
+    cocktail.strIngredient7,
+    cocktail.strIngredient8,
+    cocktail.strIngredient9,
+    cocktail.strIngredient10,
+    cocktail.strIngredient11,
+    cocktail.strIngredient12,
+    cocktail.strIngredient13,
+    cocktail.strIngredient14,
+    cocktail.strIngredient15,
+  ];
+
   return (
     <div className="flip-card">
       <div className="container_card">
         <div className="allcocktails__card">
           <div className="allcocktails__frontcard">
+            <img
+              className="star__notFavourite"
+              src="src/assets/images/star_image.jpg"
+              alt="star"
+            />
             <img
               src={cocktail.strDrinkThumb}
               alt={cocktail.strDrink}
@@ -24,6 +57,13 @@ const AllCocktailsCard = ({ cocktail }) => {
               />
               <h5>Ingredients: </h5>
             </div>
+            <ul className="allcocktails__ingredientsList">
+              {Filtreingredients.filter((el) => typeof el === "string").map(
+                (elem) => (
+                  <li className="allcocktails__li">{elem}</li>
+                )
+              )}
+            </ul>
             <ul className="allcocktails__ingredients" />
             <div className="secondblock__title">
               <img
@@ -43,6 +83,7 @@ const AllCocktailsCard = ({ cocktail }) => {
 
 AllCocktailsCard.propTypes = {
   cocktail: PropTypes.string.isRequired,
+  propsFetche: PropTypes.objectOf.isRequired,
 };
 
 export default AllCocktailsCard;

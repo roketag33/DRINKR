@@ -76,7 +76,10 @@ const App = () => {
             }
           />
 
-          <Route path="/AllCocktails" element={<AllCocktails />} />
+          <Route
+            path="/AllCocktails"
+            element={<AllCocktails propsFetche={fetche} />}
+          />
           <Route
             path="/AllCocktailsIngredients/:propsIngredient"
             element={
@@ -86,6 +89,7 @@ const App = () => {
               />
             }
           />
+          <Route path="/*" element={<h1>Not Found</h1>} />
         </Routes>
       </BrowserRouter>
     </div>

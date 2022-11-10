@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
+import "../AllCocktailsCard/AllCocktailsCard.css";
 
 const AllCocktailsCardIngredients = ({ propsFetche }) => {
   const [cocktail, setCocktail] = useState({});
@@ -12,7 +13,7 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
       .then((response) => setCocktail(response.data.drinks[0]));
   }, [cocktail]);
 
-  const ingredients = [
+  const Filtreingredients = [
     cocktail.strIngredient1,
     cocktail.strIngredient2,
     cocktail.strIngredient3,
@@ -29,30 +30,50 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
     cocktail.strIngredient14,
     cocktail.strIngredient15,
   ];
-
   return (
-    <div className="container_card">
-      <div className="allcocktails__card">
-        <div className="allcocktails__frontcard">
-          <img
-            src={propsFetche.strDrinkThumb}
-            alt={propsFetche.strDrink}
-            className="allcocktails__img"
-          />
-          <h1 className="allcocktails__title">{propsFetche.strDrink}</h1>
-        </div>
-        <div className="allcocktails__backcard">
-          <h5 className="allcocktails__subTitle">Ingredients: </h5>
-          <ul className="allcocktails__ingredientsList">
-            {ingredients
-              .filter((el) => typeof el === "string")
-              .map((elem) => (
-                <li className="allcocktails__li">{elem}</li>
-              ))}
-          </ul>
-          <ul className="allcocktails__ingredients" />
-          <h5 className="allcocktails__subTitle">Let's do it : </h5>
-          <p className="allcocktails__paraf">{cocktail.strInstructions}</p>
+    <div className="flip-card">
+      <div className="container_card">
+        <div className="allcocktails__card">
+          <div className="allcocktails__frontcard">
+            <img
+              className="star__notFavourite"
+              src="/src/assets/images/star_image.jpg"
+              alt="star"
+            />
+            <img
+              src={propsFetche.strDrinkThumb}
+              alt={propsFetche.strDrink}
+              className="allcocktails__img"
+            />
+            <h1 className="allcocktails__title">{propsFetche.strDrink}</h1>
+          </div>
+          <div className="allcocktails__backcard">
+            <div className="firstblock__title">
+              <img
+                className="drink_picto"
+                src="/src/assets/images/picto_drink.jpg"
+                alt="picto_drink"
+              />
+              <h5>Ingredients: </h5>
+            </div>
+            <ul className="allcocktails__ingredientsList">
+              {Filtreingredients.filter((el) => typeof el === "string").map(
+                (elem) => (
+                  <li className="allcocktails__li">{elem}</li>
+                )
+              )}
+            </ul>
+            <ul className="allcocktails__ingredients" />
+            <div className="secondblock__title">
+              <img
+                className="shaker_picto"
+                src="/src/assets/images/picto_shaker.png"
+                alt="picto_shaker"
+              />
+              <h5> Recipe :</h5>
+            </div>
+            <p>{cocktail.strInstructions}</p>
+          </div>
         </div>
       </div>
     </div>
