@@ -82,7 +82,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 2.5vh;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
 }
 
 .container_card:hover .allcocktails__card {

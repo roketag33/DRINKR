@@ -36,6 +36,11 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
         <div className="allcocktails__card">
           <div className="allcocktails__frontcard">
             <img
+              className="star__notFavourite"
+              src="/src/assets/images/star_image.jpg"
+              alt="star"
+            />
+            <img
               src={propsFetche.strDrinkThumb}
               alt={propsFetche.strDrink}
               className="allcocktails__img"
@@ -46,7 +51,7 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
             <div className="firstblock__title">
               <img
                 className="drink_picto"
-                src="src/assets/images/picto_drink.jpg"
+                src="/src/assets/images/picto_drink.jpg"
                 alt="picto_drink"
               />
               <h5>Ingredients: </h5>
@@ -62,12 +67,12 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
             <div className="secondblock__title">
               <img
                 className="shaker_picto"
-                src="\src\asset\images\picto_shaker.png"
+                src="/src/assets/images/picto_shaker.png"
                 alt="picto_shaker"
               />
               <h5> Recipe :</h5>
             </div>
-            <p>{propsFetche.strInstructions}</p>
+            <p>{cocktail.strInstructions}</p>
           </div>
         </div>
       </div>
