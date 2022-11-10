@@ -8,7 +8,7 @@ const AllCocktailsCard = ({ propsFetche, cocktail }) => {
   useEffect(() => {
     axios
       .get(
-        `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${propsFetche.idDrink}`
+        `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${propsFetche}`
       )
       .then((response) => setCocktail(response.data.drinks[0]));
   }, [cocktails]);
