@@ -31,7 +31,8 @@
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.8, 1.28, 0.79, 1.29);
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .form__title {
   position: relative;
@@ -142,6 +143,7 @@
     height: auto;
     padding: 1rem;
     box-shadow: 10px 10px #131313;
+    overflow: hidden;
   }
 }
 @media screen and (min-width: 1140px) {
