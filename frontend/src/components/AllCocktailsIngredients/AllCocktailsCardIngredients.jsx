@@ -62,7 +62,7 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
             <div className="secondblock__title">
               <img
                 className="shaker_picto"
-                src="src/assets/images/picto_shaker.png"
+                src="\src\asset\images\picto_shaker.png"
                 alt="picto_shaker"
               />
               <h5> Recipe :</h5>
