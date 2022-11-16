@@ -7,6 +7,7 @@ import FormIngredients from "./components/FormIngredients/FormIngredients";
 import Homepage from "./components/Homepage/Homepage";
 import ButtonList from "./components/Buttonlist/ButtonList";
 import AllCocktails from "./components/AllCocktails/AllCocktails";
+import Error from "./components/Error/Error";
 import "./App.css";
 
 const App = () => {
@@ -103,7 +104,7 @@ const App = () => {
               />
             }
           />
-          <Route path="/*" element={<h1>Not Found</h1>} />
+          <Route path="/*" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </div>

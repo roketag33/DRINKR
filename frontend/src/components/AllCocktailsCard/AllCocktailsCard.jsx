@@ -5,6 +5,7 @@ import axios from "axios";
 
 const AllCocktailsCard = ({ propsFetche, cocktail }) => {
   const [cocktails, setCocktail] = useState({});
+  const [isFavorite, setIsFavorite] = useState(false);
   useEffect(() => {
     axios
       .get(
@@ -31,14 +32,22 @@ const AllCocktailsCard = ({ propsFetche, cocktail }) => {
     cocktail.strIngredient15,
   ];
 
+  function handleClickFavorite() {
+    setIsFavorite(!isFavorite);
+  }
+
   return (
     <div className="flip-card">
       <div className="container_card">
         <div className="allcocktails__card">
           <div className="allcocktails__frontcard">
             <img
-              className="star__notFavourite"
-              src="src/assets/images/star_image.jpg"
+              src={
+                isFavorite
+                  ? "src/assets/images/violet_star.png"
+                  : "src/assets/images/yellow_star.png"
+              }
+              className="star__image"
               alt="star"
             />
             <img
@@ -49,6 +58,20 @@ const AllCocktailsCard = ({ propsFetche, cocktail }) => {
             <h1 className="allcocktails__title">{cocktail.strDrink}</h1>
           </div>
           <div className="allcocktails__backcard">
+            <img
+              onClick={handleClickFavorite}
+              onKeyDown={() => {
+                setIsFavorite(false);
+              }}
+              role="presentation"
+              src={
+                isFavorite
+                  ? "src/assets/images/violet_star.png"
+                  : "src/assets/images/yellow_star.png"
+              }
+              className="star__image"
+              alt="star"
+            />
             <div className="firstblock__title">
               <img
                 className="drink_picto"
@@ -73,7 +96,7 @@ const AllCocktailsCard = ({ propsFetche, cocktail }) => {
               />
               <h5> Recipe :</h5>
             </div>
-            <p>{cocktail.strInstructions}</p>
+            <p className="cocktail__instruction">{cocktail.strInstructions}</p>
           </div>
         </div>
       </div>
