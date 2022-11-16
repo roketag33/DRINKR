@@ -63,6 +63,17 @@ const FormIngredients = ({
     });
     setIsActiveExtra(activeExtra);
   };
+
+  const filtrebtn = (valeurbtn) => {
+    const filterElement = propsIngredient.filter(
+      (el) => el !== valeurbtn.target.value
+    );
+    if (!propsIngredient.includes(valeurbtn.target.value)) {
+      propsSetIngredient([...propsIngredient, valeurbtn.target.value]);
+    } else {
+      propsSetIngredient(filterElement);
+    }
+  };
   return (
     <div className="homePage">
       <img
@@ -89,7 +100,7 @@ const FormIngredients = ({
               value={elements.name}
               onClick={(event) => {
                 handleClickAlcool(elements.name);
-                propsSetIngredient([...propsIngredient, event.target.value]);
+                filtrebtn(event);
               }}
             >
               {elements.name}
@@ -107,7 +118,7 @@ const FormIngredients = ({
               value={elements.name}
               onClick={(event) => {
                 handleClickSoft(elements.name);
-                propsSetIngredient([...propsIngredient, event.target.value]);
+                filtrebtn(event);
               }}
             >
               {elements.name}
@@ -125,7 +136,7 @@ const FormIngredients = ({
               value={elements.name}
               onClick={(event) => {
                 handleClickExtra(elements.name);
-                propsSetIngredient([...propsIngredient, event.target.value]);
+                filtrebtn(event);
               }}
             >
               {elements.name}
@@ -136,7 +147,10 @@ const FormIngredients = ({
           <button
             className="form__btn__go btn"
             type="button"
-            onClick={deleteValeur}
+            onClick={() => {
+              deleteValeur();
+              filtrebtn();
+            }}
           >
             LET'S GO
           </button>
