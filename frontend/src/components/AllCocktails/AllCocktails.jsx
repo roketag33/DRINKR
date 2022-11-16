@@ -57,6 +57,25 @@ const AllCocktails = ({ propsFetche }) => {
     <div className="allcocktails_section">
       <MenuBurger />
       <Title />
+      {/* <button
+        type="button"
+        className="allcocktails__button"
+        onClick={() => {
+          searchCocktails();
+        }}
+      >
+        <span>more cocktails ?</span>
+      </button> */}
+      <div className="list__allcocktails">
+        {cocktails.map((cocktail) => (
+          <AllCocktailsCard
+            propsFetche={propsFetche}
+            key={cocktail.id}
+            cocktail={cocktail}
+          />
+        ))}
+       
+      </div>
       <button
         type="button"
         className="allcocktails__button"
@@ -66,15 +85,6 @@ const AllCocktails = ({ propsFetche }) => {
       >
         <span>more cocktails ?</span>
       </button>
-      <div className="list__allcocktails">
-        {cocktails.map((cocktail) => (
-          <AllCocktailsCard
-            propsFetche={propsFetche}
-            key={cocktail.id}
-            cocktail={cocktail}
-          />
-        ))}
-      </div>
       <img
         className="green_drinks"
         src="./src/assets/images/green_cocktail.png"
