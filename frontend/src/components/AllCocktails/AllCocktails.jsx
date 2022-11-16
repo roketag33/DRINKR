@@ -74,7 +74,6 @@ const AllCocktails = ({ propsFetche }) => {
             cocktail={cocktail}
           />
         ))}
-       
       </div>
       <button
         type="button"
