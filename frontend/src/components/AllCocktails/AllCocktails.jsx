@@ -6,6 +6,7 @@ import Title from "../titleblock/title/Title";
 import AllCocktailsCard from "./AllCocktailsCard/AllCocktailsCard";
 import "./AllCocktails.css";
 import MenuBurger from "../MenuBurger/MenuBurger";
+
 // import { gsap } from "gsap";
 
 let Arraycocktails = [];
