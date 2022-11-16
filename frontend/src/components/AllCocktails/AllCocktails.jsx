@@ -85,7 +85,7 @@ const AllCocktails = ({ propsFetche }) => {
 };
 
 AllCocktails.propTypes = {
-  propsFetche: PropTypes.objectOf.isRequired,
+  propsFetche: PropTypes.arrayOf.isRequired,
 };
 
 export default AllCocktails;
