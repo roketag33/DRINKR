@@ -6,11 +6,21 @@ import Title from "../titleblock/title/Title";
 import AllCocktailsCard from "../AllCocktailsCard/AllCocktailsCard";
 import "./AllCocktails.css";
 import MenuBurger from "../MenuBurger/MenuBurger";
+import SearchBar from "../Buttonlist/SearchBar";
+import ButtonListResult from "../Buttonlist/ButtonListResult";
+
 // import { gsap } from "gsap";
 
 let Arraycocktails = [];
 
-const AllCocktails = ({ propsFetche }) => {
+const AllCocktails = ({
+  propsFetche,
+  userInput,
+  handleChange,
+  search,
+  setSearch,
+}) => {
+  //
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -42,30 +52,40 @@ const AllCocktails = ({ propsFetche }) => {
     );
     Arraycocktails = Arraycocktails.concat(response.data.drinks);
     setCocktails(Arraycocktails);
-    <div className="list__allcocktails">
-      {cocktails.map((cocktail) => (
-        <AllCocktailsCard
-          propsFetche={propsFetche}
-          key={cocktail.id}
-          cocktail={cocktail}
-        />
-      ))}
-    </div>;
+    // <div className="list__allcocktails">
+    //   {cocktails.map((cocktail) => (
+    //     <AllCocktailsCard
+    //       propsFetche={propsFetche}
+    //       key={cocktail.id}
+    //       cocktail={cocktail}
+    //     />
+    //   ))}
+    // </div>;
   };
 
   return (
     <div className="allcocktails_section">
       <MenuBurger />
       <Title />
-      {/* <button
-        type="button"
-        className="allcocktails__button"
-        onClick={() => {
-          searchCocktails();
-        }}
+      <form
+        // onSubmit={}
+        className="allCocktails__form"
       >
-        <span>more cocktails ?</span>
-      </button> */}
+        <SearchBar
+          className="allCocktails__searchbar"
+          value={userInput}
+          handleChange={handleChange}
+        />
+        <ButtonListResult
+          classeNameLi="allCocktails__result__li"
+          classResultList="allCocktails__result__li"
+          classname="allCocktails__resultList"
+          search={search}
+          userInput={userInput}
+          setSearch={setSearch}
+        />
+      </form>
+
       <div className="list__allcocktails">
         {cocktails.map((cocktail) => (
           <AllCocktailsCard
@@ -94,7 +114,11 @@ const AllCocktails = ({ propsFetche }) => {
 };
 
 AllCocktails.propTypes = {
-  propsFetche: PropTypes.objectOf.isRequired,
+  propsFetche: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  userInput: PropTypes.string.isRequired,
+  search: PropTypes.func.isRequired,
+  setSearch: PropTypes.func.isRequired,
 };
 
 export default AllCocktails;

@@ -78,7 +78,16 @@ const App = () => {
 
           <Route
             path="/AllCocktails"
-            element={<AllCocktails propsFetche={fetche} />}
+            element={
+              <AllCocktails
+                propsFetche={fetche}
+                setSearch={setSearch}
+                userInput={userInput}
+                search={search}
+                handleChange={handleChange}
+                setUserInput={setUserInput}
+              />
+            }
           />
           <Route
             path="/AllCocktailsIngredients/:propsIngredient"
@@ -86,6 +95,11 @@ const App = () => {
               <AllCocktailsIngredients
                 propsFetche={fetche}
                 propsSetFetche={setFetche}
+                setSearch={setSearch} // à partir d'ici searchbar test greg
+                userInput={userInput}
+                search={search}
+                handleChange={handleChange}
+                setUserInput={setUserInput}
               />
             }
           />
