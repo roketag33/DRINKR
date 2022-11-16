@@ -3,7 +3,7 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import Loading from "../Loading/Loading";
 import Title from "../titleblock/title/Title";
-import AllCocktailsCard from "../AllCocktailsCard/AllCocktailsCard";
+import AllCocktailsCard from "./AllCocktailsCard/AllCocktailsCard";
 import "./AllCocktails.css";
 import MenuBurger from "../MenuBurger/MenuBurger";
 import SearchBar from "../Buttonlist/SearchBar";
@@ -119,7 +119,6 @@ AllCocktails.propTypes = {
   userInput: PropTypes.string.isRequired,
   search: PropTypes.func.isRequired,
   setSearch: PropTypes.func.isRequired,
-  propsFetche: PropTypes.arrayOf.isRequired,
 };
 
 export default AllCocktails;

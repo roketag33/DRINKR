@@ -39,10 +39,7 @@ const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
           handleChange={handleChange}
         />
       </NavLink>
-      <form
-        // onSubmit={}
-        className="button_list_form button-list__form btn-down margin "
-      >
+      <form className="button_list_form button-list__form btn-down margin ">
         <SearchBar
           className="list__searchbar"
           value={userInput}
