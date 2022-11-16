@@ -155,18 +155,6 @@ const FormIngredients = ({
             LET'S GO
           </button>
         </NavLink>
-        <NavLink to={`/AllCocktailsIngredients/${propsIngredient}`}>
-          <button
-            className="form__btn__go btn"
-            type="button"
-            onClick={() => {
-              deleteValeur();
-              filtrebtn();
-            }}
-          >
-            LET'S GO
-          </button>
-        </NavLink>
       </div>
     </div>
   );

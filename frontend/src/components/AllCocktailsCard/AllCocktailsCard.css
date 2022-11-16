@@ -248,11 +248,11 @@
   }
 
   .allcocktails__img {
-  width: 20vw;
+    width: 20vw;
   }
 
   .allcocktails__card h1 {
-  width: 20vw;
+    width: 20vw;
   }
 
   .cocktail__instruction {
@@ -269,6 +269,6 @@
   }
 
   .allcocktails__ingredientsList {
-   padding-left: 1vw;
+    padding-left: 1vw;
   }
 }
