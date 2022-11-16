@@ -85,7 +85,9 @@
   margin-bottom: 2vh;
   margin-top: 2vh;
 }
-
+.container_card {
+  perspective: 1000px;
+}
 .container_card:hover .allcocktails__card {
   transform: rotateY(180deg);
 }

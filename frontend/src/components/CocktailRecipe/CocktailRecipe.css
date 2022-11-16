@@ -49,6 +49,84 @@
 .cocktailRecipe__resultLi:hover {
   text-decoration: underline;
 }
+/* .cocktailRecipe__similar-btn{
+position: relative;
+width: 100%;
+padding: 1.2rem;
+margin:  2rem 0;
+background-color: transparent;      RESPONSIVE BUTTON HERE
+border-radius: 2rem;
+border: none;
+box-shadow: 5px 5px black;
+font-family: var(--text-font-family);
+cursor: pointer;
+transition: all .3s ease;
+}
+.cocktailRecipe__similar-btn:hover{
+  border: 1px solid black;
+
+} */
+.cocktailRecipe__similar-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+  background-color: orange;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cocktailRecipe__similar-btn:hover {
+  width: 200px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.cocktailRecipe__similar-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 50px;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.cocktailRecipe__similar-btn:hover::before {
+  background-color: rgb(226, 105, 0);
+}
+.cocktailRecipe__similar-btn::after {
+  content: "See more cocktail";
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  white-space: nowrap;
+  border-radius: 50px;
+  z-index: -1;
+  transition: all 0.1s ease;
+  font-family: var(--text-font-family);
+  font-size: 1rem;
+}
+.cocktailRecipe__similar-btn:hover::after {
+  opacity: 1;
+  padding: 0 2rem;
+  transition: all 0.3s ease;
+}
+
 .cocktailRecipe__container .card {
   position: relative;
   display: flex;
@@ -216,7 +294,7 @@
   .cocktailRecipe__container .card {
     position: relative;
     margin-top: 2rem;
-    width: 40%;
+    width: 60%;
     min-height: 75vh;
     height: auto;
   }
@@ -239,5 +317,8 @@
     font-family: title-saint-regus;
     font-size: 3rem;
     text-transform: uppercase;
+  }
+  .cocktailRecipe__similar-btn {
+    margin: 3.5rem 0;
   }
 }

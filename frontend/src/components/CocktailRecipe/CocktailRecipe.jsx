@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 import { motion } from "framer-motion";
 import ButtonListResult from "../Buttonlist/ButtonListResult";
@@ -67,6 +67,21 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
     cocktail.strMeasure14,
     cocktail.strMeasure15,
   ];
+  const [btn, setBtn] = useState(false);
+  const [similar, setSimilar] = useState(cocktail); // Empty array here
+  const [random, setRandom] = useState(0);
+  const handleBtn = () => {
+    setBtn(!btn);
+    setRandom(random + 1);
+  };
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${cocktail.strIngredient1}`
+      )
+      .then((response) => setSimilar(response.data.drinks[random]));
+  }, [btn, random]);
 
   return (
     <div className="cocktailRecipe__container">
@@ -90,6 +105,7 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
           setSearch={setSearch}
         />
       </form>
+
       <motion.div
         className="cocktailRecipe__motion"
         initial={{ y: "100%" }}
@@ -147,6 +163,27 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
           </p>
         </animated.div>
       </motion.div>
+      {similar && similar.idDrink !== undefined ? (
+        <NavLink to={`/CocktailRecipe/${similar.idDrink}`}>
+          <button
+            type="button"
+            onClick={handleBtn}
+            className="cocktailRecipe__similar-btn"
+          >
+            &#8599;
+          </button>
+        </NavLink>
+      ) : (
+        <NavLink to={`/CocktailRecipe/${id}`}>
+          <button
+            type="button"
+            onClick={handleBtn}
+            className="cocktailRecipe__similar-btn"
+          >
+            &#8599;
+          </button>
+        </NavLink>
+      )}
     </div>
   );
 };
