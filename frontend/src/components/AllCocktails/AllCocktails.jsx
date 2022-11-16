@@ -3,7 +3,7 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import Loading from "../Loading/Loading";
 import Title from "../titleblock/title/Title";
-import AllCocktailsCard from "../AllCocktailsCard/AllCocktailsCard";
+import AllCocktailsCard from "./AllCocktailsCard/AllCocktailsCard";
 import "./AllCocktails.css";
 import MenuBurger from "../MenuBurger/MenuBurger";
 // import { gsap } from "gsap";
@@ -57,7 +57,7 @@ const AllCocktails = ({ propsFetche }) => {
     <div className="allcocktails_section">
       <MenuBurger />
       <Title />
-      <button
+      {/* <button
         type="button"
         className="allcocktails__button"
         onClick={() => {
@@ -65,7 +65,7 @@ const AllCocktails = ({ propsFetche }) => {
         }}
       >
         <span>more cocktails ?</span>
-      </button>
+      </button> */}
       <div className="list__allcocktails">
         {cocktails.map((cocktail) => (
           <AllCocktailsCard
@@ -75,6 +75,15 @@ const AllCocktails = ({ propsFetche }) => {
           />
         ))}
       </div>
+      <button
+        type="button"
+        className="allcocktails__button"
+        onClick={() => {
+          searchCocktails();
+        }}
+      >
+        <span>more cocktails ?</span>
+      </button>
       <img
         className="green_drinks"
         src="./src/assets/images/green_cocktail.png"

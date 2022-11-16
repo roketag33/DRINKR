@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
-import "../AllCocktailsCard/AllCocktailsCard.css";
+import "../AllCocktails/AllCocktailsCard/AllCocktailsCard.css";
 
 const AllCocktailsCardIngredients = ({ propsFetche }) => {
   const [cocktail, setCocktail] = useState({});
