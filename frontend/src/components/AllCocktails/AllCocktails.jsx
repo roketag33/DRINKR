@@ -9,8 +9,6 @@ import MenuBurger from "../MenuBurger/MenuBurger";
 import SearchBar from "../Buttonlist/SearchBar";
 import ButtonListResult from "../Buttonlist/ButtonListResult";
 
-// import { gsap } from "gsap";
-
 let Arraycocktails = [];
 
 const AllCocktails = ({
