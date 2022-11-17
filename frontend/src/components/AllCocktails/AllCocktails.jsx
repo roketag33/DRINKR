@@ -5,12 +5,22 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import Loading from "../Loading/Loading";
 import Title from "../titleblock/title/Title";
-import AllCocktailsCard from "../AllCocktailsCard/AllCocktailsCard";
+import AllCocktailsCard from "./AllCocktailsCard/AllCocktailsCard";
 import "./AllCocktails.css";
 import MenuBurger from "../MenuBurger/MenuBurger";
+import SearchBar from "../Buttonlist/SearchBar";
+import ButtonListResult from "../Buttonlist/ButtonListResult";
 
 let Arraycocktails = [];
-const AllCocktails = ({ propsFetche }) => {
+
+const AllCocktails = ({
+  propsFetche,
+  userInput,
+  handleChange,
+  search,
+  setSearch,
+}) => {
+  //
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -56,15 +66,25 @@ const AllCocktails = ({ propsFetche }) => {
     <div className="allcocktails_section">
       <MenuBurger />
       <Title />
-      <button
-        type="button"
-        className="allcocktails__button"
-        onClick={() => {
-          searchCocktails();
-        }}
+      <form
+        // onSubmit={}
+        className="allCocktails__form"
       >
-        <span>more cocktails ?</span>
-      </button>
+        <SearchBar
+          className="allCocktails__searchbar"
+          value={userInput}
+          handleChange={handleChange}
+        />
+        <ButtonListResult
+          classeNameLi="allCocktails__result__li"
+          classResultList="allCocktails__result__li"
+          classname="allCocktails__resultList"
+          search={search}
+          userInput={userInput}
+          setSearch={setSearch}
+        />
+      </form>
+
       <div className="list__allcocktails">
         {cocktails.map((cocktail) => (
           <AllCocktailsCard
@@ -74,6 +94,15 @@ const AllCocktails = ({ propsFetche }) => {
           />
         ))}
       </div>
+      <button
+        type="button"
+        className="allcocktails__button"
+        onClick={() => {
+          searchCocktails();
+        }}
+      >
+        <span>more cocktails ?</span>
+      </button>
       <img
         className="green_drinks"
         src="./src/assets/images/green_cocktail.png"
@@ -93,7 +122,10 @@ const AllCocktails = ({ propsFetche }) => {
 };
 
 AllCocktails.propTypes = {
-  propsFetche: PropTypes.objectOf.isRequired,
+  propsFetche: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  userInput: PropTypes.string.isRequired,
+  search: PropTypes.func.isRequired,
+  setSearch: PropTypes.func.isRequired,
 };
-
 export default AllCocktails;

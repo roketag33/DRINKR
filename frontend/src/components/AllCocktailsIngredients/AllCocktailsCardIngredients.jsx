@@ -1,10 +1,11 @@
 import { React, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
-import "../AllCocktailsCard/AllCocktailsCard.css";
+import "../AllCocktails/AllCocktailsCard/AllCocktailsCard.css";
 
 const AllCocktailsCardIngredients = ({ propsFetche }) => {
   const [cocktail, setCocktail] = useState({});
+  const [isFavorite, setIsFavorite] = useState(false);
   useEffect(() => {
     axios
       .get(
@@ -30,14 +31,22 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
     cocktail.strIngredient14,
     cocktail.strIngredient15,
   ];
+  function handleClickFavorite() {
+    setIsFavorite(!isFavorite);
+  }
+
   return (
     <div className="flip-card">
       <div className="container_card">
         <div className="allcocktails__card">
           <div className="allcocktails__frontcard">
             <img
-              className="star__notFavourite"
-              src="/src/assets/images/star_image.jpg"
+              src={
+                isFavorite
+                  ? "/src/assets/images/violet_star.png"
+                  : "/src/assets/images/yellow_star.png"
+              }
+              className="star__image"
               alt="star"
             />
             <img
@@ -48,6 +57,20 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
             <h1 className="allcocktails__title">{propsFetche.strDrink}</h1>
           </div>
           <div className="allcocktails__backcard">
+            <img
+              onClick={handleClickFavorite}
+              onKeyDown={() => {
+                setIsFavorite(false);
+              }}
+              role="presentation"
+              src={
+                isFavorite
+                  ? "/src/assets/images/violet_star.png"
+                  : "/src/assets/images/yellow_star.png"
+              }
+              className="star__image"
+              alt="star"
+            />
             <div className="firstblock__title">
               <img
                 className="drink_picto"

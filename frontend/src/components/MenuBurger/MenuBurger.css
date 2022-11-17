@@ -11,6 +11,7 @@
 }
 
 .Burger-style {
+  position: fixed;
   background-color: transparent;
   border: transparent;
   cursor: pointer;
@@ -21,11 +22,10 @@
   border: 1px solid grey;
   background-color: #b8efe2;
   padding: 40px 20px 10px 10px;
-
+  position: fixed;
   align-items: flex-start;
   justify-content: start;
   border-radius: 10px;
-  position: absolute;
   top: 10px;
   left: 34px;
   z-index: 100;
@@ -112,19 +112,19 @@
     height: 2px;
   }
   .modalContainer {
-    width: 200%;
-    height: 40%;
-    left: 1rem;
-    top: 0.7rem;
+    width: 45%;
+    height: 25%;
+    left: 3rem;
+    top: 3.5rem;
   }
   .menu_burger__btn {
-    margin-top: 1.5%;
-    margin-bottom: 4%;
-    width: 60vw;
-    height: 5vh;
-    left: 2px;
+    margin-top: 9%;
+    margin-bottom: 5%;
+    width: 48vw;
+    height: 6vh;
+    left: 1px;
     box-shadow: 5px 5px black;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -141,17 +141,17 @@
     width: 35px;
   }
   .modalContainer {
-    width: 200%;
-    height: 50%;
-    left: 1.5rem;
-    top: 0.5rem;
+    width: 45%;
+    height: 25%;
+    left: 3.5rem;
+    top: 3.5rem;
   }
   .menu_burger__btn {
-    margin-top: 0.8%;
-    margin-bottom: 4%;
-    width: 60vw;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    width: 48vw;
     height: 7vh;
-    left: 7px;
+    left: 1px;
     box-shadow: 5px 5px black;
   }
 }
@@ -168,15 +168,15 @@
     width: 35px;
   }
   .modalContainer {
-    width: 150%;
-    height: 65%;
-    left: 1.5rem;
-    top: 0.5rem;
+    width: 35%;
+    height: 25%;
+    left: 3.5rem;
+    top: 3.5rem;
   }
   .menu_burger__btn {
     margin-top: 3%;
-    width: 45vw;
-    height: 8vh;
+    width: 35vw;
+    height: 7vh;
     left: 5px;
     font-size: 1rem;
   }
@@ -195,10 +195,10 @@
     width: 38px;
   }
   .modalContainer {
-    width: 100%;
-    height: 70%;
-    left: 2rem;
-    top: 0.7rem;
+    width: 30%;
+    height: 30%;
+    left: 4rem;
+    top: 4.5rem;
   }
   .menu_burger__btn {
     margin-top: 8%;
@@ -220,10 +220,10 @@
     width: 38px;
   }
   .modalContainer {
-    width: 100%;
-    height: 90%;
-    left: 2rem;
-    top: 0.7rem;
+    width: 30%;
+    height: 35%;
+    left: 4rem;
+    top: 4.5rem;
   }
   .menu_burger__btn {
     margin-top: 12%;
@@ -235,10 +235,10 @@
 }
 @media all and (min-width: 1020px) {
   .modalContainer {
-    width: 100%;
-    height: 100%;
-    left: 2rem;
-    top: 0.7rem;
+    width: 30%;
+    height: 40%;
+    left: 4rem;
+    top: 4.5rem;
   }
 
   .menu_burger__btn {
@@ -254,10 +254,10 @@
     left: 2rem;
   }
   .modalContainer {
-    width: 100%;
-    height: 100%;
-    left: 2rem;
-    top: 0.7rem;
+    width: 30%;
+    height: 40%;
+    left: 4rem;
+    top: 6.5rem;
   }
 
   .menu_burger__btn {
