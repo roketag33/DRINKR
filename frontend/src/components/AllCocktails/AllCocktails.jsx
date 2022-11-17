@@ -1,3 +1,5 @@
+/* eslint-disable no-return-assign */
+/* eslint-disable func-names */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
@@ -60,7 +62,6 @@ const AllCocktails = ({
       ))}
     </div>;
   };
-
   return (
     <div className="allcocktails_section">
       <MenuBurger />
@@ -107,6 +108,15 @@ const AllCocktails = ({
         src="./src/assets/images/green_cocktail.png"
         alt="green_cocktail"
       />
+      {
+        (window.onscroll = function () {
+          const scrollPosition = window.scrollY;
+          const pageHeight = document.body.scrollHeight - window.innerHeight;
+          if (scrollPosition > pageHeight * 0.99) {
+            searchCocktails();
+          }
+        })
+      }
     </div>
   );
 };
@@ -118,5 +128,4 @@ AllCocktails.propTypes = {
   search: PropTypes.func.isRequired,
   setSearch: PropTypes.func.isRequired,
 };
-
 export default AllCocktails;
