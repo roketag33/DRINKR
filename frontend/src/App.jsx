@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import Loading from "./components/Loading/Loading";
 import AllCocktailsIngredients from "./components/AllCocktailsIngredients/AllCocktailsIngredients";
 import CocktailRecipe from "./components/CocktailRecipe/CocktailRecipe";
 import FormIngredients from "./components/FormIngredients/FormIngredients";
@@ -108,6 +109,7 @@ const App = () => {
           />
           <Route path="/*" element={<Error />} />
           <Route path="/LegalNotice" element={<LegalNotice />} />
+          <Route path="/load" element={<Loading />} />
         </Routes>
         <Footer />
       </BrowserRouter>

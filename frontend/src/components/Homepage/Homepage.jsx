@@ -11,7 +11,7 @@ const Homepage = () => {
     <div className="homePage">
       <MajorityBlock show={show} setShow={setShow} />
       <div className={!show ? "homePage__container" : "faded"}>
-        <Titleblock />
+        <Titleblock show={show} />
         <Navigation />
 
         <img

@@ -9,8 +9,6 @@ import MenuBurger from "../MenuBurger/MenuBurger";
 import SearchBar from "../Buttonlist/SearchBar";
 import ButtonListResult from "../Buttonlist/ButtonListResult";
 
-// import { gsap } from "gsap";
-
 let Arraycocktails = [];
 
 const AllCocktails = ({
@@ -20,7 +18,6 @@ const AllCocktails = ({
   search,
   setSearch,
 }) => {
-  //
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -52,25 +49,13 @@ const AllCocktails = ({
     );
     Arraycocktails = Arraycocktails.concat(response.data.drinks);
     setCocktails(Arraycocktails);
-    // <div className="list__allcocktails">
-    //   {cocktails.map((cocktail) => (
-    //     <AllCocktailsCard
-    //       propsFetche={propsFetche}
-    //       key={cocktail.id}
-    //       cocktail={cocktail}
-    //     />
-    //   ))}
-    // </div>;
   };
 
   return (
     <div className="allcocktails_section">
       <MenuBurger />
       <Title />
-      <form
-        // onSubmit={}
-        className="allCocktails__form"
-      >
+      <form className="allCocktails__form">
         <SearchBar
           className="allCocktails__searchbar"
           value={userInput}

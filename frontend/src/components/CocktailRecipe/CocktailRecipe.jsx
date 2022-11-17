@@ -22,6 +22,7 @@ const trans = (x, y, s) =>
 const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
   const [cocktail, setCocktail] = useState({});
   const { id } = useParams();
+
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 40 },
@@ -68,11 +69,14 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
     cocktail.strMeasure15,
   ];
   const [btn, setBtn] = useState(false);
-  const [similar, setSimilar] = useState(cocktail); // Empty array here
+  const [similar, setSimilar] = useState(cocktail);
   const [random, setRandom] = useState(0);
   const handleBtn = () => {
     setBtn(!btn);
     setRandom(random + 1);
+    setSimilar(cocktail);
+    // console.log(cocktail);
+    // console.log(id);
   };
 
   useEffect(() => {
@@ -168,7 +172,11 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
           <button
             type="button"
             onClick={handleBtn}
-            className="cocktailRecipe__similar-btn"
+            className={
+              window.width > `${700}px`
+                ? "cocktailRecipe__similar-btn"
+                : "cocktailRecipe__similar-btn-responsive"
+            }
           >
             &#8599;
           </button>
