@@ -50,15 +50,15 @@ const AllCocktails = ({
     );
     Arraycocktails = Arraycocktails.concat(response.data.drinks);
     setCocktails(Arraycocktails);
-    // <div className="list__allcocktails">
-    //   {cocktails.map((cocktail) => (
-    //     <AllCocktailsCard
-    //       propsFetche={propsFetche}
-    //       key={cocktail.id}
-    //       cocktail={cocktail}
-    //     />
-    //   ))}
-    // </div>;
+    <div className="list__allcocktails">
+      {cocktails.map((cocktail) => (
+        <AllCocktailsCard
+          propsFetche={propsFetche}
+          key={cocktail.id}
+          cocktail={cocktail}
+        />
+      ))}
+    </div>;
   };
 
   return (
