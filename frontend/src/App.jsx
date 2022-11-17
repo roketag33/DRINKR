@@ -7,6 +7,7 @@ import FormIngredients from "./components/FormIngredients/FormIngredients";
 import Homepage from "./components/Homepage/Homepage";
 import ButtonList from "./components/Buttonlist/ButtonList";
 import AllCocktails from "./components/AllCocktails/AllCocktails";
+import Error from "./components/Error/Error";
 import Footer from "./components/Footer/Footer";
 import LegalNotice from "./components/Footer/LegalNotice";
 import "./App.css";
@@ -80,7 +81,16 @@ const App = () => {
 
           <Route
             path="/AllCocktails"
-            element={<AllCocktails propsFetche={fetche} />}
+            element={
+              <AllCocktails
+                propsFetche={fetche}
+                setSearch={setSearch}
+                userInput={userInput}
+                search={search}
+                handleChange={handleChange}
+                setUserInput={setUserInput}
+              />
+            }
           />
           <Route
             path="/AllCocktailsIngredients/:propsIngredient"
@@ -88,10 +98,15 @@ const App = () => {
               <AllCocktailsIngredients
                 propsFetche={fetche}
                 propsSetFetche={setFetche}
+                setSearch={setSearch} // à partir d'ici searchbar test greg
+                userInput={userInput}
+                search={search}
+                handleChange={handleChange}
+                setUserInput={setUserInput}
               />
             }
           />
-          <Route path="/*" element={<h1>Not Found</h1>} />
+          <Route path="/*" element={<Error />} />
           <Route path="/LegalNotice" element={<LegalNotice />} />
         </Routes>
         <Footer />

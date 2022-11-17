@@ -33,6 +33,10 @@ const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
           type=""
           className="list__btn btn-midle btn"
           value="Find new cocktail ideas"
+          search={search}
+          userInput={userInput}
+          setSearch={setSearch}
+          handleChange={handleChange}
         />
       </NavLink>
       <form className="button_list_form button-list__form btn-down margin ">

@@ -19,7 +19,7 @@
 }
 
 .allcocktails__frontcard {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -37,12 +37,9 @@
 }
 
 .allcocktails__img {
-  max-width: 55%;
-  margin: 0;
-  border-radius: 10px;
-  /* -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
-  box-shadow: 0 10px 6px -6px #777; */
+  width: 55vw;
+  border-radius: 2vh;
+  margin-top: 5vh;
 }
 
 .allcocktails__backcard {
@@ -51,7 +48,6 @@
   transform: rotateY(180deg);
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  overflow-y: auto;
 }
 
 .drink_picto {
@@ -75,7 +71,7 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 2.5vh;
-  margin-bottom: 2vh;
+  margin-left: 2vw;
 }
 
 .secondblock__title {
@@ -85,7 +81,9 @@
   margin-bottom: 2vh;
   margin-top: 2vh;
 }
-
+.container_card {
+  perspective: 1000px;
+}
 .container_card:hover .allcocktails__card {
   transform: rotateY(180deg);
 }
@@ -99,35 +97,43 @@
 
 .allcocktails__ingredientsList {
   list-style-type: disc;
+  padding-left: 5vw;
 }
 
-.star__notFavourite {
-  width: 12vw;
-  position: relative;
-  z-index: 10;
-  top: -5vh;
-  right: -35vw;
+.star__image {
+  width: 18vw;
+  position: absolute;
+  z-index: 200;
+  top: -8vh;
+  right: -5vw;
 }
 
 /*Scroll part*/
 
-.allcocktails__backcard::-webkit-scrollbar {
+.cocktail__instruction {
+  overflow-y: auto;
+  height: 30vh;
+}
+
+.cocktail__instruction::-webkit-scrollbar {
   width: 20px;
 }
 
-.allcocktails__backcard::-webkit-scrollbar-track {
+.cocktail__instruction::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
-.allcocktails__backcard::-webkit-scrollbar-thumb {
+.cocktail__instruction::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 10px;
 }
 
-.allcocktails__backcard::-webkit-scrollbar-thumb:hover {
+.cocktail__instruction::-webkit-scrollbar-thumb:hover {
   background: #b30000;
 }
+
+/*Scroll part*/
 
 @media screen and (min-width: 400px) {
   .allcocktails__card {
@@ -136,115 +142,135 @@
   }
 
   .allcocktails__img {
-    width: 40vw;
+    width: 45vw;
   }
 
-  .star__notFavourite {
-    width: 12vw;
-    top: -5vh;
-    right: -28vw;
+  .cocktail__instruction {
+    height: 30vh;
+  }
+  .star__image {
+    width: 15vw;
   }
 }
 
 @media screen and (min-width: 525px) {
   .allcocktails__card {
     height: 75vh;
-    width: 60vw;
+    width: 65vw;
   }
 
   .allcocktails__img {
-    max-width: 40vw;
+    width: 50vw;
+  }
+
+  .cocktail__instruction {
+    height: 35vh;
+  }
+  .star__image {
+    width: 15vw;
   }
 }
 
 @media screen and (min-width: 600px) {
   .allcocktails__card {
-    height: 65vh;
-    width: 40vw;
+    height: 90vh;
+    width: 60vw;
   }
 
   .allcocktails__img {
-    max-width: 28vw;
+    max-width: 45vw;
   }
 
-  .star__notFavourite {
-    width: 8vw;
-    top: -5vh;
-    right: -20vw;
+  .cocktail__instruction {
+    height: 35vh;
+  }
+  .star__image {
+    width: 12vw;
   }
 }
 
 @media screen and (min-width: 735px) {
   .allcocktails__card {
-    height: 60vh;
-    width: 35vw;
+    height: 90vh;
+    width: 75vw;
   }
 
   .allcocktails__img {
-    max-width: 25vw;
+    width: 55vw;
   }
 
-  .star__notFavourite {
-    width: 6vw;
-    top: -5vh;
-    right: -17vw;
+  .cocktail__instruction {
+    height: 40vh;
+  }
+  .star__image {
+    width: 12vw;
   }
 }
 
 @media screen and (min-width: 800px) {
   .allcocktails__card {
-    height: 55vh;
-    width: 30vw;
+    height: 105vh;
+    width: 60vw;
   }
 
   .allcocktails__img {
-    max-width: 20vw;
+    max-width: 45vw;
   }
 
-  .star__notFavourite {
-    width: 6vw;
-    top: -5vh;
-    right: -15vw;
+  .cocktail__instruction {
+    height: 50vh;
+  }
+  .star__image {
+    width: 12vw;
   }
 }
 
 @media screen and (min-width: 900px) {
   .allcocktails__card {
-    height: 60vh;
-    width: 25vw;
+    height: 110vh;
+    width: 55vw;
   }
 
   .allcocktails__img {
-    max-width: 20vw;
+    max-width: 45vw;
   }
 
-  .star__notFavourite {
-    width: 6vw;
-    top: -5vh;
-    right: -11vw;
+  .cocktail__instruction {
+    height: 50vh;
+  }
+  .star__image {
+    width: 12vw;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .allcocktails__card {
-    height: 60vh;
-    width: 25vw;
+    height: 70vh;
+    width: 28vw;
   }
 
   .allcocktails__img {
-    max-width: 16vw;
-  }
-
-  .allcocktails__backcard {
-    max-height: 55vh;
+    width: 20vw;
   }
 
   .allcocktails__card h1 {
-    max-width: 20vw;
+    width: 20vw;
   }
-  .star__notFavourite {
-    width: 4vw;
-    top: -5vh;
-    right: -11vw;
+
+  .cocktail__instruction {
+    height: 30vh;
+  }
+  .star__image {
+    width: 7vw;
+    top: -7vh;
+    right: -1.7vw;
+  }
+
+  .firstblock__title {
+    margin-left: 0;
+  }
+
+  .allcocktails__ingredientsList {
+    padding-left: 1vw;
   }
 }
