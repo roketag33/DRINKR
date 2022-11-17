@@ -55,6 +55,7 @@
   box-shadow: 10px 10px black;
   width: 90%;
   height: 66vh;
+  overflow-y: auto;
 }
 
 .LegalNotice_container h2 {
@@ -70,3 +71,16 @@
   font-family: var(--text-font-family);
   padding: 10px;
 }
+
+.LegalNotice_container::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  .LegalNotice_container::-webkit-scrollbar-thumb {
+    background: var(--cocktail-list-bg-color);
+    border-radius: 10px;
+  }
+  
+  .LegalNotice_container::-webkit-scrollbar-thumb:hover {
+    background: var(--crd-bg-color);
+  }
