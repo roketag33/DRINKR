@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Footer.css";
 import Titleblock from "../titleblock/Titleblock";
 
@@ -294,6 +295,9 @@ const LegalNotice = () => {
           Drink’r.com.au registration, any subscription to our digital services
           or your use of this site.
         </p>
+        <button className="Button_HomePage" type="button">
+          <NavLink to="/ButtonList"> GO BACK TO HOMEPAGE</NavLink>
+        </button>
       </div>
     </div>
   );

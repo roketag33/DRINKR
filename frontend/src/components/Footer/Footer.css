@@ -1,35 +1,3 @@
-.footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #ffff9e;
-  position: fixed;
-  bottom: -40px;
-  width: 50%;
-  height: 10%;
-  border-radius: 100px;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%);
-  opacity: 0;
-  transition: 0.5s ease;
-  box-shadow: 0px 0px 0px 5px black;
-}
-.footer:hover {
-  opacity: 1;
-}
-
-.copyright {
-  font-family: var(--text-font-family);
-}
-
-.legal-notice {
-  font-family: title-saint-regus;
-  padding: 8px;
-  border-color: transparent;
-  background-color: #ffff9e;
-  cursor: pointer;
-}
-
 .LegalNotice {
   position: relative;
   background-color: var(--home-bg-color);
@@ -73,14 +41,54 @@
 }
 
 .LegalNotice_container::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  .LegalNotice_container::-webkit-scrollbar-thumb {
-    background: var(--cocktail-list-bg-color);
-    border-radius: 10px;
-  }
-  
-  .LegalNotice_container::-webkit-scrollbar-thumb:hover {
-    background: var(--crd-bg-color);
-  }
+  width: 20px;
+}
+
+.LegalNotice_container::-webkit-scrollbar-thumb {
+  background: var(--cocktail-list-bg-color);
+  border-radius: 10px;
+}
+
+.LegalNotice_container::-webkit-scrollbar-thumb:hover {
+  background: var(--crd-bg-color);
+}
+
+.Button_HomePage {
+  font-family: title-saint-regus;
+  padding: 8px;
+  border-color: transparent;
+  background-color: #ffff9e;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffff9e;
+  position: fixed;
+  bottom: -40px;
+  width: 50%;
+  height: 10%;
+  border-radius: 100px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: 0.5s ease;
+  box-shadow: 0px 0px 0px 5px black;
+}
+.footer:hover {
+  opacity: 1;
+}
+
+.copyright {
+  font-family: var(--text-font-family);
+}
+
+.legal-notice {
+  font-family: title-saint-regus;
+  padding: 8px;
+  border-color: transparent;
+  background-color: #ffff9e;
+  cursor: pointer;
+}
