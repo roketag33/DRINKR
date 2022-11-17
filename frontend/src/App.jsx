@@ -8,7 +8,6 @@ import Homepage from "./components/Homepage/Homepage";
 import ButtonList from "./components/Buttonlist/ButtonList";
 import AllCocktails from "./components/AllCocktails/AllCocktails";
 import Error from "./components/Error/Error";
-import Footer from "./components/Footer/Footer";
 import LegalNotice from "./components/Footer/LegalNotice";
 import "./App.css";
 
@@ -109,7 +108,6 @@ const App = () => {
           <Route path="/*" element={<Error />} />
           <Route path="/LegalNotice" element={<LegalNotice />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );

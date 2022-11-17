@@ -8,7 +8,7 @@ const Footer = () => {
       <p className="copyright"> COPYRIGHT © 2022 - ALL RIGHTS RESERVED</p>
       <button className="legal-notice" type="button">
         {" "}
-        <NavLink to="/LegalNotice"> LEGAL NOTIVE</NavLink>
+        <NavLink to="/LegalNotice"> LEGAL NOTICE</NavLink>
       </button>
     </div>
   );
