@@ -18,7 +18,7 @@ const ButtonListResult = ({
             el.strDrink.toLowerCase().includes(userInput.toLowerCase())
           )
           .map((el, id) => (
-            <NavLink to={`/CocktailRecipe/${el.idDrink}`}>
+            <NavLink to={`/CocktailRecipe/${el.idDrink}`} reloadDocument>
               <ResultList
                 className={classeNameLi}
                 setSearch={setSearch}

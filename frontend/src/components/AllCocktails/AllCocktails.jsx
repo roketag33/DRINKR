@@ -20,7 +20,6 @@ const AllCocktails = ({
   search,
   setSearch,
 }) => {
-  //
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -66,10 +65,7 @@ const AllCocktails = ({
     <div className="allcocktails_section">
       <MenuBurger />
       <Title />
-      <form
-        // onSubmit={}
-        className="allCocktails__form"
-      >
+      <form className="allCocktails__form">
         <SearchBar
           className="allCocktails__searchbar"
           value={userInput}

@@ -4,18 +4,15 @@ import LoadingCard from "./LoadingCard";
 import LoadingSearchBar from "./LoadingSearchBar";
 
 const Loading = () => {
+  const fakeArrayForDavid = ["david", "david", "david", "david", "david"];
   return (
     <div className="allcocktails_section-placeholder">
       <Title />
       <div className="list__allcocktails">
         <LoadingSearchBar />
-        <LoadingCard />
-        <LoadingCard />
-        <LoadingCard />
-        <LoadingCard />
-        <LoadingCard />
-        <LoadingCard />
-        <LoadingCard />
+        {fakeArrayForDavid.map(() => (
+          <LoadingCard />
+        ))}
       </div>
     </div>
   );
