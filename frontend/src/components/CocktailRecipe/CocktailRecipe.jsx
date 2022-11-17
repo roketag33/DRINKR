@@ -173,9 +173,10 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
             type="button"
             onClick={handleBtn}
             className={
-              window.width > `${700}px`
-                ? "cocktailRecipe__similar-btn"
-                : "cocktailRecipe__similar-btn-responsive"
+
+ "cocktailRecipe__similar-btn"
+
+
             }
           >
             &#8599;
