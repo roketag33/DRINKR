@@ -26,7 +26,7 @@
   z-index: 0;
 }
 
-button {
+.allcocktails__button {
   background-color: var(--crd-bg-color);
   color: var(--crd-txt-color);
   border: none;
