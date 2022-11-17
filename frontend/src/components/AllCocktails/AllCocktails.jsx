@@ -90,15 +90,6 @@ const AllCocktails = ({
           />
         ))}
       </div>
-      <button
-        type="button"
-        className="allcocktails__button"
-        onClick={() => {
-          searchCocktails();
-        }}
-      >
-        <span>more cocktails ?</span>
-      </button>
       <img
         className="green_drinks"
         src="./src/assets/images/green_cocktail.png"
