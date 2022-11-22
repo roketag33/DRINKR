@@ -18,10 +18,7 @@ const AllCocktailsIngredients = ({
     <div className="allcocktails_section">
       <MenuBurger />
       <Title />
-      <form
-        // onSubmit={}
-        className="allCocktails__form"
-      >
+      <form className="allCocktails__form">
         <SearchBar
           className="allCocktails__searchbar"
           value={userInput}

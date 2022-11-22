@@ -75,8 +75,6 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
     setBtn(!btn);
     setRandom(random + 1);
     setSimilar(cocktail);
-    // console.log(cocktail);
-    // console.log(id);
   };
 
   useEffect(() => {
