@@ -1,12 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import Loading from "./components/Loading/Loading";
 import AllCocktailsIngredients from "./components/AllCocktailsIngredients/AllCocktailsIngredients";
 import CocktailRecipe from "./components/CocktailRecipe/CocktailRecipe";
 import FormIngredients from "./components/FormIngredients/FormIngredients";
 import Homepage from "./components/Homepage/Homepage";
 import ButtonList from "./components/Buttonlist/ButtonList";
 import AllCocktails from "./components/AllCocktails/AllCocktails";
+import Error from "./components/Error/Error";
+import LegalNotice from "./components/Footer/LegalNotice";
 import "./App.css";
 
 const App = () => {
@@ -76,16 +79,36 @@ const App = () => {
             }
           />
 
-          <Route path="/AllCocktails" element={<AllCocktails />} />
+          <Route
+            path="/AllCocktails"
+            element={
+              <AllCocktails
+                propsFetche={fetche}
+                setSearch={setSearch}
+                userInput={userInput}
+                search={search}
+                handleChange={handleChange}
+                setUserInput={setUserInput}
+              />
+            }
+          />
           <Route
             path="/AllCocktailsIngredients/:propsIngredient"
             element={
               <AllCocktailsIngredients
                 propsFetche={fetche}
                 propsSetFetche={setFetche}
+                setSearch={setSearch} // à partir d'ici searchbar test greg
+                userInput={userInput}
+                search={search}
+                handleChange={handleChange}
+                setUserInput={setUserInput}
               />
             }
           />
+          <Route path="/*" element={<Error />} />
+          <Route path="/LegalNotice" element={<LegalNotice />} />
+          <Route path="/load" element={<Loading />} />
         </Routes>
       </BrowserRouter>
     </div>

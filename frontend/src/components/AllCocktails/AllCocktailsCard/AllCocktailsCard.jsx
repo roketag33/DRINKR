@@ -1,18 +1,18 @@
 import { React, useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import "./AllCocktailsCard.css";
 import axios from "axios";
-import "../AllCocktails/AllCocktailsCard/AllCocktailsCard.css";
 
-const AllCocktailsCardIngredients = ({ propsFetche }) => {
-  const [cocktail, setCocktail] = useState({});
+const AllCocktailsCard = ({ propsFetche, cocktail }) => {
+  const [cocktails, setCocktail] = useState({});
   const [isFavorite, setIsFavorite] = useState(false);
   useEffect(() => {
     axios
       .get(
-        `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${propsFetche.idDrink}`
+        `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${propsFetche}`
       )
       .then((response) => setCocktail(response.data.drinks[0]));
-  }, [cocktail]);
+  }, [cocktails]);
 
   const Filtreingredients = [
     cocktail.strIngredient1,
@@ -31,6 +31,7 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
     cocktail.strIngredient14,
     cocktail.strIngredient15,
   ];
+
   function handleClickFavorite() {
     setIsFavorite(!isFavorite);
   }
@@ -43,18 +44,18 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
             <img
               src={
                 isFavorite
-                  ? "/src/assets/images/favorite.png"
-                  : "/src/assets/images/notFavorite.png"
+                  ? "src/assets/images/favorite.png"
+                  : "src/assets/images/notFavorite.png"
               }
-              className="heart__image"
+              className="heart__image bubbly-button"
               alt="heart"
             />
             <img
-              src={propsFetche.strDrinkThumb}
-              alt={propsFetche.strDrink}
+              src={cocktail.strDrinkThumb}
+              alt={cocktail.strDrink}
               className="allcocktails__img"
             />
-            <h1 className="allcocktails__title">{propsFetche.strDrink}</h1>
+            <h1 className="allcocktails__title">{cocktail.strDrink}</h1>
           </div>
           <div className="allcocktails__backcard">
             <img
@@ -65,16 +66,16 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
               role="presentation"
               src={
                 isFavorite
-                  ? "/src/assets/images/favorite.png"
-                  : "/src/assets/images/notFavorite.png"
+                  ? "src/assets/images/favorite.png"
+                  : "src/assets/images/notFavorite.png"
               }
-              className="heart__image"
+              className="heart__image  bubbly-button"
               alt="heart"
             />
             <div className="firstblock__title">
               <img
                 className="drink_picto"
-                src="/src/assets/images/picto_drink.jpg"
+                src="src/assets/images/picto_drink.jpg"
                 alt="picto_drink"
               />
               <h5>Ingredients: </h5>
@@ -90,7 +91,7 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
             <div className="secondblock__title">
               <img
                 className="shaker_picto"
-                src="/src/assets/images/picto_shaker.png"
+                src="src/assets/images/picto_shaker.png"
                 alt="picto_shaker"
               />
               <h5> Recipe :</h5>
@@ -103,8 +104,9 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
   );
 };
 
-AllCocktailsCardIngredients.propTypes = {
+AllCocktailsCard.propTypes = {
+  cocktail: PropTypes.string.isRequired,
   propsFetche: PropTypes.func.isRequired,
 };
 
-export default AllCocktailsCardIngredients;
+export default AllCocktailsCard;

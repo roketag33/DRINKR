@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import Title from "../titleblock/title/Title";
@@ -10,15 +10,73 @@ const FormIngredients = ({
   propsIngredient,
   propsSetIngredient,
   propsSetFetche,
+  propsFetche,
 }) => {
-  useEffect(() => {
-    axios
+  const Cocktailingredients = async () => {
+    await axios
       .get(
         `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${propsIngredient}`
       )
       .then((response) => propsSetFetche(response.data.drinks));
+  };
+  useEffect(() => {
+    Cocktailingredients();
   }, [propsIngredient]);
+  const deleteValeur = () => {
+    propsSetIngredient([]);
+  };
+  const [isActiveAlcool, setIsActiveAlcool] = useState(ingredients.ALCOOL);
+  const [isActiveSoft, setIsActiveSoft] = useState(ingredients.SOFT);
+  const [isActiveExtra, setIsActiveExtra] = useState(ingredients.EXTRA);
 
+  const handleClickAlcool = (ingredientsName) => {
+    const activeAlcool = isActiveAlcool.map((el) => {
+      if (el.name === ingredientsName) {
+        return {
+          ...el,
+          isActive: !el.isActive,
+        };
+      }
+      return { ...el };
+    });
+    setIsActiveAlcool(activeAlcool);
+  };
+  const handleClickSoft = (ingredientsNameSoft) => {
+    const activeSoft = isActiveSoft.map((el) => {
+      if (el.name === ingredientsNameSoft) {
+        return {
+          ...el,
+          isActive: !el.isActive,
+        };
+      }
+      return { ...el };
+    });
+    setIsActiveSoft(activeSoft);
+  };
+
+  const handleClickExtra = (ingredientsNameExtra) => {
+    const activeExtra = isActiveExtra.map((el) => {
+      if (el.name === ingredientsNameExtra) {
+        return {
+          ...el,
+          isActive: !el.isActive,
+        };
+      }
+      return { ...el };
+    });
+    setIsActiveExtra(activeExtra);
+  };
+
+  const filtrebtn = (valeurbtn) => {
+    const filterElement = propsIngredient.filter(
+      (el) => el !== valeurbtn.target.value
+    );
+    if (!propsIngredient.includes(valeurbtn.target.value)) {
+      propsSetIngredient([...propsIngredient, valeurbtn.target.value]);
+    } else {
+      propsSetIngredient(filterElement);
+    }
+  };
   return (
     <div className="homePage">
       <img
@@ -36,62 +94,94 @@ const FormIngredients = ({
       <div className="form__container">
         <h4 className="form__title">1-ALCOOL</h4>
         <div className="form__container__ingredients">
-          {ingredients.alcool.map((elements) => (
+          {isActiveAlcool.map((elements) => (
             <button
-              className="form__btn btn"
-              type="button"
-              value={elements}
-              onClick={(event) =>
-                propsSetIngredient([...propsIngredient, event.target.value])
+              className={
+                elements.isActive ? "form__btn__click" : "form__btn btn"
               }
+              type="button"
+              value={elements.name}
+              onClick={(event) => {
+                handleClickAlcool(elements.name);
+                filtrebtn(event);
+              }}
             >
-              {elements}
+              {elements.name}
             </button>
           ))}
         </div>
         <h4 className="form__title">2-SOFT</h4>
         <div className="form__container__ingredients">
-          {ingredients.soft.map((elements) => (
+          {isActiveSoft.map((elements) => (
             <button
-              className="form__btn btn"
-              type="button"
-              value={elements}
-              onClick={(event) =>
-                propsSetIngredient([...propsIngredient, event.target.value])
+              className={
+                elements.isActive ? "form__btn__click" : "form__btn btn"
               }
+              type="button"
+              value={elements.name}
+              onClick={(event) => {
+                handleClickSoft(elements.name);
+                filtrebtn(event);
+              }}
             >
-              {elements}
+              {elements.name}
             </button>
           ))}
         </div>
         <h4 className="form__title">3-EXTRA</h4>
         <div className="form__container__ingredients">
-          {ingredients.extra.map((elements) => (
+          {isActiveExtra.map((elements) => (
             <button
-              className="form__btn btn"
-              type="button"
-              value={elements}
-              onClick={(event) =>
-                propsSetIngredient([...propsIngredient, event.target.value])
+              className={
+                elements.isActive ? "form__btn__click" : "form__btn btn"
               }
+              type="button"
+              value={elements.name}
+              onClick={(event) => {
+                handleClickExtra(elements.name);
+                filtrebtn(event);
+              }}
             >
-              {elements}
+              {elements.name}
             </button>
           ))}
         </div>
-        <NavLink to={`/AllCocktailsIngredients/${propsIngredient}`}>
-          <button className="form__btn__go btn" type="button">
-            LET'S GO
-          </button>
-        </NavLink>
+        {propsFetche === "None Found" ? (
+          <NavLink to="/AllCocktails">
+            <button
+              className="form__btn__go btn"
+              type="button"
+              onClick={() => {
+                deleteValeur();
+                filtrebtn();
+              }}
+            >
+              LET'S GO
+            </button>
+          </NavLink>
+        ) : (
+          <NavLink to={`/AllCocktailsIngredients/${propsIngredient}`}>
+            <button
+              className="form__btn__go btn"
+              type="button"
+              onClick={() => {
+                deleteValeur();
+                filtrebtn();
+              }}
+            >
+              LET'S GO
+            </button>
+          </NavLink>
+        )}
       </div>
     </div>
   );
 };
 
 FormIngredients.propTypes = {
-  propsIngredient: PropTypes.objectOf.isRequired,
-  propsSetIngredient: PropTypes.objectOf.isRequired,
-  propsSetFetche: PropTypes.objectOf.isRequired,
+  propsSetIngredient: PropTypes.func.isRequired,
+  propsSetFetche: PropTypes.func.isRequired,
+  propsIngredient: PropTypes.func.isRequired,
+  propsFetche: PropTypes.arrayOf.isRequired,
 };
 export default FormIngredients;

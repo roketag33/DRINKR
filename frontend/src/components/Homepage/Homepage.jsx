@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navigation from "../Navigation";
 import Titleblock from "../titleblock/Titleblock";
 import MajorityBlock from "../MajorityBlock/MajorityBlock";
+import Footer from "../Footer/Footer";
 import "./Homepage.css";
 
 const Homepage = () => {
@@ -11,8 +12,9 @@ const Homepage = () => {
     <div className="homePage">
       <MajorityBlock show={show} setShow={setShow} />
       <div className={!show ? "homePage__container" : "faded"}>
-        <Titleblock />
+        <Titleblock show={show} />
         <Navigation />
+
         <img
           className="cocktail__mainpage"
           src="/src/assets/images/pink_cocktailtrans.png"
@@ -24,6 +26,7 @@ const Homepage = () => {
           alt="mintleaves"
         />
       </div>
+      {!show && <Footer />}
     </div>
   );
 };
