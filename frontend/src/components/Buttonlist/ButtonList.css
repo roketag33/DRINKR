@@ -76,7 +76,7 @@
 
 .button-list__result-container {
   position: absolute;
-  bottom: -10rem;
+  bottom: -13rem;
   display: flex;
   flex-direction: column;
   justify-content: start;

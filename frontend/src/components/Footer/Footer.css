@@ -84,10 +84,10 @@
 .footer {
   text-align: center;
   padding: 1rem;
-  background-color: #ffff9e;
+
   position: fixed;
   bottom: 5px;
-  width: 60%;
+  width: 80%;
   height: 5%;
   border-radius: 100px;
   left: 50%;
@@ -100,29 +100,16 @@
 
 .copyright {
   font-family: var(--text-font-family);
+  font-size: 0.7rem;
 }
 
 .legal-notice {
   font-family: title-saint-regus;
   height: 2rem;
   border-color: transparent;
-  background-color: #ffff9e;
+  background-color: transparent;
   cursor: pointer;
-}
-
-@media screen and (min-width: 320px) {
-  .LegalNotice h2 {
-    font-size: 2rem;
-    white-space: nowrap;
-  }
-  .LegalNotice h1 {
-    font-size: 3rem;
-    white-space: nowrap;
-  }
-  .legal-notice {
-  font-size: 1rem;
-  margin-top: -0.2rem;
-  }
+  font-size: 0.7rem;
 }
 
 @media screen and (min-width: 500px) {
@@ -164,12 +151,13 @@
 @media screen and (min-width: 620px) {
   .footer {
     width: 60%;
+    height: 7%;
   }
 }
-
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 768px) {
   .footer {
-    opacity: 0; /* change this value to 0*/
+    opacity: 0;
+    background-color: var(--btn-bg-color);
   }
   .footer:hover {
     opacity: 1;

@@ -5,7 +5,6 @@ import Buttons from "./Buttons";
 import SearchBar from "./SearchBar";
 import ButtonListResult from "./ButtonListResult";
 import Titleblock from "../titleblock/Titleblock";
-import Footer from "../Footer/Footer";
 import "./ButtonList.css";
 
 const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
@@ -55,7 +54,6 @@ const ButtonList = ({ userInput, handleChange, search, setSearch }) => {
           setSearch={setSearch}
         />
       </form>
-      <Footer />
     </div>
   );
 };

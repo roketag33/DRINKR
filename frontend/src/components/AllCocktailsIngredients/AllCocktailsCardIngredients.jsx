@@ -95,7 +95,7 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
               />
               <h5> Recipe :</h5>
             </div>
-            <p>{cocktail.strInstructions}</p>
+            <p className="cocktail__instruction">{cocktail.strInstructions}</p>
           </div>
         </div>
       </div>

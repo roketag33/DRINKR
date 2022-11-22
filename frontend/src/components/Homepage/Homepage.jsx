@@ -26,7 +26,7 @@ const Homepage = () => {
           alt="mintleaves"
         />
       </div>
-      <Footer />
+      {!show && <Footer />}
     </div>
   );
 };

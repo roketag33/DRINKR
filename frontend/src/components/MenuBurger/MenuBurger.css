@@ -11,38 +11,41 @@
 }
 
 .Burger-style {
-  position: fixed;
   background-color: transparent;
   border: transparent;
   cursor: pointer;
   z-index: 1000;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
 }
 
-.modalContainer {
-  border: 1px solid grey;
+.Menu-Burger .modalContainer {
   background-color: #b8efe2;
-  padding: 40px 20px 10px 10px;
   position: fixed;
-  align-items: flex-start;
-  justify-content: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
-  top: 10px;
-  left: 34px;
   z-index: 100;
   box-shadow: 10px 10px black;
-  width: 100%;
-  height: 100%;
+  top: 1.6rem;
+  left: 1.6rem;
+  width: 60vw;
+  height: 30vh;
 }
 
 .Menu-Burger {
-  position: absolute;
-  top: 5rem;
-  left: 4rem;
+  position: fixed;
+  top: 4.5rem;
+  left: 4.5rem;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   width: 30vw;
   height: 40vh;
+  z-index: 1000;
 }
 
 .span-right {
@@ -83,9 +86,8 @@
   transition: all 0.4s ease;
 }
 
-.menu_burger__btn {
+.Menu-Burger .menu_burger__btn {
   position: relative;
-  width: 90%;
   height: 3rem;
   border-radius: 100px;
   border: none;
@@ -93,72 +95,47 @@
   background-color: #ffff9e;
   z-index: 19;
   font-family: var(--text-font-family);
-  font-size: 1.1rem;
-  width: 96%;
-  margin-top: 13%;
+  font-size: 1rem;
+  width: 30vw;
+  margin-top: 2vh;
 }
 
-@media all and (max-width: 403px) {
-  .Menu-Burger {
-    top: 3rem;
-    left: 2rem;
+@media all and (min-width: 320px) {
+  .Burger-style {
+    top: 1rem;
+    left: 1rem;
   }
   .Burger-style span {
     width: 35px;
     height: 3px;
   }
+
   .Burger-style span:nth-last-child(2) {
     width: 25px;
     height: 2px;
   }
-  .modalContainer {
-    width: 45%;
-    height: 25%;
-    left: 3rem;
-    top: 3.5rem;
+  .Menu-Burger .modalContainer {
+    top: 1.6rem;
+    left: 1.6rem;
+    width: 60vw;
+    height: 30vh;
   }
-  .menu_burger__btn {
-    margin-top: 9%;
-    margin-bottom: 5%;
+  .Menu-Burger .menu_burger__btn {
     width: 48vw;
     height: 6vh;
-    left: 1px;
     box-shadow: 5px 5px black;
     font-size: 0.8rem;
   }
 }
 
-@media all and (min-width: 404px) {
-  .Menu-Burger {
-    top: 2.5rem;
-    left: 2rem;
-  }
-  .Burger-style span {
-    width: 50px;
-    height: 2px;
-  }
-  .Burger-style span:nth-last-child(2) {
-    width: 35px;
-  }
-  .modalContainer {
-    width: 45%;
-    height: 25%;
-    left: 3.5rem;
-    top: 3.5rem;
-  }
-  .menu_burger__btn {
-    margin-top: 3%;
-    margin-bottom: 5%;
-    width: 48vw;
-    height: 7vh;
-    left: 1px;
-    box-shadow: 5px 5px black;
-  }
-}
 @media all and (min-width: 519px) {
+  .Burger-style {
+    top: 1rem;
+    left: 1rem;
+  }
   .Menu-Burger {
-    top: 3rem;
-    left: 2rem;
+    top: 1rem;
+    left: 1rem;
   }
   .Burger-style span {
     width: 60px;
@@ -225,15 +202,14 @@
     left: 4rem;
     top: 4.5rem;
   }
-  .menu_burger__btn {
-    margin-top: 12%;
+  .Menu-Burger .menu_burger__btn {
     width: 30vw;
     height: 8vh;
     left: 4px;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
-@media all and (min-width: 1020px) {
+/* @media all and (min-width: 1020px) {
   .modalContainer {
     width: 30%;
     height: 40%;
@@ -242,27 +218,24 @@
   }
 
   .menu_burger__btn {
-    margin-top: 10%;
     width: 30vw;
     height: 8.5vh;
     left: 3px;
   }
-}
-@media screen and (min-width: 1200px) {
-  .Menu-Burger {
-    top: 6rem;
+} */
+@media screen and (min-width: 1020px) {
+  .Burger-style {
+    top: 2rem;
     left: 2rem;
   }
-  .modalContainer {
-    width: 30%;
+  .Menu-Burger .modalContainer {
+    width: 40vw;
     height: 40%;
-    left: 4rem;
-    top: 6.5rem;
+    left: 3.5rem;
+    top: 3rem;
   }
 
-  .menu_burger__btn {
-    margin-top: 8.5%;
-    margin-bottom: 0.2%;
+  .Menu-Burger .menu_burger__btn {
     width: 30vw;
     height: 10vh;
     left: 3px;
