@@ -1,3 +1,5 @@
+/* eslint-disable no-return-assign */
+/* eslint-disable func-names */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
@@ -9,8 +11,6 @@ import MenuBurger from "../MenuBurger/MenuBurger";
 import SearchBar from "../Buttonlist/SearchBar";
 import ButtonListResult from "../Buttonlist/ButtonListResult";
 
-// import { gsap } from "gsap";
-
 let Arraycocktails = [];
 
 const AllCocktails = ({
@@ -20,7 +20,6 @@ const AllCocktails = ({
   search,
   setSearch,
 }) => {
-  //
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -52,8 +51,16 @@ const AllCocktails = ({
     );
     Arraycocktails = Arraycocktails.concat(response.data.drinks);
     setCocktails(Arraycocktails);
+    <div className="list__allcocktails">
+      {cocktails.map((cocktail) => (
+        <AllCocktailsCard
+          propsFetche={propsFetche}
+          key={cocktail.id}
+          cocktail={cocktail}
+        />
+      ))}
+    </div>;
   };
-
   return (
     <div className="allcocktails_section">
       <MenuBurger />
@@ -83,20 +90,20 @@ const AllCocktails = ({
           />
         ))}
       </div>
-      <button
-        type="button"
-        className="allcocktails__button"
-        onClick={() => {
-          searchCocktails();
-        }}
-      >
-        <span>more cocktails ?</span>
-      </button>
       <img
         className="green_drinks"
         src="./src/assets/images/green_cocktail.png"
         alt="green_cocktail"
       />
+      {
+        (window.onscroll = function () {
+          const scrollPosition = window.scrollY;
+          const pageHeight = document.body.scrollHeight - window.innerHeight;
+          if (scrollPosition > pageHeight * 0.99) {
+            searchCocktails();
+          }
+        })
+      }
     </div>
   );
 };
@@ -108,5 +115,4 @@ AllCocktails.propTypes = {
   search: PropTypes.func.isRequired,
   setSearch: PropTypes.func.isRequired,
 };
-
 export default AllCocktails;

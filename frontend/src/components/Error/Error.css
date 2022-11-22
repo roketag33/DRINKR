@@ -1,4 +1,30 @@
-.img__error {
+.error {
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+}
+.container__error {
+  display: flex;
   position: absolute;
-  width: 100%;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.img__error {
+  width: 30%;
+}
+.error h1 {
+  font-size: 15vh;
+}
+.error h2 {
+  font-size: 6vh;
+}
+.error__title__site {
+  font-size: 3rem;
+  font-family: title-saint-regus;
+  text-align: center;
+  border-radius: 30px;
+  border-width: 1em;
+  background-color: var(--home-bg-color);
+  margin-top: 2vh;
 }

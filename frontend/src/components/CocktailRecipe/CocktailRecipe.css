@@ -49,23 +49,22 @@
 .cocktailRecipe__resultLi:hover {
   text-decoration: underline;
 }
-/* .cocktailRecipe__similar-btn{
-position: relative;
-width: 100%;
-padding: 1.2rem;
-margin:  2rem 0;
-background-color: transparent;      RESPONSIVE BUTTON HERE
-border-radius: 2rem;
-border: none;
-box-shadow: 5px 5px black;
-font-family: var(--text-font-family);
-cursor: pointer;
-transition: all .3s ease;
+.cocktailRecipe__similar-btn-responsive {
+  position: relative;
+  width: 100%;
+  padding: 1.2rem;
+  margin: 2rem 0;
+  background-color: transparent;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 5px 5px black;
+  font-family: var(--text-font-family);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.cocktailRecipe__similar-btn:hover{
+.cocktailRecipe__similar-btn:hover {
   border: 1px solid black;
-
-} */
+}
 .cocktailRecipe__similar-btn {
   position: relative;
   width: 50px;
@@ -75,7 +74,7 @@ transition: all .3s ease;
   border-radius: 100px;
   cursor: pointer;
   border: none;
-  background-color: orange;
+  background-color: #fa7a3f;
   z-index: 1;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -101,10 +100,10 @@ transition: all .3s ease;
   transition: all 0.3s ease;
 }
 .cocktailRecipe__similar-btn:hover::before {
-  background-color: rgb(226, 105, 0);
+  background-color: #fa7a3f;
 }
 .cocktailRecipe__similar-btn::after {
-  content: "See more cocktail";
+  content: "See similar cocktail";
   position: absolute;
   display: flex;
   justify-content: start;

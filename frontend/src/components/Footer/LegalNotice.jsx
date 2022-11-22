@@ -1,13 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Footer.css";
-import Titleblock from "../titleblock/Titleblock";
+import Title from "../titleblock/title/Title";
 
 const LegalNotice = () => {
   return (
     <div className="LegalNotice">
-      <Titleblock />
+      <Title />
+      <h2> LEGAL NOTICES </h2>
       <div className="LegalNotice_container">
-        <h2> LEGAL NOTICES </h2>
         <h3>Last updated : 17 November 2022</h3>
         <p>
           Welcome to our Site. These are our terms for use of the Site which you
@@ -269,6 +270,9 @@ const LegalNotice = () => {
           accordance with the News Limited Group Privacy Policy.
         </p>
       </div>
+      <button className="Button_HomePage" type="button">
+        <NavLink to="/ButtonList"> GO BACK TO HOMEPAGE</NavLink>
+      </button>
     </div>
   );
 };
