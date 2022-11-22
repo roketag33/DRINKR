@@ -87,7 +87,7 @@
   background-color: #ffff9e;
   position: fixed;
   bottom: 5px;
-  width: 90%;
+  width: 60%;
   height: 6%;
   border-radius: 100px;
   left: 50%;
@@ -116,7 +116,7 @@
     font-size: 2rem;
     white-space: nowrap;
   }
-  .LegalNotice h1  {
+  .LegalNotice h1 {
     font-size: 3rem;
     white-space: nowrap;
   }
@@ -128,33 +128,72 @@
     white-space: nowrap;
     margin-top: 3vh;
   }
-  .LegalNotice h1  {
+  .LegalNotice h1 {
     font-size: 3.5rem;
     white-space: nowrap;
   }
 }
 
 @media screen and (min-width: 700px) {
-  .LegalNotice h2{
+  .LegalNotice h2 {
     font-size: 3rem;
     white-space: nowrap;
   }
-  .LegalNotice h1  {
+  .LegalNotice h1 {
     font-size: 4.5rem;
     white-space: nowrap;
   }
 }
 @media screen and (min-width: 2100px) {
-  .LegalNotice h2  {
+  .LegalNotice h2 {
     font-size: 5rem;
     white-space: nowrap;
   }
-  .LegalNotice h1  {
+  .LegalNotice h1 {
     font-size: 5rem;
     white-space: nowrap;
   }
 }
 
-.legal-notice a{
+.legal-notice a {
   height: 2rem;
+}
+@media screen and (min-width: 620px) {
+  .footer {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .footer {
+    opacity: 0; /* change this value to 0*/
+  }
+  .footer:hover {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .copyright {
+    font-size: 1rem;
+  }
+  .legal-notice {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .legal-notice {
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .copyright {
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+  }
+  .legal-notice {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+  }
 }
