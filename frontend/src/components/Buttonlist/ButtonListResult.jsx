@@ -17,12 +17,11 @@ const ButtonListResult = ({
           .filter((el) =>
             el.strDrink.toLowerCase().includes(userInput.toLowerCase())
           )
-          .map((el, id) => (
+          .map((el) => (
             <NavLink to={`/CocktailRecipe/${el.idDrink}`} reloadDocument>
               <ResultList
                 className={classeNameLi}
                 setSearch={setSearch}
-                id={id}
                 el={el}
               />
             </NavLink>
@@ -32,7 +31,7 @@ const ButtonListResult = ({
 };
 ButtonListResult.propTypes = {
   userInput: PropTypes.string.isRequired,
-  search: PropTypes.func.isRequired,
+  search: PropTypes.string.isRequired,
   setSearch: PropTypes.func.isRequired,
   classname: PropTypes.string.isRequired,
   classeNameLi: PropTypes.string.isRequired,

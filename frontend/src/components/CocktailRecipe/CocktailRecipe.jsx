@@ -85,7 +85,7 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
         `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${cocktail.strIngredient1}`
       )
       .then((response) => setSimilar(response.data.drinks[random]));
-  }, [btn, random]);
+  }, [cocktail]);
 
   return (
     <div className="cocktailRecipe__container">
@@ -167,7 +167,7 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
           </p>
         </animated.div>
       </motion.div>
-      {similar && similar.idDrink !== undefined ? (
+      {similar && similar.idDrink !== null ? (
         <NavLink to={`/CocktailRecipe/${similar.idDrink}`}>
           <button
             type="button"
@@ -194,7 +194,7 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
 CocktailRecipe.propTypes = {
   handleChange: PropTypes.func.isRequired,
   userInput: PropTypes.string.isRequired,
-  search: PropTypes.func.isRequired,
+  search: PropTypes.string.isRequired,
   setSearch: PropTypes.func.isRequired,
   xys: PropTypes.number.isRequired,
 };

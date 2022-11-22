@@ -116,12 +116,7 @@
   z-index: 200;
   top: -2vh;
   right: -4vw;
-  transform: rotate(25deg);
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-}
-
-.heart__image:active {
-  transform: scale(0.9);
+  cursor: pointer;
 }
 
 /*Scroll part*/

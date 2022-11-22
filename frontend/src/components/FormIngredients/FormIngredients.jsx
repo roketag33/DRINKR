@@ -181,7 +181,7 @@ const FormIngredients = ({
 FormIngredients.propTypes = {
   propsSetIngredient: PropTypes.func.isRequired,
   propsSetFetche: PropTypes.func.isRequired,
-  propsIngredient: PropTypes.arrayOf.isRequired,
+  propsIngredient: PropTypes.func.isRequired,
   propsFetche: PropTypes.arrayOf.isRequired,
 };
 export default FormIngredients;
