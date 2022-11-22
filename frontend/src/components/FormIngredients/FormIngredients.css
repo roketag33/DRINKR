@@ -257,6 +257,7 @@
     padding: 1rem;
     box-shadow: 10px 10px #131313;
     overflow: hidden;
+    overflow-y: scroll;
   }
 }
 @media screen and (min-width: 1140px) {
