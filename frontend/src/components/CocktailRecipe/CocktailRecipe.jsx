@@ -172,12 +172,7 @@ const CocktailRecipe = ({ userInput, handleChange, search, setSearch }) => {
           <button
             type="button"
             onClick={handleBtn}
-            className={
-
- "cocktailRecipe__similar-btn"
-
-
-            }
+            className="cocktailRecipe__similar-btn"
           >
             &#8599;
           </button>
