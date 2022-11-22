@@ -18,7 +18,7 @@
   height: 30vh;
 }
 .MajorityBlock__para {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: var(--text-font-family);
   background-color: #ffff9e;
   padding-bottom: 3rem;
@@ -28,8 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
-  background-color: #ffff9e;
+  width: 70%;
 }
 .MajorityBlock__button-yes {
   position: relative;
@@ -38,7 +37,7 @@
   border: none;
   box-shadow: 5px 5px black;
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: white;
   font-family: title-saint-regus;
 }
@@ -53,7 +52,7 @@
   border: none;
   box-shadow: 5px 5px black;
   padding: 0.7rem;
-  font-size: 1rem;
+  font-size: 1.7rem;
   color: white;
   font-family: title-saint-regus;
 }
@@ -137,7 +136,7 @@
 }
 @media all and (min-width: 1000px) {
   .MajorityBlock__buttons {
-    width: 50%;
+    width: 60%;
   }
 }
 @media all and (min-width: 1140px) {

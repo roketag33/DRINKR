@@ -107,6 +107,7 @@
   z-index: 200;
   top: -6vh;
   right: -4vw;
+  cursor: pointer;
 }
 
 /*Scroll part*/

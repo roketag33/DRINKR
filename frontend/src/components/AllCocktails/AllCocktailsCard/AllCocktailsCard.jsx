@@ -107,7 +107,7 @@ const AllCocktailsCard = ({ propsFetche, cocktail }) => {
 
 AllCocktailsCard.propTypes = {
   cocktail: PropTypes.string.isRequired,
-  propsFetche: PropTypes.objectOf.isRequired,
+  propsFetche: PropTypes.func.isRequired,
 };
 
 export default AllCocktailsCard;
