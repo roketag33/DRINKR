@@ -43,11 +43,11 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
             <img
               src={
                 isFavorite
-                  ? "/src/assets/images/violet_star.png"
-                  : "/src/assets/images/yellow_star.png"
+                  ? "/src/assets/images/favorite.png"
+                  : "/src/assets/images/notFavorite.png"
               }
-              className="star__image"
-              alt="star"
+              className="heart__image"
+              alt="heart"
             />
             <img
               src={propsFetche.strDrinkThumb}
@@ -65,11 +65,11 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
               role="presentation"
               src={
                 isFavorite
-                  ? "/src/assets/images/violet_star.png"
-                  : "/src/assets/images/yellow_star.png"
+                  ? "/src/assets/images/favorite.png"
+                  : "/src/assets/images/notFavorite.png"
               }
-              className="star__image"
-              alt="star"
+              className="heart__image"
+              alt="heart"
             />
             <div className="firstblock__title">
               <img
@@ -104,7 +104,7 @@ const AllCocktailsCardIngredients = ({ propsFetche }) => {
 };
 
 AllCocktailsCardIngredients.propTypes = {
-  propsFetche: PropTypes.objectOf.isRequired,
+  propsFetche: PropTypes.func.isRequired,
 };
 
 export default AllCocktailsCardIngredients;

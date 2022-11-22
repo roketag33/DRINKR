@@ -112,7 +112,7 @@ AllCocktails.propTypes = {
   propsFetche: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
   userInput: PropTypes.string.isRequired,
-  search: PropTypes.func.isRequired,
+  search: PropTypes.string.isRequired,
   setSearch: PropTypes.func.isRequired,
 };
 export default AllCocktails;

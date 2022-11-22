@@ -51,7 +51,7 @@ const AllCocktailsIngredients = ({
 };
 
 AllCocktailsIngredients.propTypes = {
-  propsFetche: PropTypes.objectOf.isRequired,
+  propsFetche: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
   userInput: PropTypes.string.isRequired,
   search: PropTypes.func.isRequired,
