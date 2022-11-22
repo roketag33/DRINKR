@@ -10,15 +10,18 @@ const FormIngredients = ({
   propsIngredient,
   propsSetIngredient,
   propsSetFetche,
+  propsFetche,
 }) => {
-  useEffect(() => {
-    axios
+  const Cocktailingredients = async () => {
+    await axios
       .get(
         `https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=${propsIngredient}`
       )
       .then((response) => propsSetFetche(response.data.drinks));
+  };
+  useEffect(() => {
+    Cocktailingredients();
   }, [propsIngredient]);
-
   const deleteValeur = () => {
     propsSetIngredient([]);
   };
@@ -143,18 +146,33 @@ const FormIngredients = ({
             </button>
           ))}
         </div>
-        <NavLink to={`/AllCocktailsIngredients/${propsIngredient}`}>
-          <button
-            className="form__btn__go btn"
-            type="button"
-            onClick={() => {
-              deleteValeur();
-              filtrebtn();
-            }}
-          >
-            LET'S GO
-          </button>
-        </NavLink>
+        {propsFetche === "None Found" ? (
+          <NavLink to="/AllCocktails">
+            <button
+              className="form__btn__go btn"
+              type="button"
+              onClick={() => {
+                deleteValeur();
+                filtrebtn();
+              }}
+            >
+              LET'S GO
+            </button>
+          </NavLink>
+        ) : (
+          <NavLink to={`/AllCocktailsIngredients/${propsIngredient}`}>
+            <button
+              className="form__btn__go btn"
+              type="button"
+              onClick={() => {
+                deleteValeur();
+                filtrebtn();
+              }}
+            >
+              LET'S GO
+            </button>
+          </NavLink>
+        )}
       </div>
     </div>
   );
@@ -164,5 +182,6 @@ FormIngredients.propTypes = {
   propsSetIngredient: PropTypes.func.isRequired,
   propsSetFetche: PropTypes.func.isRequired,
   propsIngredient: PropTypes.arrayOf.isRequired,
+  propsFetche: PropTypes.arrayOf.isRequired,
 };
 export default FormIngredients;
