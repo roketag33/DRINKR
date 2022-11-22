@@ -47,7 +47,7 @@ const AllCocktailsCard = ({ propsFetche, cocktail }) => {
                   ? "src/assets/images/favorite.png"
                   : "src/assets/images/notFavorite.png"
               }
-              className="heart__image"
+              className="heart__image bubbly-button"
               alt="heart"
             />
             <img
@@ -69,9 +69,8 @@ const AllCocktailsCard = ({ propsFetche, cocktail }) => {
                   ? "src/assets/images/favorite.png"
                   : "src/assets/images/notFavorite.png"
               }
-              className="heart__image"
+              className="heart__image  bubbly-button"
               alt="heart"
-              title="Click to add it to your fav'"
             />
             <div className="firstblock__title">
               <img
