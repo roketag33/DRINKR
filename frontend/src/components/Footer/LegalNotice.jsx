@@ -6,8 +6,10 @@ import Title from "../titleblock/title/Title";
 const LegalNotice = () => {
   return (
     <div className="LegalNotice">
-      <Title />
-      <h2> LEGAL NOTICES </h2>
+      <h1>
+        <Title />
+      </h1>
+      <h2> Legal Notice </h2>
       <div className="LegalNotice_container">
         <h3>Last updated : 17 November 2022</h3>
         <p>
@@ -269,6 +271,7 @@ const LegalNotice = () => {
           service supplied again. Privacy Policy The Website is operated in
           accordance with the News Limited Group Privacy Policy.
         </p>
+        <br />
       </div>
       <button className="Button_HomePage" type="button">
         <NavLink to="/ButtonList"> GO BACK TO HOMEPAGE</NavLink>
