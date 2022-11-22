@@ -44,11 +44,11 @@ const AllCocktailsCard = ({ propsFetche, cocktail }) => {
             <img
               src={
                 isFavorite
-                  ? "src/assets/images/violet_star.png"
-                  : "src/assets/images/yellow_star.png"
+                  ? "src/assets/images/favorite.png"
+                  : "src/assets/images/notFavorite.png"
               }
-              className="star__image"
-              alt="star"
+              className="heart__image"
+              alt="heart"
             />
             <img
               src={cocktail.strDrinkThumb}
@@ -66,11 +66,12 @@ const AllCocktailsCard = ({ propsFetche, cocktail }) => {
               role="presentation"
               src={
                 isFavorite
-                  ? "src/assets/images/violet_star.png"
-                  : "src/assets/images/yellow_star.png"
+                  ? "src/assets/images/favorite.png"
+                  : "src/assets/images/notFavorite.png"
               }
-              className="star__image"
-              alt="star"
+              className="heart__image"
+              alt="heart"
+              title="Click to add it to your fav'"
             />
             <div className="firstblock__title">
               <img

@@ -52,25 +52,13 @@ const AllCocktails = ({
     );
     Arraycocktails = Arraycocktails.concat(response.data.drinks);
     setCocktails(Arraycocktails);
-    // <div className="list__allcocktails">
-    //   {cocktails.map((cocktail) => (
-    //     <AllCocktailsCard
-    //       propsFetche={propsFetche}
-    //       key={cocktail.id}
-    //       cocktail={cocktail}
-    //     />
-    //   ))}
-    // </div>;
   };
 
   return (
     <div className="allcocktails_section">
       <MenuBurger />
       <Title />
-      <form
-        // onSubmit={}
-        className="allCocktails__form"
-      >
+      <form className="allCocktails__form">
         <SearchBar
           className="allCocktails__searchbar"
           value={userInput}
