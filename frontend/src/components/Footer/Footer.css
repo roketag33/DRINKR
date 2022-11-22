@@ -94,7 +94,7 @@
   position: fixed;
   bottom: 5px;
   width: 90%;
-  height: 10%;
+  height: 6%;
   border-radius: 100px;
   left: 50%;
   right: 50%;
@@ -110,7 +110,7 @@
 
 .legal-notice {
   font-family: title-saint-regus;
-  padding: 8px;
+  padding: 0px;
   border-color: transparent;
   background-color: #ffff9e;
   cursor: pointer;
@@ -133,10 +133,10 @@
 
 @media screen and (min-width: 1023px) {
   .copyright {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .legal-notice {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
